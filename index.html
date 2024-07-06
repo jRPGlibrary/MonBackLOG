@@ -90,17 +90,28 @@
                 const commentText = this.container.querySelector('.comment-input').value.trim();
                 if (commentText) {
                     try {
-                        await addDoc(collection(db, 'comments'), {
+                        const docRef = await addDoc(collection(db, 'comments'), {
                             text: commentText,
                             pageId: this.pageId,
                             timestamp: serverTimestamp()
                         });
+                        console.log("Document written with ID: ", docRef.id);
                         this.container.querySelector('.comment-input').value = '';
-                        this.loadComments();
+                        
+                        // Ajouter le nouveau commentaire à l'affichage immédiatement
+                        this.addCommentToDisplay(commentText);
                     } catch (error) {
                         console.error('Erreur lors de l\'ajout du commentaire:', error);
                     }
                 }
+            }
+
+            addCommentToDisplay(text) {
+                const commentsContainer = this.container.querySelector('.comments-container');
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
+                commentElement.textContent = text;
+                commentsContainer.insertBefore(commentElement, commentsContainer.firstChild);
             }
 
             async loadComments() {
@@ -115,10 +126,7 @@
                     const querySnapshot = await getDocs(q);
                     querySnapshot.forEach((doc) => {
                         const commentData = doc.data();
-                        const commentElement = document.createElement('div');
-                        commentElement.classList.add('comment');
-                        commentElement.textContent = commentData.text;
-                        commentsContainer.appendChild(commentElement);
+                        this.addCommentToDisplay(commentData.text);
                     });
                 } catch (error) {
                     console.error('Erreur lors du chargement des commentaires:', error);
