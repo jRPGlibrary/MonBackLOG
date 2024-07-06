@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment Box</title>
+    <title>Boîte de commentaires</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .comment-box { margin-bottom: 20px; }
@@ -12,21 +12,17 @@
     </style>
 </head>
 <body>
-    <h1>Comments</h1>
+    <h1>Commentaires</h1>
     <div class="comment-box">
-        <textarea id="commentText" placeholder="Add a comment..."></textarea>
-        <button onclick="submitComment()">Submit</button>
+        <textarea id="commentText" placeholder="Ajoutez un commentaire..."></textarea>
+        <button onclick="submitComment()">Soumettre</button>
     </div>
     <div id="comments"></div>
 
-    <!-- Import Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js';
+        import { getFirestore, collection, addDoc, query, where, orderBy, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js';
 
-    <script>
-        console.log("Starting script...");
-
-        // Your web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyAFsnabnd0A0LeEwO3w9gK-6fhc_rWSnNU",
             authDomain: "jrpglibrary-38e6c.firebaseapp.com",
@@ -37,48 +33,42 @@
             measurementId: "G-98KKZX26D8"
         };
 
-        // Initialize Firebase
-        const app = firebase.initializeApp(firebaseConfig);
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
-        // Initialize Firestore
-        const db = firebase.firestore();
-
-        console.log("Firebase initialized...");
-
-        async function submitComment() {
-            console.log("Submit button clicked...");
+        window.submitComment = async function() {
             const commentText = document.getElementById('commentText').value;
-            console.log("Comment text: ", commentText);
-            const pageId = window.location.pathname; // Unique identifier for each Notion page
-            console.log("Page ID: ", pageId);
+            const pageId = window.location.pathname;
+
             if (commentText.trim()) {
                 try {
-                    await db.collection('comments').add({
+                    await addDoc(collection(db, 'comments'), {
                         text: commentText,
                         pageId: pageId,
-                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                        timestamp: serverTimestamp()
                     });
-                    console.log('Comment added successfully');
+                    console.log('Commentaire ajouté avec succès');
                     document.getElementById('commentText').value = '';
                     loadComments();
                 } catch (error) {
-                    console.error('Error adding comment: ', error);
+                    console.error('Erreur lors de l\'ajout du commentaire: ', error);
                 }
             } else {
-                console.warn('Comment text is empty');
+                console.warn('Le texte du commentaire est vide');
             }
         }
 
         async function loadComments() {
-            console.log("Loading comments...");
             const pageId = window.location.pathname;
             const commentsDiv = document.getElementById('comments');
             commentsDiv.innerHTML = '';
+
             try {
-                const querySnapshot = await db.collection('comments')
-                    .where('pageId', '==', pageId)
-                    .orderBy('timestamp', 'desc')
-                    .get();
+                const q = query(collection(db, 'comments'), 
+                    where('pageId', '==', pageId),
+                    orderBy('timestamp', 'desc')
+                );
+                const querySnapshot = await getDocs(q);
                 querySnapshot.forEach((doc) => {
                     const commentData = doc.data();
                     const commentDiv = document.createElement('div');
@@ -86,9 +76,9 @@
                     commentDiv.innerText = commentData.text;
                     commentsDiv.appendChild(commentDiv);
                 });
-                console.log('Comments loaded successfully');
+                console.log('Commentaires chargés avec succès');
             } catch (error) {
-                console.error('Error loading comments: ', error);
+                console.error('Erreur lors du chargement des commentaires: ', error);
             }
         }
 
@@ -96,4 +86,3 @@
     </script>
 </body>
 </html>
-
