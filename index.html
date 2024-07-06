@@ -24,9 +24,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
 
     <script>
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "firebase/app";
-        import { getAnalytics } from "firebase/analytics";
+        console.log("Starting script...");
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -40,44 +38,62 @@
         };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        const app = firebase.initializeApp(firebaseConfig);
 
         // Initialize Firestore
-        const db = firebase.firestore(app);
+        const db = firebase.firestore();
+
+        console.log("Firebase initialized...");
 
         async function submitComment() {
+            console.log("Submit button clicked...");
             const commentText = document.getElementById('commentText').value;
+            console.log("Comment text: ", commentText);
             const pageId = window.location.pathname; // Unique identifier for each Notion page
+            console.log("Page ID: ", pageId);
             if (commentText.trim()) {
-                await db.collection('comments').add({
-                    text: commentText,
-                    pageId: pageId,
-                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-                });
-                document.getElementById('commentText').value = '';
-                loadComments();
+                try {
+                    await db.collection('comments').add({
+                        text: commentText,
+                        pageId: pageId,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                    });
+                    console.log('Comment added successfully');
+                    document.getElementById('commentText').value = '';
+                    loadComments();
+                } catch (error) {
+                    console.error('Error adding comment: ', error);
+                }
+            } else {
+                console.warn('Comment text is empty');
             }
         }
 
         async function loadComments() {
+            console.log("Loading comments...");
             const pageId = window.location.pathname;
             const commentsDiv = document.getElementById('comments');
             commentsDiv.innerHTML = '';
-            const querySnapshot = await db.collection('comments')
-                .where('pageId', '==', pageId)
-                .orderBy('timestamp', 'desc')
-                .get();
-            querySnapshot.forEach((doc) => {
-                const commentData = doc.data();
-                const commentDiv = document.createElement('div');
-                commentDiv.classList.add('comment');
-                commentDiv.innerText = commentData.text;
-                commentsDiv.appendChild(commentDiv);
-            });
+            try {
+                const querySnapshot = await db.collection('comments')
+                    .where('pageId', '==', pageId)
+                    .orderBy('timestamp', 'desc')
+                    .get();
+                querySnapshot.forEach((doc) => {
+                    const commentData = doc.data();
+                    const commentDiv = document.createElement('div');
+                    commentDiv.classList.add('comment');
+                    commentDiv.innerText = commentData.text;
+                    commentsDiv.appendChild(commentDiv);
+                });
+                console.log('Comments loaded successfully');
+            } catch (error) {
+                console.error('Error loading comments: ', error);
+            }
         }
 
         loadComments();
     </script>
 </body>
 </html>
+
