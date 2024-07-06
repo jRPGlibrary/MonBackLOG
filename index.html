@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Widget de commentaires pour Notion</title>
+    <title>Widget de commentaires persistant pour Notion</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -50,7 +50,7 @@
 
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js';
-        import { getFirestore, collection, addDoc, query, where, orderBy, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js';
+        import { getFirestore, collection, addDoc, query, where, orderBy, onSnapshot, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js';
 
         const firebaseConfig = {
             apiKey: "AIzaSyAFsnabnd0A0LeEwO3w9gK-6fhc_rWSnNU",
@@ -74,7 +74,7 @@
                     return;
                 }
                 this.render();
-                this.loadComments();
+                this.listenToComments();
             }
 
             render() {
@@ -90,47 +90,39 @@
                 const commentText = this.container.querySelector('.comment-input').value.trim();
                 if (commentText) {
                     try {
-                        const docRef = await addDoc(collection(db, 'comments'), {
+                        await addDoc(collection(db, 'comments'), {
                             text: commentText,
                             pageId: this.pageId,
                             timestamp: serverTimestamp()
                         });
-                        console.log("Document written with ID: ", docRef.id);
+                        console.log("Commentaire ajouté avec succès");
                         this.container.querySelector('.comment-input').value = '';
-                        
-                        // Ajouter le nouveau commentaire à l'affichage immédiatement
-                        this.addCommentToDisplay(commentText);
                     } catch (error) {
                         console.error('Erreur lors de l\'ajout du commentaire:', error);
                     }
                 }
             }
 
-            addCommentToDisplay(text) {
-                const commentsContainer = this.container.querySelector('.comments-container');
-                const commentElement = document.createElement('div');
-                commentElement.classList.add('comment');
-                commentElement.textContent = text;
-                commentsContainer.insertBefore(commentElement, commentsContainer.firstChild);
-            }
+            listenToComments() {
+                const q = query(
+                    collection(db, 'comments'),
+                    where('pageId', '==', this.pageId),
+                    orderBy('timestamp', 'desc')
+                );
 
-            async loadComments() {
-                const commentsContainer = this.container.querySelector('.comments-container');
-                commentsContainer.innerHTML = '';
-                try {
-                    const q = query(
-                        collection(db, 'comments'),
-                        where('pageId', '==', this.pageId),
-                        orderBy('timestamp', 'desc')
-                    );
-                    const querySnapshot = await getDocs(q);
-                    querySnapshot.forEach((doc) => {
+                onSnapshot(q, (snapshot) => {
+                    const commentsContainer = this.container.querySelector('.comments-container');
+                    commentsContainer.innerHTML = '';
+                    snapshot.forEach((doc) => {
                         const commentData = doc.data();
-                        this.addCommentToDisplay(commentData.text);
+                        const commentElement = document.createElement('div');
+                        commentElement.classList.add('comment');
+                        commentElement.textContent = commentData.text;
+                        commentsContainer.appendChild(commentElement);
                     });
-                } catch (error) {
-                    console.error('Erreur lors du chargement des commentaires:', error);
-                }
+                }, (error) => {
+                    console.error("Erreur lors de l'écoute des commentaires: ", error);
+                });
             }
         }
 
