@@ -1,57 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Widget de commentaires persistant pour Notion</title>
+    <title>Comment Box</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-            margin: 0;
-            padding: 10px;
-            background-color: transparent;
-        }
-        .comment-system {
-            max-width: 100%;
-        }
-        .comment-input {
-            width: 100%;
-            height: 80px;
-            margin-bottom: 10px;
-            padding: 8px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            font-size: 14px;
-            resize: vertical;
-        }
-        .comment-submit {
-            padding: 8px 16px;
-            background-color: #2eaadc;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .comment {
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 14px;
-            background-color: #f9f9f9;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .comment-box { margin-bottom: 20px; }
+        .comment-box textarea { width: 100%; height: 100px; margin-bottom: 10px; }
+        .comment { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
-    <div id="comment-system" class="comment-system">
-        <!-- Le système de commentaires sera injecté ici -->
+    <h1>Comments</h1>
+    <div class="comment-box">
+        <textarea id="commentText" placeholder="Add a comment..."></textarea>
+        <button onclick="submitComment()">Submit</button>
     </div>
+    <div id="comments"></div>
 
-    <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js';
-        import { getFirestore, collection, addDoc, query, where, orderBy, onSnapshot, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js';
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
 
+    <script>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+
+        // Your web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyAFsnabnd0A0LeEwO3w9gK-6fhc_rWSnNU",
             authDomain: "jrpglibrary-38e6c.firebaseapp.com",
@@ -62,72 +39,45 @@
             measurementId: "G-98KKZX26D8"
         };
 
+        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        const analytics = getAnalytics(app);
 
-        class CommentSystem {
-            constructor(containerId) {
-                this.container = document.getElementById(containerId);
-                this.pageId = new URLSearchParams(window.location.search).get('pageId');
-                if (!this.pageId) {
-                    this.container.innerHTML = 'Erreur: pageId manquant';
-                    return;
-                }
-                this.render();
-                this.listenToComments();
-            }
+        // Initialize Firestore
+        const db = firebase.firestore(app);
 
-            render() {
-                this.container.innerHTML = `
-                    <textarea class="comment-input" placeholder="Écrivez votre commentaire ici..."></textarea>
-                    <button class="comment-submit">Envoyer</button>
-                    <div class="comments-container"></div>
-                `;
-                this.container.querySelector('.comment-submit').addEventListener('click', () => this.submitComment());
-            }
-
-            async submitComment() {
-                const commentText = this.container.querySelector('.comment-input').value.trim();
-                if (commentText) {
-                    try {
-                        await addDoc(collection(db, 'comments'), {
-                            text: commentText,
-                            pageId: this.pageId,
-                            timestamp: serverTimestamp()
-                        });
-                        console.log("Commentaire ajouté avec succès");
-                        this.container.querySelector('.comment-input').value = '';
-                    } catch (error) {
-                        console.error('Erreur lors de l\'ajout du commentaire:', error);
-                    }
-                }
-            }
-
-            listenToComments() {
-                const q = query(
-                    collection(db, 'comments'),
-                    where('pageId', '==', this.pageId),
-                    orderBy('timestamp', 'desc')
-                );
-
-                onSnapshot(q, (snapshot) => {
-                    const commentsContainer = this.container.querySelector('.comments-container');
-                    commentsContainer.innerHTML = '';
-                    snapshot.forEach((doc) => {
-                        const commentData = doc.data();
-                        const commentElement = document.createElement('div');
-                        commentElement.classList.add('comment');
-                        commentElement.textContent = commentData.text;
-                        commentsContainer.appendChild(commentElement);
-                    });
-                }, (error) => {
-                    console.error("Erreur lors de l'écoute des commentaires: ", error);
+        async function submitComment() {
+            const commentText = document.getElementById('commentText').value;
+            const pageId = window.location.pathname; // Unique identifier for each Notion page
+            if (commentText.trim()) {
+                await db.collection('comments').add({
+                    text: commentText,
+                    pageId: pageId,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
                 });
+                document.getElementById('commentText').value = '';
+                loadComments();
             }
         }
 
-        // Initialisation du système de commentaires
-        new CommentSystem('comment-system');
+        async function loadComments() {
+            const pageId = window.location.pathname;
+            const commentsDiv = document.getElementById('comments');
+            commentsDiv.innerHTML = '';
+            const querySnapshot = await db.collection('comments')
+                .where('pageId', '==', pageId)
+                .orderBy('timestamp', 'desc')
+                .get();
+            querySnapshot.forEach((doc) => {
+                const commentData = doc.data();
+                const commentDiv = document.createElement('div');
+                commentDiv.classList.add('comment');
+                commentDiv.innerText = commentData.text;
+                commentsDiv.appendChild(commentDiv);
+            });
+        }
+
+        loadComments();
     </script>
 </body>
 </html>
