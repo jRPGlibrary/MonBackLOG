@@ -5,28 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment Box</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .comment-box { margin-bottom: 20px; }
-        .comment-box textarea { width: 100%; height: 100px; margin-bottom: 10px; }
-        .comment { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .comment-box {
+            margin-bottom: 20px;
+        }
+        .comment-box h3 {
+            margin-bottom: 10px;
+        }
+        .comment-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .comment-list li {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .reply-button {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .reply-button:hover {
+            background-color: #0056b3;
+        }
+        .reply-form {
+            display: none;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .reply-form input, .reply-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .reply-form button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .reply-form button:hover {
+            background-color: #218838;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .pagination button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .pagination button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
-    <h1>Comments</h1>
+
     <div class="comment-box">
-        <textarea id="commentText" placeholder="Add a comment..."></textarea>
-        <button onclick="submitComment()">Submit</button>
+        <h3>Comments</h3>
+        <ul id="comment-list" class="comment-list"></ul>
+        <div class="pagination">
+            <button id="prev-page">Previous</button>
+            <button id="next-page">Next</button>
+        </div>
+        <form id="comment-form" class="comment-form">
+            <input type="text" id="name" placeholder="Your name" required>
+            <textarea id="comment" placeholder="Your comment" rows="4" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
     </div>
-    <div id="comments"></div>
 
-    <!-- Import Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-
-    <script>
+    <script type="module">
         // Import the functions you need from the SDKs you need
-        import { initializeApp } from "firebase/app";
-        import { getAnalytics } from "firebase/analytics";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getFirestore, collection, addDoc, query, where, getDocs, orderBy, limit, startAfter, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -41,42 +114,157 @@
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
 
-        // Initialize Firestore
-        const db = firebase.firestore(app);
-
-        async function submitComment() {
-            const commentText = document.getElementById('commentText').value;
-            const pageId = window.location.pathname; // Unique identifier for each Notion page
-            if (commentText.trim()) {
-                await db.collection('comments').add({
-                    text: commentText,
-                    pageId: pageId,
-                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-                });
-                document.getElementById('commentText').value = '';
-                loadComments();
-            }
+        // Get unique page identifier
+        function getPageId() {
+            return window.location.pathname.replace(/\//g, "_");
         }
 
+        const pageId = getPageId();
+        let lastVisible = null;
+
+        // Function to load comments
         async function loadComments() {
-            const pageId = window.location.pathname;
-            const commentsDiv = document.getElementById('comments');
-            commentsDiv.innerHTML = '';
-            const querySnapshot = await db.collection('comments')
-                .where('pageId', '==', pageId)
-                .orderBy('timestamp', 'desc')
-                .get();
+            const commentsList = document.getElementById('comment-list');
+            commentsList.innerHTML = '';
+
+            const q = query(
+                collection(db, 'comments'), 
+                where('pageId', '==', pageId),
+                where('parentId', '==', null), // Only top-level comments
+                orderBy('timestamp', 'desc'),
+                limit(5)
+            );
+
+            const querySnapshot = await getDocs(q);
+
+            querySnapshot.forEach(async (doc) => {
+                const data = doc.data();
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    ${data.name}: ${data.comment}
+                    <button class="reply-button" data-id="${doc.id}">Reply</button>
+                    <ul class="replies" id="replies-${doc.id}"></ul>
+                    <form class="reply-form" data-id="${doc.id}">
+                        <input type="text" class="reply-name" placeholder="Your name" required>
+                        <textarea class="reply-comment" placeholder="Your reply" rows="2" required></textarea>
+                        <button type="submit">Post Reply</button>
+                    </form>
+                `;
+                commentsList.appendChild(li);
+                await loadReplies(doc.id);
+            });
+
+            lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
+        }
+
+        // Function to load replies for a given comment
+        async function loadReplies(parentId) {
+            const repliesList = document.getElementById(`replies-${parentId}`);
+            repliesList.innerHTML = '';
+
+            const q = query(
+                collection(db, 'comments'), 
+                where('parentId', '==', parentId),
+                orderBy('timestamp', 'desc')
+            );
+
+            const querySnapshot = await getDocs(q);
+
             querySnapshot.forEach((doc) => {
-                const commentData = doc.data();
-                const commentDiv = document.createElement('div');
-                commentDiv.classList.add('comment');
-                commentDiv.innerText = commentData.text;
-                commentsDiv.appendChild(commentDiv);
+                const data = doc.data();
+                const li = document.createElement('li');
+                li.textContent = `${data.name}: ${data.comment}`;
+                repliesList.appendChild(li);
             });
         }
 
+        // Function to load more comments for pagination
+        async function loadMoreComments() {
+            if (!lastVisible) return;
+
+            const commentsList = document.getElementById('comment-list');
+
+            const q = query(
+                collection(db, 'comments'), 
+                where('pageId', '==', pageId),
+                where('parentId', '==', null), // Only top-level comments
+                orderBy('timestamp', 'desc'),
+                startAfter(lastVisible),
+                limit(5)
+            );
+
+            const querySnapshot = await getDocs(q);
+
+            querySnapshot.forEach(async (doc) => {
+                const data = doc.data();
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    ${data.name}: ${data.comment}
+                    <button class="reply-button" data-id="${doc.id}">Reply</button>
+                    <ul class="replies" id="replies-${doc.id}"></ul>
+                    <form class="reply-form" data-id="${doc.id}">
+                        <input type="text" class="reply-name" placeholder="Your name" required>
+                        <textarea class="reply-comment" placeholder="Your reply" rows="2" required></textarea>
+                        <button type="submit">Post Reply</button>
+                    </form>
+                `;
+                commentsList.appendChild(li);
+                await loadReplies(doc.id);
+            });
+
+            lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
+        }
+
+        // Function to submit a new comment
+        document.getElementById('comment-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+
+            await addDoc(collection(db, 'comments'), {
+                pageId: pageId,
+                name: name,
+                comment: comment,
+                parentId: null,
+                timestamp: serverTimestamp()
+            });
+
+            document.getElementById('comment-form').reset();
+            loadComments();
+        });
+
+        // Function to submit a new reply
+        document.addEventListener('submit', async (e) => {
+            if (e.target.classList.contains('reply-form')) {
+                e.preventDefault();
+
+                const form = e.target;
+                const parentId = form.getAttribute('data-id');
+                const name = form.querySelector('.reply-name').value;
+                const comment = form.querySelector('.reply-comment').value;
+
+                await addDoc(collection(db, 'comments'), {
+                    pageId: pageId,
+                    name: name,
+                    comment: comment,
+                    parentId: parentId,
+                    timestamp: serverTimestamp()
+                });
+
+                form.reset();
+                loadReplies(parentId);
+            }
+        });
+
+        // Event listener for pagination buttons
+        document.getElementById('
+        document.getElementById('next-page').addEventListener('click', loadMoreComments);
+        document.getElementById('prev-page').addEventListener('click', loadPreviousComments);
+
+        // Initial load of comments
         loadComments();
     </script>
 </body>
