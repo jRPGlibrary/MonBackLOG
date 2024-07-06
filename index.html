@@ -19,22 +19,32 @@
     </div>
     <div id="comments"></div>
 
+    <!-- Import Firebase -->
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
     <script>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+
+        // Your web app's Firebase configuration
         const firebaseConfig = {
-          apiKey: "AIzaSyAFsnabnd0A0LeEwO3w9gK-6fhc_rWSnNU",
-          authDomain: "jrpglibrary-38e6c.firebaseapp.com",
-          projectId: "jrpglibrary-38e6c",
-          storageBucket: "jrpglibrary-38e6c.appspot.com",
-          messagingSenderId: "82820484706",
-          appId: "1:82820484706:web:b1130a49ee3f47c0198b3b",
-          measurementId: "G-98KKZX26D8"
+            apiKey: "AIzaSyAFsnabnd0A0LeEwO3w9gK-6fhc_rWSnNU",
+            authDomain: "jrpglibrary-38e6c.firebaseapp.com",
+            projectId: "jrpglibrary-38e6c",
+            storageBucket: "jrpglibrary-38e6c.appspot.com",
+            messagingSenderId: "82820484706",
+            appId: "1:82820484706:web:b1130a49ee3f47c0198b3b",
+            measurementId: "G-98KKZX26D8"
         };
-        
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+
+        // Initialize Firestore
+        const db = firebase.firestore(app);
 
         async function submitComment() {
             const commentText = document.getElementById('commentText').value;
@@ -71,7 +81,3 @@
     </script>
 </body>
 </html>
-
-
-
-
