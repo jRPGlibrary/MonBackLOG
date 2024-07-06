@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commentaires</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .comment-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .comment-form input, .comment-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .comment-form button {
+            padding: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .comment-form button:hover {
+            background-color: #0056b3;
+        }
+        .comments {
+            list-style: none;
+            padding: 0;
+        }
+        .comment {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .comment .comment-author {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="comment-section">
+        <div class="comment-form">
+            <input type="text" id="comment-author" placeholder="Votre nom">
+            <textarea id="comment-text" rows="4" placeholder="Votre commentaire"></textarea>
+            <button onclick="postComment()">Poster le commentaire</button>
+        </div>
+        <ul class="comments" id="comments">
+            <!-- Les commentaires apparaîtront ici -->
+        </ul>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAFsnabnd0A0LeEwO3w9gK-6fhc_rWSnNU",
+            authDomain: "jrpglibrary-38e6c.firebaseapp.com",
+            projectId: "jrpglibrary-38e6c",
+            storageBucket: "jrpglibrary-38e6c.appspot.com",
+            messagingSenderId: "82820484706",
+            appId: "1:82820484706:web:923bfc37a4a3caa0198b3b",
+            measurementId: "G-T0Q8LRVJN2"
+        };
+
+        // Initialiser Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+
+        // Authentification anonyme
+        auth.signInAnonymously().catch(error => {
+            console.error("Erreur d'authentification anonyme:", error);
+        });
+
+        // Fonction pour poster un commentaire
+        function postComment() {
+            const author = document.getElementById('comment-author').value;
+            const text = document.getElementById('comment-text').value;
+
+            if (author && text) {
+                db.collection("comments").add({
+                    author: author,
+                    text: text,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                })
+                .then(() => {
+                    document.getElementById('comment-author').value = '';
+                    document.getElementById('comment-text').value = '';
+                })
+                .catch(error => {
+                    console.error("Erreur lors de l'ajout du commentaire:", error);
+                });
+            } else {
+                alert('Veuillez remplir tous les champs.');
+            }
+        }
+
+        // Fonction pour afficher les commentaires
+        function loadComments() {
+            db.collection("comments").orderBy("timestamp", "desc")
+                .onSnapshot(snapshot => {
+                    const commentsList = document.getElementById('comments');
+                    commentsList.innerHTML = '';
+                    snapshot.forEach(doc => {
+                        const comment = doc.data();
+                        const commentItem = document.createElement('li');
+                        commentItem.classList.add('comment');
+
+                        const commentAuthor = document.createElement('div');
+                        commentAuthor.classList.add('comment-author');
+                        commentAuthor.textContent = comment.author;
+
+                        const commentText = document.createElement('div');
+                        commentText.textContent = comment.text;
+
+                        commentItem.appendChild(commentAuthor);
+                        commentItem.appendChild(commentText);
+                        commentsList.appendChild(commentItem);
+                    });
+                });
+        }
+
+        // Charger les commentaires au démarrage
+        loadComments();
+    </script>
+</body>
+</html>
