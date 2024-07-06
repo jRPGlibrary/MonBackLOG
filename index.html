@@ -40,7 +40,6 @@
         .comments {
             list-style: none;
             padding: 0;
-            color: white;
         }
         .comment {
             padding: 10px;
@@ -70,7 +69,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
 
     <script>
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // Configuration Firebase (inchangée)
         const firebaseConfig = {
             apiKey: "AIzaSyAFsnabnd0A0LeEwO3w9gK-6fhc_rWSnNU",
             authDomain: "jrpglibrary-38e6c.firebaseapp.com",
@@ -91,13 +90,21 @@
             console.error("Erreur d'authentification anonyme:", error);
         });
 
+        // Fonction pour obtenir l'identifiant de la page
+        function getPageId() {
+            // Vous devrez implémenter cette fonction pour récupérer l'identifiant unique de la page
+            // Par exemple, vous pourriez utiliser un attribut data sur le corps de la page
+            return document.body.getAttribute('data-page-id') || 'default';
+        }
+
         // Fonction pour poster un commentaire
         function postComment() {
             const author = document.getElementById('comment-author').value;
             const text = document.getElementById('comment-text').value;
+            const pageId = getPageId();
 
             if (author && text) {
-                db.collection("comments").add({
+                db.collection("pages").doc(pageId).collection("comments").add({
                     author: author,
                     text: text,
                     timestamp: firebase.firestore.FieldValue.serverTimestamp()
@@ -116,7 +123,8 @@
 
         // Fonction pour afficher les commentaires
         function loadComments() {
-            db.collection("comments").orderBy("timestamp", "desc")
+            const pageId = getPageId();
+            db.collection("pages").doc(pageId).collection("comments").orderBy("timestamp", "desc")
                 .onSnapshot(snapshot => {
                     const commentsList = document.getElementById('comments');
                     commentsList.innerHTML = '';
