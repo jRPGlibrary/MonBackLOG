@@ -3,35 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citation Embed Rouge</title>
+    <title>Compteur de visiteurs uniques jRPGlibrary</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <style>
-        .citation-embed {
-            border-left: 4px solid #f44336;
-            padding: 15px;
-            margin: 15px 0;
+        body {
             font-family: Arial, sans-serif;
-        }
-        .citation-texte {
-            display:flex;
-            align-items: center;
+            display: flex;
             justify-content: center;
-            font-style: italic;
-            color: white;
-            font-size: 18px;
-            margin-bottom: 10px;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
-        .citation-auteur {
-            text-align: right;
-            color: white;
+        #visitor-counter {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        #count {
+            font-size: 2em;
             font-weight: bold;
+            color: #4a4a4a;
+        }
+        .label {
+            color: #888;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="citation-embed">
-        <p class="citation-texte">"Chaque aventure RPG est une invitation à un voyage extraordinaire, 
-            où chaque quête, combat et découverte nous rapproche un peu plus de l'émerveillement”."</p>
-        <p class="citation-auteur">- jRPGlibrary</p>
+    <div id="visitor-counter">
+        <div id="count">Chargement...</div>
+        <div class="label">Visiteurs uniques</div>
     </div>
+
+    <script>
+        // Configuration Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyAFsnabnd0A0LeEwO3w9gK-6fhc_rWSnNU",
+            authDomain: "jrpglibrary-38e6c.firebaseapp.com",
+            projectId: "jrpglibrary-38e6c",
+            storageBucket: "jrpglibrary-38e6c.appspot.com",
+            messagingSenderId: "82820484706",
+            appId: "1:82820484706:web:892360db0538f0e7198b3b",
+            measurementId: "G-T0GE4WYT52"
+        };
+
+        // Initialiser Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        const notionPageId = "556029ef66cb4a38a91d7b741627e3ce"; // ID de votre page Notion
+
+        function generateUniqueId() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        function getOrSetVisitorId() {
+            let visitorId = localStorage.getItem('visitorId');
+            if (!visitorId) {
+                visitorId = generateUniqueId();
+                localStorage.setItem('visitorId', visitorId);
+            }
+            return visitorId;
+        }
+
+        async function incrementUniqueVisitor() {
+            const visitorId = getOrSetVisitorId();
+            const visitorRef = db.ref(`pageVisitors/${notionPageId}/${visitorId}`);
+            const countRef = db.ref(`uniqueVisitorCount/${notionPageId}`);
+
+            try {
+                const snapshot = await visitorRef.once('value');
+                if (!snapshot.exists()) {
+                    await visitorRef.set(true);
+                    await countRef.transaction((currentCount) => {
+                        return (currentCount || 0) + 1;
+                    });
+                }
+            } catch (error) {
+                console.error("Erreur lors de l'incrémentation du compteur:", error);
+            }
+        }
+
+        function updateCountDisplay(count) {
+            document.getElementById('count').textContent = count.toLocaleString();
+        }
+
+        // Incrémenter le compteur et commencer à écouter les mises à jour
+        incrementUniqueVisitor();
+        db.ref(`uniqueVisitorCount/${notionPageId}`).on('value', (snapshot) => {
+            const count = snapshot.val() || 0;
+            updateCountDisplay(count);
+        });
+    </script>
 </body>
 </html>
