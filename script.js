@@ -4,6 +4,19 @@ const gamesData = [
     description: "Plus de jeux seront ajoutés prochainement."
   },
   {
+    title: "Afterimage",
+    description:
+      "Un jeu de plateforme et d'action en 2D avec des graphismes peints à la main.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLegx_C13jM0adc054oeGYEufNkmgrEjHXuw&s"
+  },
+  {
+    title: "Anthem",
+    description:
+      "Un RPG d'action en ligne où vous incarnez un Freelancer équipé d'une exo-armure.",
+    image: "https://i.ytimg.com/vi/ZFwylDNpgFc/maxresdefault.jpg"
+  },
+  {
     title: "Astria Ascending",
     description: "Un JRPG avec des graphismes dessinés à la main.",
     image:
@@ -20,6 +33,59 @@ const gamesData = [
     description: "La suite du populaire Atelier Ryza.",
     image:
       "https://imgs.search.brave.com/1LiOTrfO5hWTBfGMC_6Zu5s9l2-bG3auuRQ9bFtRZiU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bmludGVuZG8uY29t/L2V1L21lZGlhL2lt/YWdlcy8xMF9zaGFy/ZV9pbWFnZXMvZ2Ft/ZXNfMTUvbmludGVu/ZG9fc3dpdGNoXzQv/SDJ4MV9OU3dpdGNo/X0F0ZWxpZXJSeXoy/TG9zdExlZ2VuZHNB/bmRUaGVTZWNyZXRG/YWlyeV9GUl9pbWFn/ZTE2MDB3LmpwZw"
+  },
+  {
+    title: "Atlas Fallen",
+    description:
+      "Un jeu d'action-aventure où les joueurs luttent contre des créatures mythiques dans un monde désertique.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBAphHIWFkPTttkYY92bRcGUcGOHV_ES4uFQ&s"
+  },
+  {
+    title: "Banishers",
+    description:
+      "Un jeu d'action RPG où vous incarnez des chasseurs de fantômes dans un monde surnaturel.",
+    image:
+      "https://cdn1.epicgames.com/spt-assets/62b3525c0dae4deebb9b66f0d17bfd3f/banishers--ghosts-of-new-eden-urj7a.jpg"
+  },
+  {
+    title: "Biomutant",
+    description: "Un RPG d'action en monde ouvert avec un protagoniste mutant.",
+    image:
+      "https://cdn2.unrealengine.com/egs-biomutant-experiment101-g1a-00-1920x1080-7283d571f350.jpg"
+  },
+  {
+    title: "Call of Duty Black Ops 3",
+    description:
+      "Un jeu de tir à la première personne avec une campagne et des modes multijoueurs.",
+    image:
+      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/header.jpg?t=1646763462"
+  },
+  {
+    title: "Captain Tsubasa Rise of New Champions",
+    description:
+      "Un jeu de football basé sur le célèbre manga Captain Tsubasa.",
+    image:
+      "https://image.jeuxvideo.com/medias-crop-1200-675/159957/1599567951-1501-card.jpg"
+  },
+  {
+    title: "Cyberpunk 2077 ",
+    description:
+      "Un RPG en monde ouvert se déroulant dans un futur dystopique.",
+    image:
+      "https://image.api.playstation.com/vulcan/ap/rnd/202111/3013/bxSj4jO0KBqUgAbH3zuNjCje.jpg"
+  },
+  {
+    title: "Dark Alliance",
+    description: "Un jeu d'action RPG basé sur l'univers de Donjons & Dragons.",
+    image:
+      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/623280/capsule_616x353.jpg?t=1693497645"
+  },
+  {
+    title: "Devil May Cry 5 Special Edition",
+    description:
+      "Une version améliorée du jeu d'action stylisé avec de nouveaux personnages jouables.",
+    image: "https://www.devilmaycry.com/5se/assets/images/share.png"
   },
   {
     title: "Dragon Quest Builder 1",
@@ -52,6 +118,20 @@ const gamesData = [
     description: "Un JRPG classique avec des graphismes modernes.",
     image:
       "https://gaming-cdn.com/images/products/7643/orig/dragon-quest-xi-s-les-combattants-de-la-destinee-edition-ultime-definitive-edition-pc-jeu-steam-europe-cover.jpg?v=1684473422"
+  },
+  {
+    title: "Dungeon Munchies",
+    description:
+      "Un jeu de plateforme et de cuisine où vous chassez et cuisinez des monstres.",
+    image:
+      "https://image.api.playstation.com/vulcan/ap/rnd/202208/2506/c4Boa163pL4hYwlhmoqhwoWS.jpg"
+  },
+  {
+    title: "Elden Ring",
+    description:
+      "Un RPG d'action en monde ouvert par les créateurs de Dark Souls.",
+    image:
+      "https://image.api.playstation.com/vulcan/ap/rnd/202107/1612/Y5RHNmzAtc6sRYwZlYiKHAxN.png"
   },
   {
     title: "Final Fantasy Type-0 HD",
@@ -102,10 +182,43 @@ const gamesData = [
       "https://fyre.cdn.sewest.net/ff-xvi/63613f54b609f28540733c42/social_share-GK0OFw6bj.jpg"
   },
   {
+    title: "Godfall",
+    description:
+      "Un RPG d'action où vous affrontez des ennemis dans un monde de haute fantaisie.",
+    image:
+      "https://cdn.gamekult.com/images/gallery/34/348571/godfall-pc-ps5-1e367c7b.jpg"
+  },
+  {
+    title: "Hogwarts Legacy",
+    description:
+      "Un RPG d'action en monde ouvert se déroulant dans l'univers de Harry Potter.",
+    image:
+      "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2"
+  },
+  {
     title: "Like A Dragon Ishin",
     description: "Un jeu d'action-aventure se déroulant dans le Japon féodal.",
     image:
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1805480/capsule_616x353.jpg?t=1717079037"
+  },
+  {
+    title: "One Piece Odyssey",
+    description: "Un RPG basé sur le célèbre manga One Piece.",
+    image:
+      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814000/capsule_616x353.jpg?t=1703657096"
+  },
+  {
+    title: "Scarlet Nexus",
+    description:
+      "Un RPG d'action dans un futur dystopique avec des pouvoirs psychiques.",
+    image:
+      "https://gaming-cdn.com/images/products/6906/orig/scarlet-nexus-pc-spiel-steam-cover.jpg?v=1651581759"
+  },
+  {
+    title: "Star Ocean Divine Force",
+    description: "Un RPG de science-fiction avec des combats en temps réel.",
+    image:
+      "https://fyre.cdn.sewest.net/star-ocean-tdf/6278f2af7867700012c8e9b2/sharing_compact-Gdv8nMCD2.jpg"
   },
   {
     title: "Sword And Fairy VII",
@@ -208,3 +321,4 @@ alphabet.split("").forEach((letter) => {
     rowsContainer.appendChild(row);
   }
 });
+
