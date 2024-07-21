@@ -425,18 +425,23 @@ const gamesData = [
   }
 ];
 
-// Trier les jeux par ordre alphabétique
+// Partie 1 : Tri des jeux par ordre alphabétique
 gamesData.sort((a, b) => a.title.localeCompare(b.title));
 
+// Partie 2 : Initialisation des éléments principaux
 const rowsContainer = document.getElementById("rows-container");
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+// Partie 3 : Boucle principale pour chaque lettre de l'alphabet
 alphabet.split("").forEach((letter) => {
+  // Filtrer les jeux commençant par la lettre actuelle
   const gamesForLetter = gamesData.filter((game) =>
     game.title.toUpperCase().startsWith(letter)
   );
 
+  // Vérifier s'il y a des jeux pour cette lettre
   if (gamesForLetter.length > 0) {
+    // Partie 4 : Création de la structure de base pour chaque lettre
     const row = document.createElement("div");
     row.classList.add("row");
 
@@ -451,57 +456,62 @@ alphabet.split("").forEach((letter) => {
       `Jeux vidéo commençant par la lettre ${letter}`
     );
 
+    // Partie 5 : Création des cartes pour chaque jeu
     gamesForLetter.forEach((game) => {
       const card = document.createElement("div");
       card.classList.add("card");
 
+      // Gestion de l'image (utilisation d'un placeholder si pas d'image)
       const cardImage = game.image
         ? game.image
         : `https://via.placeholder.com/250x140.png?text=${encodeURIComponent(
             game.title
           )}`;
 
+      // Partie 6 : Construction du contenu HTML de la carte
       card.innerHTML = `
-                <div class="card-image" style="background-image: url('${cardImage}');" loading="lazy"></div>
-                <div class="card-content">
-                    <h3 class="card-title">${game.title}</h3>
-                    <p class="card-description">${game.description}</p>
-                    <div class="share-icons">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                          window.location.href
-                        )}" target="_blank" aria-label="Partager sur Facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(
-                          game.title +
-                            " - " +
-                            game.description +
-                            " " +
-                            window.location.href
-                        )}" target="_blank" aria-label="Partager sur WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://reddit.com/submit?url=${encodeURIComponent(
-                          window.location.href
-                        )}&title=${encodeURIComponent(
+        <div class="card-image" style="background-image: url('${cardImage}');" loading="lazy"></div>
+        <div class="card-content">
+            <h3 class="card-title">${game.title}</h3>
+            <p class="card-description">${game.description}</p>
+            <div class="share-icons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                  window.location.href
+                )}" target="_blank" aria-label="Partager sur Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(
+                  game.title +
+                    " - " +
+                    game.description +
+                    " " +
+                    window.location.href
+                )}" target="_blank" aria-label="Partager sur WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://reddit.com/submit?url=${encodeURIComponent(
+                  window.location.href
+                )}&title=${encodeURIComponent(
         game.title
       )}" target="_blank" aria-label="Partager sur Reddit">
-                            <i class="fab fa-reddit"></i>
-                        </a>
-                        <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                          window.location.href
-                        )}&text=${encodeURIComponent(
+                    <i class="fab fa-reddit"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                  window.location.href
+                )}&text=${encodeURIComponent(
         game.title + " - " + game.description
       )}" target="_blank" aria-label="Partager sur X (Twitter)">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-            `;
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+      `;
 
+      // Ajout de la carte au conteneur de slider
       sliderContainer.appendChild(card);
     });
 
+    // Partie 7 : Ajout des éléments créés à la structure DOM
     row.appendChild(sliderContainer);
     rowsContainer.appendChild(row);
   }
