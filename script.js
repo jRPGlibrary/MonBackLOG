@@ -1,7 +1,8 @@
 const gamesData = [
   {
     title: "(d'autres titres à venir)",
-    description: "Plus de jeux seront ajoutés prochainement."
+    description: "Plus de jeux seront ajoutés prochainement.",
+    image: "#"
   },
   {
     title: "Afterimage",
@@ -158,123 +159,226 @@ const gamesData = [
   },
   {
     title: "Dark Alliance",
-    description: "Un jeu d'action RPG basé sur l'univers de Donjons & Dragons.",
+    description:
+      "Un jeu d'action RPG basé sur l'univers de Donjons & Dragons. Combattez aux côtés de vos amis dans ce jeu coopératif, explorez des donjons dangereux et affrontez des créatures mythiques.",
     image:
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/623280/capsule_616x353.jpg?t=1693497645"
   },
   {
+    title: "Destiny Connect",
+    description:
+      "Un RPG où vous voyagez dans le temps pour sauver la ville de Clocknee d'une catastrophe imminente. Résolvez des énigmes et combattez des ennemis mécaniques avec l'aide de vos compagnons.",
+    image:
+      "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/fr_CA/games/switch/d/destiny-connect-tick-tock-travelers-switch/hero"
+  },
+  {
     title: "Devil May Cry 5 Special Edition",
     description:
-      "Une version améliorée du jeu d'action stylisé avec de nouveaux personnages jouables.",
+      "Une version améliorée du jeu d'action stylisé avec de nouveaux personnages jouables, des graphismes améliorés et des modes de jeu supplémentaires. Incarnez Dante, Nero et Vergil dans des combats intenses contre des démons.",
     image: "https://www.devilmaycry.com/5se/assets/images/share.png"
   },
   {
-    title: "Dragon Quest Builder 1",
+    title: "DioField Chronicle",
     description:
-      "Un jeu de construction et d'aventure dans l'univers de Dragon Quest.",
+      "Un RPG stratégique qui combine des éléments de fantasy et de guerre. Dirigez vos troupes sur le champ de bataille et prenez des décisions tactiques pour vaincre vos ennemis.",
+    image:
+      "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000045379/89b77052967271f0fc10309eeee8cd930eb3b46cefe3743b15cf3eb186436672"
+  },
+  {
+    title: "Dragon's Dogma II",
+    description:
+      "La suite très attendue du RPG d'action Dragon's Dogma. Explorez un monde ouvert rempli de créatures fantastiques et engagez-vous dans des combats dynamiques avec des compagnons IA.",
+    image:
+      "https://blog.fr.playstation.com/tachyon/sites/10/2023/11/2a8448dcd6f6cc96d5882a58a09c3dd1710fc334.jpeg"
+  },
+  {
+    title: "Dragon Quest Builder",
+    description:
+      "Un jeu de construction et d'aventure dans l'univers de Dragon Quest. Utilisez vos compétences en construction pour reconstruire des villes et combattre des monstres.",
     image:
       "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_DragonQuestBuilders_image1600w.jpg"
   },
   {
     title: "Dragon Quest Builder 2",
-    description: "La suite améliorée de Dragon Quest Builders.",
+    description:
+      "La suite améliorée de Dragon Quest Builders. Construisez des structures encore plus grandes et explorez de nouvelles îles tout en combattant des ennemis et en accomplissant des quêtes.",
     image:
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1072420/capsule_616x353.jpg?t=1712127433"
   },
   {
-    title: "Dragon Quest Heroes 1",
+    title: "Dragon Quest Heroes : Le Crépuscule de l'Arbre du Monde",
     description:
-      "Un jeu d'action hack-and-slash dans l'univers de Dragon Quest.",
+      "La suite du spin-off d'action de Dragon Quest. Incarnez des héros emblématiques de la série et combattez des hordes de monstres dans des batailles épiques.",
     image:
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/410850/capsule_616x353_french.jpg?t=1596103807"
   },
   {
-    title: "Dragon Quest Heroes 2",
-    description: "La suite du spin-off d'action de Dragon Quest.",
-    image:
-      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/574050/capsule_616x353.jpg?t=1579778123"
-  },
-  {
     title: "Dragon Quest XI Definitive Edition",
-    description: "Un JRPG classique avec des graphismes modernes.",
+    description:
+      "Un JRPG classique avec des graphismes modernes et du contenu supplémentaire. Suivez l'épopée du Luminaire dans sa quête pour sauver le monde d'Erdrea.",
     image:
       "https://gaming-cdn.com/images/products/7643/orig/dragon-quest-xi-s-les-combattants-de-la-destinee-edition-ultime-definitive-edition-pc-jeu-steam-europe-cover.jpg?v=1684473422"
   },
   {
     title: "Dungeon Munchies",
     description:
-      "Un jeu de plateforme et de cuisine où vous chassez et cuisinez des monstres.",
+      "Un jeu de plateforme et de cuisine où vous chassez et cuisinez des monstres pour gagner des pouvoirs. Explorez des donjons, préparez des plats et découvrez des recettes uniques.",
     image:
       "https://image.api.playstation.com/vulcan/ap/rnd/202208/2506/c4Boa163pL4hYwlhmoqhwoWS.jpg"
   },
   {
+    title: "Edge Of Eternity",
+    description:
+      "Un RPG au tour par tour se déroulant dans un monde de fantasy en proie à une guerre et à une mystérieuse corruption. Suivez Daryon et Selene dans leur quête pour sauver leur monde.",
+    image:
+      "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_EdgeOfEternity_MidgarStudio_S3_2560x1440-81a646b96c49e82f758a2dc625fe5802"
+  },
+  {
+    title: "Eiyuden Chronicle: Hundred Heroes",
+    description:
+      "Un RPG tactique qui rend hommage aux classiques du genre. Recrutez plus de 100 personnages uniques et engagez-vous dans des batailles stratégiques pour sauver votre royaume.",
+    image:
+      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1658280/capsule_616x353.jpg?t=1720811443"
+  },
+  {
+    title: "Eiyuden Chronicle: Rising",
+    description:
+      "Un action-RPG qui sert de préquelle à Eiyuden Chronicle: Hundred Heroes. Explorez des ruines anciennes, combattez des monstres et découvrez les histoires des personnages principaux.",
+    image:
+      "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000044258/a35a23f6576a9ddec3ecab8d604cb3e336ae6c093da3744c83bc2147fbf3091e"
+  },
+  {
     title: "Elden Ring",
     description:
-      "Un RPG d'action en monde ouvert par les créateurs de Dark Souls.",
+      "Un RPG d'action en monde ouvert par les créateurs de Dark Souls. Explorez un vaste monde interconnecté, combattez des ennemis redoutables et découvrez les secrets de l'Elden Ring.",
     image:
       "https://image.api.playstation.com/vulcan/ap/rnd/202107/1612/Y5RHNmzAtc6sRYwZlYiKHAxN.png"
   },
   {
+    title: "Exist Archive",
+    description:
+      "Un RPG au tour par tour où vous explorez des donjons et combattez des ennemis dans un monde parallèle. Découvrez les mystères de ce monde et les secrets de votre propre existence.",
+    image:
+      "https://cdn.wccftech.com/wp-content/uploads/2016/10/Exist-Archive-Logo.jpg"
+  },
+  {
+    title: "FairyTale",
+    description:
+      "Un RPG d'action enchanteur où vous incarnez une jeune fée dans un monde magique. Explorez des royaumes féeriques, résolvez des énigmes et affrontez des créatures mythiques pour sauver votre royaume.",
+    image:
+      "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70070000010761/f24813812527737efecdeba972400f74486be544314852c93eaa2e80d893ea4a"
+  },
+  {
     title: "Final Fantasy Type-0 HD",
-    description: "Un spin-off de Final Fantasy avec un gameplay d'action.",
+    description:
+      "Un spin-off de Final Fantasy avec un gameplay d'action. Dirigez une équipe de 14 cadets magiques dans des missions de combat intenses pour libérer leur nation de l'oppression impériale.",
     image:
       "https://gaming-cdn.com/images/products/855/orig/final-fantasy-type-0-hd-pc-jeu-steam-cover.jpg?v=1705402458"
   },
   {
     title: "Final Fantasy VII: Remake",
-    description: "Le classique RPG de Square Enix, remasterisé.",
+    description:
+      "Une réinvention moderne du classique RPG de Square Enix. Revivez l'histoire de Cloud et ses amis à Midgar avec des graphismes époustouflants et un système de combat repensé mêlant action et stratégie.",
     image:
       "https://www.journaldujapon.com/wp-content/uploads/2020/05/SEA_END_fb_share_img_1200x630.jpg"
   },
   {
     title: "Final Fantasy VII: Rebirth",
-    description: "Le classique RPG de Square Enix, remasterisé.",
+    description:
+      "La suite très attendue de Final Fantasy VII Remake. Continuez l'aventure de Cloud et ses compagnons au-delà de Midgar, explorant un vaste monde ouvert rempli de nouveaux défis et de révélations.",
     image:
       "https://image.api.playstation.com/vulcan/ap/rnd/202308/3005/537b5208a8ee42935286a44b3b981da86d976bf54899bf98.jpg"
   },
   {
-    title: "Final Fantasy VIII",
-    description: "Un RPG épique avec un système de junction unique.",
+    title: "Final Fantasy VIII Remastered",
+    description:
+      "Un RPG épique avec un système de junction unique, maintenant en HD. Suivez Squall et les SeeDs dans leur lutte contre une sorcière menaçant de comprimer le temps.",
     image:
       "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000019037/1f609577d7c4f00a85b762bb56fcec55f3ebba9b0ca77292ec11626f3d804dc2"
   },
   {
     title: "Final Fantasy X/X2 HD",
-    description: "Deux jeux Final Fantasy emblématiques remasterisés en HD.",
+    description:
+      "Deux jeux Final Fantasy emblématiques remasterisés en HD. Vivez l'histoire émouvante de Tidus et Yuna dans FFX, puis poursuivez l'aventure dans le monde coloré de FFX-2.",
     image:
       "https://gaming-cdn.com/images/products/1440/orig/final-fantasy-x-x-2-hd-remaster-hd-remaster-pc-jeu-steam-cover.jpg?v=1704208232"
   },
   {
-    title: "Final Fantasy XII Zodiac Âges",
-    description: "Version améliorée du douzième opus de la série.",
+    title: "Final Fantasy XII Zodiac Age",
+    description:
+      "Version améliorée du douzième opus de la série. Explorez le monde d'Ivalice dans cette aventure politique et fantastique, avec un système de combat innovant et des graphismes remasterisés.",
     image:
       "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000009746/5bcb8b7802294acb31bc57de2d50a34c1e7a3bd10d8d00f931aa297e20948196"
   },
   {
     title: "Final Fantasy XV",
-    description: "Un RPG d'action dans un monde ouvert moderne.",
+    description:
+      "Un RPG d'action dans un monde ouvert moderne. Accompagnez le prince Noctis et ses amis dans un road trip épique mêlant technologie avancée et magie ancestrale.",
     image:
       "https://gaming-cdn.com/images/products/11258/orig/final-fantasy-xv-royal-edition-xbox-one-xbox-series-x-s-royal-edition-xbox-one-xbox-series-x-s-jeu-microsoft-store-etats-unis-cover.jpg?v=1705325920"
   },
   {
     title: "Final Fantasy XVI",
-    description: "Le dernier opus de la célèbre série de RPG.",
+    description:
+      "Le dernier opus de la célèbre série de RPG. Plongez dans un monde médiéval-fantastique où la politique et les invocations s'entrechoquent dans une histoire mature et épique.",
     image:
       "https://fyre.cdn.sewest.net/ff-xvi/63613f54b609f28540733c42/social_share-GK0OFw6bj.jpg"
   },
   {
+    title: "Forspoken",
+    description:
+      "Un RPG d'action-aventure où vous incarnez Frey, une New-Yorkaise transportée dans un monde fantastique. Maîtrisez la magie et le parkour pour explorer un vaste monde ouvert et affronter des créatures corrompues.",
+    image:
+      "https://cdn1.epicgames.com/offer/a472b0f2f2a5493d960a941f01cf3393/EGS_Forspoken_LuminousProductions_S1_2560x1440-f2f99882e9d396b21fb65735d266385a_2560x1440-f2f99882e9d396b21fb65735d266385a"
+  },
+  {
     title: "Godfall",
     description:
-      "Un RPG d'action où vous affrontez des ennemis dans un monde de haute fantaisie.",
+      "Un RPG d'action où vous affrontez des ennemis dans un monde de haute fantaisie. Utilisez des armures légendaires appelées Valorplates pour vaincre des hordes d'ennemis et des boss puissants.",
     image:
       "https://cdn.gamekult.com/images/gallery/34/348571/godfall-pc-ps5-1e367c7b.jpg"
   },
   {
+    title: "Grandblue Fantasy: ReLink",
+    description:
+      "Un action-RPG basé sur le populaire jeu mobile Granblue Fantasy. Explorez un monde vaste et magnifique, engagez-vous dans des combats dynamiques et découvrez une histoire épique avec des personnages mémorables.",
+    image:
+      "https://cdn.wccftech.com/wp-content/uploads/2023/01/Granblue-Fantasy-Relink-HD-scaled.jpg"
+  },
+  {
+    title: "Hack//G.U. Last Recode",
+    description:
+      "Une collection remasterisée de la trilogie .hack//G.U. avec un nouvel épisode. Plongez dans un MMORPG simulé, incarnez Haseo dans sa quête pour sauver son ami et découvrez les mystères derrière le jeu 'The World'.",
+    image:
+      "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000039876/98e4d1676ceb6fd61a210429a26c7a6ae3627c765e2875adbcc270965b940432"
+  },
+  {
     title: "Hogwarts Legacy",
     description:
-      "Un RPG d'action en monde ouvert se déroulant dans l'univers de Harry Potter.",
+      "Un RPG d'action en monde ouvert dans l'univers de Harry Potter. Explorez Poudlard, apprenez des sorts, préparez des potions, et découvrez des secrets tout en façonnant votre propre héritage magique.",
     image:
       "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000014724/72ce0a17215521a167c3da579db4cc48a2f7a52eacc81ad985ba20fd6817fdc2"
+  },
+  {
+    title: "Kingdom Hearts The Story So Far",
+    description:
+      "Une collection regroupant les jeux principaux de la série Kingdom Hearts. Revivez l'aventure de Sora, Donald et Dingo à travers différents mondes Disney et Square Enix.",
+    image:
+      "https://www.animenewsnetwork.com/thumbnails/crop600x315gPP/cms/news.2/137799/kh-story-so-far.jpg"
+  },
+  {
+    title: "Kingdom Hearts HD 2.8",
+    description:
+      "Une compilation incluant Kingdom Hearts Dream Drop Distance HD, Kingdom Hearts 0.2 Birth by Sleep, et le film Kingdom Hearts χ Back Cover. Préparez-vous pour Kingdom Hearts III.",
+    image:
+      "https://cdn1.epicgames.com/c8ff067c1c984cd7ab1998e8a9afc8b6/offer/EGS_KINGDOMHEARTSHD28FinalChapterPrologue_SquareEnix_S5-1920x1080-bdc8f514d3488ea8484639733b01b09e.jpg"
+  },
+  {
+    title: "Kingdom Hearts III",
+    description:
+      "Le troisième opus principal de la série. Sora et ses amis affrontent l'Organisation XIII dans une aventure épique à travers de nouveaux mondes Disney et Pixar.",
+    image:
+      "https://cdn1.epicgames.com/0712176b5e3e49bfa8866c0ee1359f2d/offer/EGS_KINGDOMHEARTSIIIReMindDLC_SquareEnix_S1-2560x1440-5044e506e523e5ff52628d1060699062.jpg"
   },
   {
     title: "Like A Dragon Ishin",
