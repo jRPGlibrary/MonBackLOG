@@ -582,7 +582,30 @@ const gamesData = [
     ]
   },
   {
-    title: "Like A Dragon Ishin",
+    title: "Like A Dragon",
+    description:
+      "Un RPG au tour par tour dans l'univers de Yakuza. Incarnez Ichiban Kasuga dans une aventure pleine d'humour et d'action dans les rues de Yokohama.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1235140/header.jpg",
+    positives: ["Histoire captivante", "Mélange réussi de sérieux et d'humour"],
+    negatives: [
+      "Changement de gameplay par rapport aux précédents Yakuza",
+      "Certaines quêtes secondaires répétitives"
+    ]
+  },
+  {
+    title: "Like A Dragon: Infinite Wealth",
+    description:
+      "La suite de Yakuza: Like a Dragon, continuant l'histoire d'Ichiban Kasuga. Cette fois-ci, l'aventure se déroule à Hawaii, mêlant l'action des yakuzas à l'ambiance tropicale.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/like-a-dragon-infinite-wealth-file-123384a0fe.jpg.webp",
+    positives: ["Nouveau cadre exotique", "Amélioration du système de combat"],
+    negatives: [
+      "Peut être déroutant pour les nouveaux venus",
+      "Certains éléments de gameplay répétitifs"
+    ]
+  },
+  {
+    title: "Like A Dragon: Ishin",
     description:
       "Un jeu d'action-aventure se déroulant dans le Japon féodal. Incarnez un samouraï cherchant à venger la mort de son mentor tout en naviguant dans les intrigues politiques de l'époque.",
     image:
@@ -594,20 +617,140 @@ const gamesData = [
     negatives: ["Peut être répétitif", "Histoire parfois prévisible"]
   },
   {
+    title: "Mato Anomalies",
+    description:
+      "Un RPG d'enquête cyberpunk se déroulant dans une version futuriste de Shanghai. Incarnez le détective Doe et le combattant d'exorcisme Gram pour résoudre des mystères et combattre des démons.",
+    image:
+      "https://imgs.search.brave.com/l5fZ4GzUO-S_3NSFpqxg_d881tEzUijGCA60UDLdLcU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZGxjb21wYXJlLmNv/bS9nYW1lX3RldGll/cmUvdXBsb2FkL2dh/bWVpbWFnZS9maWxl/L21hdG8tYW5vbWFs/aWVzLXRldGllcmUt/ZmlsZS0yOTM0NGEz/OS5qcGc",
+    positives: [
+      "Ambiance cyberpunk unique",
+      "Mélange intéressant d'enquête et de combat"
+    ],
+    negatives: ["Histoire parfois confuse", "Combats répétitifs"]
+  },
+  {
+    title: "Monochrome Mobius",
+    description:
+      "Un RPG tactique se déroulant dans l'univers d'Utawarerumono. Suivez l'histoire d'Oshtor dans un monde fantastique mêlant mythologie et politique.",
+    image:
+      "https://imgs.search.brave.com/PoVn0YKhFczxCvhDh-mS4iMSjOoTJv_8x1_jwbYpGA8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sYWdl/ZWtyb29tLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMy8w/OC9tb25vY2hyb21l/LTgwMHg0NDUuanBn",
+    positives: [
+      "Riche univers fantastique",
+      "Système de combat tactique profond"
+    ],
+    negatives: [
+      "Peut être déroutant pour les nouveaux venus",
+      "Rythme parfois lent"
+    ]
+  },
+  {
+    title: "Neo: The World Ends With You",
+    description:
+      "Suite du jeu culte The World Ends With You. Participez au Jeu des Reapers dans les rues de Shibuya, Tokyo, avec un nouveau casting de personnages.",
+    image:
+      "https://imgs.search.brave.com/YvaawyNoRV39HNmSpX_OxSV4tpIsgHCOUKcZxiXl8C8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bmludGVuZG8tdG93/bi5mci93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMS8wNy9OZW9U/aGVXb3JsZEVuZHNX/aXRoWW91LmpwZw",
+    positives: ["Style visuel unique", "Système de combat dynamique"],
+    negatives: ["Histoire parfois complexe", "Peut sembler répétitif"]
+  },
+  {
+    title: "Nexomon Extinction",
+    description:
+      "Un jeu de capture de monstres inspiré des classiques du genre. Explorez un monde coloré, capturez et entraînez des Nexomon pour sauver le monde.",
+    image:
+      "https://imgs.search.brave.com/pnOS_jwHPyvYm8T7Ji34yBRg5Y5HEwM4u_0eySc9gYw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5qZXV4dmlkZW8u/Y29tL21lZGlhcy1t/ZC8xNjAwODUvMTYw/MDg0OTU2MC02MjA1/LWNhcmQuanBn",
+    positives: ["Grande variété de créatures", "Histoire engageante"],
+    negatives: ["Formule très familière", "Peut manquer d'innovation"]
+  },
+  {
+    title: "Nier Automata",
+    description:
+      "Un RPG d'action post-apocalyptique où vous incarnez des androïdes combattant pour le compte de l'humanité. Découvrez une histoire profonde à travers de multiples fins.",
+    image:
+      "https://cdn.akamai.steamstatic.com/steam/apps/524220/capsule_616x353.jpg?t=1696405478",
+    positives: ["Narration complexe et captivante", "Gameplay fluide et varié"],
+    negatives: [
+      "Quêtes secondaires répétitives",
+      "Peut nécessiter plusieurs parties pour tout comprendre"
+    ]
+  },
+  {
+    title: "Ni No Kuni Remastered",
+    description:
+      "Version remastérisée du RPG enchanteur de Level-5 et Studio Ghibli. Suivez Oliver dans sa quête pour sauver sa mère à travers un monde magique.",
+    image:
+      "https://cdn.akamai.steamstatic.com/steam/apps/798460/capsule_616x353.jpg?t=1693523220",
+    positives: ["Direction artistique magnifique", "Histoire touchante"],
+    negatives: ["Combats parfois frustrants", "Rythme inégal"]
+  },
+  {
+    title: "Octopath Traveler II",
+    description:
+      "Un RPG au tour par tour avec un style graphique HD-2D unique. Suivez les histoires entrelacées de huit voyageurs différents dans le monde de Solistia.",
+    image:
+      "https://imgs.search.brave.com/dMKS0U4dkGDRPfJ6sUzlxwp2sGAnvSKNR87KmQu38SQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nYW1p/bmctY2RuLmNvbS9p/bWFnZXMvbmV3cy9h/cnRpY2xlcy82NzI2/L2NvdmVyLzEwMDB4/NTYzL29jdG9wYXRo/LXRyYXZlbGVyLTIt/cG91cnJhaXQtYXJy/aXZlci1zdXItbGEt/eGJveC1ldC1sZS1n/YW1lLXBhc3MtY2Ut/bW9pcy1jaS1zZWxv/bi1kZXMtcnVtZXVy/cy1jb3ZlcjY2NWYz/NTdkMDIyNzYuanBn",
+    positives: [
+      "Graphismes HD-2D magnifiques",
+      "Histoires multiples et entrelacées"
+    ],
+    negatives: [
+      "Peut sembler répétitif",
+      "Certaines histoires plus faibles que d'autres"
+    ]
+  },
+  {
     title: "One Piece Odyssey",
     description:
       "Un RPG basé sur le célèbre manga One Piece. Rejoignez Luffy et son équipage dans une nouvelle aventure, explorez des îles mystérieuses et combattez des ennemis redoutables.",
     image:
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814000/capsule_616x353.jpg?t=1703657096",
-    positives: ["Fidèle à l'univers du manga", "Personnages attachants"],
-    negatives: ["Peut être répétitif", "Certaines mécaniques de jeu datées"]
+    positives: ["Fidèle à l'univers du manga", "Système de combat stratégique"],
+    negatives: ["Peut être répétitif", "Rythme parfois lent"]
+  },
+  {
+    title: "Persona 5 Royal",
+    description:
+      "L'édition définitive du JRPG acclamé Persona 5. Incarnez le leader des Voleurs Fantômes et changez les cœurs corrompus de la société tout en menant une double vie d'étudiant.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/945f-persona_5_royal.jpeg.webp",
+    positives: [
+      "Histoire captivante",
+      "Système de combat au tour par tour raffiné"
+    ],
+    negatives: ["Très long", "Peut être écrasant pour les nouveaux venus"]
+  },
+  {
+    title: "Persona 5 Strikers",
+    description:
+      "Un spin-off action-RPG de Persona 5. Rejoignez les Voleurs Fantômes pour une aventure à travers le Japon, combinant l'action frénétique des musou avec les éléments RPG de la série Persona.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/75239.jpg.webp",
+    positives: [
+      "Mélange réussi d'action et de RPG",
+      "Retrouvailles avec les personnages appréciés"
+    ],
+    negatives: [
+      "Histoire moins développée que Persona 5",
+      "Peut devenir répétitif"
+    ]
+  },
+  {
+    title: "Sakuna: Of Rice and Ruin",
+    description:
+      "Un mélange unique de simulation agricole et de jeu de plateforme d'action. Incarnez Sakuna, une déesse déchue, qui doit cultiver du riz et combattre des démons pour racheter ses fautes.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/74677.jpg.webp",
+    positives: ["Mélange original de gameplay", "Graphismes charmants"],
+    negatives: [
+      "Peut devenir répétitif",
+      "Courbe d'apprentissage abrupte pour la culture du riz"
+    ]
   },
   {
     title: "Scarlet Nexus",
     description:
       "Un RPG d'action dans un futur dystopique avec des pouvoirs psychiques. Incarnez des membres d'une unité d'élite luttant contre des créatures étranges appelées 'Autres'.",
     image:
-      "https://gaming-cdn.com/images/products/6906/orig/scarlet-nexus-pc-spiel-steam-cover.jpg?v=1651581759",
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/9d3e-scarlet_nexus.jpeg.webp",
     positives: [
       "Système de combat unique avec pouvoirs psychiques",
       "Design visuel attrayant"
@@ -615,28 +758,203 @@ const gamesData = [
     negatives: ["Histoire parfois confuse", "Missions secondaires répétitives"]
   },
   {
-    title: "Star Ocean Divine Force",
+    title: "SD Gundam Battle Alliance",
     description:
-      "Un RPG de science-fiction avec des combats en temps réel. Explorez des planètes variées et découvrez une histoire mêlant fantaisie et technologie avancée.",
+      "Un jeu d'action basé sur la franchise Gundam. Pilotez des mechas SD dans des batailles intenses à travers différentes époques de l'univers Gundam.",
     image:
-      "https://fyre.cdn.sewest.net/star-ocean-tdf/6278f2af7867700012c8e9b2/sharing_compact-Gdv8nMCD2.jpg",
-    positives: ["Vaste univers à explorer", "Système de combat dynamique"],
-    negatives: ["Graphismes inégaux", "Rythme de jeu parfois lent"]
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/sd-gundam-battle-alliance-file-917139655.jpeg.webp",
+    positives: [
+      "Grande variété de mechas",
+      "Gameplay satisfaisant pour les fans"
+    ],
+    negatives: ["Peut être répétitif", "Peu accessible aux non-initiés"]
   },
   {
-    title: "Sword And Fairy VII",
+    title: "Sea of Stars",
     description:
-      "Un RPG d'action basé sur la mythologie chinoise. Plongez dans un monde riche en folklore et affrontez des créatures légendaires dans des combats spectaculaires.",
+      "Un RPG au tour par tour inspiré des classiques du genre. Suivez deux Enfants du Solstice dans leur quête pour vaincre les créations maléfiques de l'Alchimiste.",
     image:
-      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1543030/capsule_616x353.jpg?t=1677654242",
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/sea-of-stars-file-918841fa1.jpeg.webp",
     positives: [
-      "Univers inspiré de la mythologie chinoise",
-      "Graphismes détaillés"
+      "Magnifiques graphismes en pixel art",
+      "Système de combat engageant"
     ],
     negatives: [
-      "Traduction parfois approximative",
+      "Peut sembler trop nostalgique pour certains",
+      "Histoire classique"
+    ]
+  },
+  {
+    title: "Soul Hackers 2",
+    description:
+      "Un RPG cyberpunk de la série Shin Megami Tensei. Incarnez Ringo, une agent d'Aion, dans sa mission pour sauver l'humanité d'une apocalypse imminente.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/soul-hackers-2-file-91397e4ca.jpeg.webp",
+    positives: [
+      "Ambiance cyberpunk captivante",
+      "Système de combat stratégique"
+    ],
+    negatives: ["Narration parfois lente", "Environnements répétitifs"]
+  },
+  {
+    title: "Star Ocean: Integrity and Faithlessness",
+    description:
+      "Un RPG d'action se déroulant dans l'univers de Star Ocean. Suivez Fidel Camuze et son groupe dans leur quête pour protéger une mystérieuse jeune fille.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/21079.png.webp",
+    positives: [
+      "Système de combat dynamique",
+      "Univers de science-fiction intéressant"
+    ],
+    negatives: ["Histoire courte", "Graphismes datés"]
+  },
+  {
+    title: "Star Ocean: The Divine Force",
+    description:
+      "Le dernier opus de la série Star Ocean. Un RPG d'action mêlant science-fiction et fantasy, avec un système de combat amélioré et une exploration en 3D.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/star-ocean-the-divine-force-file-919921da1.jpeg.webp",
+    positives: ["Liberté d'exploration", "Système de combat fluide"],
+    negatives: ["Graphismes inégaux", "Scénario prévisible"]
+  },
+  {
+    title: "Star Ocean: The Second Story R",
+    description:
+      "Un remake du classique de la PlayStation. Choisissez entre Claude ou Rena et vivez une aventure épique mêlant science-fiction et fantasy.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/star-ocean-the-second-story-r-tetiere-file-14d7e186.jpg.webp",
+    positives: ["Graphismes 2.5D charmants", "Système de combat amélioré"],
+    negatives: [
+      "Peut sembler daté dans certains aspects",
+      "Progression parfois lente"
+    ]
+  },
+  {
+    title: "Stranger of Paradise: Final Fantasy Origin",
+    description:
+      "Un spin-off action-RPG de Final Fantasy. Suivez Jack et ses compagnons dans leur quête pour vaincre Chaos, dans une réinterprétation sombre du premier Final Fantasy.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/6d8f-stranger_of_paradise:_final_fantasy_origin.jpeg.webp",
+    positives: [
+      "Système de combat intense",
+      "Personnalisation poussée des jobs"
+    ],
+    negatives: ["Histoire confuse", "Graphismes inégaux"]
+  },
+  {
+    title: "Sword and Fairy 7",
+    description:
+      "Le dernier opus de la série de RPG chinoise populaire. Plongez dans un monde inspiré de la mythologie chinoise avec des graphismes améliorés et un système de combat en temps réel.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/86439.jpg.webp",
+    positives: [
+      "Riche univers basé sur la mythologie chinoise",
+      "Graphismes impressionnants"
+    ],
+    negatives: [
+      "Peut être déroutant pour les nouveaux venus",
+      "Traduction parfois approximative"
+    ]
+  },
+  {
+    title: "Tales of Arise",
+    description:
+      "Un RPG d'action qui suit l'histoire de Alphen et Shionne, issus de mondes opposés, dans leur quête pour changer leur destin et créer un nouvel avenir.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/740130/header.jpg",
+    positives: [
+      "Graphismes époustouflants",
+      "Système de combat fluide et dynamique"
+    ],
+    negatives: [
+      "Histoire parfois prévisible",
+      "Certaines zones de jeu linéaires"
+    ]
+  },
+  {
+    title: "Tales of Berseria",
+    description:
+      "Suivez Velvet Crowe dans sa quête de vengeance contre l'homme qui lui a tout pris, dans ce RPG d'action sombre et mature de la série Tales of.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/429660/header.jpg",
+    positives: ["Histoire captivante et mature", "Personnages bien développés"],
+    negatives: [
+      "Environnements parfois répétitifs",
+      "Combats pouvant devenir monotones"
+    ]
+  },
+  {
+    title: "Tales of Symphonia Remastered",
+    description:
+      "Une version remasterisée du classique GameCube. Suivez Lloyd Irving et ses amis dans leur quête pour sauver deux mondes en conflit.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/372360/header.jpg",
+    positives: [
+      "Histoire épique et émouvante",
+      "Système de combat en temps réel amélioré"
+    ],
+    negatives: [
+      "Graphismes datés malgré le remaster",
+      "Certains mécanismes de jeu vieillissants"
+    ]
+  },
+  {
+    title: "Tales of Vesperia: Definitive Edition",
+    description:
+      "L'édition définitive de Tales of Vesperia, avec du contenu supplémentaire. Suivez Yuri Lowell dans son voyage pour sauver son monde d'une ancienne menace.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/738540/header.jpg",
+    positives: ["Personnages charismatiques", "Système de combat satisfaisant"],
+    negatives: [
+      "Rythme lent au début",
+      "Graphismes améliorés mais toujours datés"
+    ]
+  },
+  {
+    title: "Tales of Zestiria",
+    description:
+      "Un RPG d'action où vous incarnez Sorey, un jeune homme devenu le Berger, dans sa quête pour libérer le monde de la corruption des Hellions.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/351970/header.jpg",
+    positives: [
+      "Monde ouvert à explorer",
+      "Système de fusion des personnages intéressant"
+    ],
+    negatives: [
+      "Histoire parfois confuse",
+      "Caméra problématique dans certaines zones"
+    ]
+  },
+  {
+    title: "The Witch And The Hundred Knight 2",
+    description:
+      "Un RPG d'action où vous incarnez le Hundred Knight, une créature invoquée par une sorcière pour combattre ses ennemis et découvrir les secrets d'un monde sombre et magique.",
+    image:
+      "https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/37117.jpeg.webp",
+    positives: ["Univers sombre et captivant", "Combats dynamiques"],
+    negatives: ["Histoire parfois confuse", "Graphismes datés"]
+  },
+  {
+    title: "The Witcher 3: Wild Hunt",
+    description:
+      "Un RPG en monde ouvert acclamé par la critique. Incarnez Geralt de Riv, un chasseur de monstres, dans sa quête pour retrouver sa fille adoptive tout en naviguant dans un monde riche et détaillé.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg",
+    positives: ["Monde ouvert immersif", "Narration complexe et captivante"],
+    negatives: [
+      "Quêtes secondaires parfois répétitives",
       "Courbe d'apprentissage abrupte"
     ]
+  },
+  {
+    title: "Trials of Mana",
+    description:
+      "Un remake du classique RPG d'action. Suivez les aventures de six héros dans leur quête pour sauver le monde de Mana, avec des graphismes modernisés et un système de combat amélioré.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/924980/header.jpg",
+    positives: ["Graphismes modernisés", "Système de combat amélioré"],
+    negatives: ["Histoire classique", "Peut sembler daté pour certains joueurs"]
+  },
+  {
+    title: "Valkyrie Elysium",
+    description:
+      "Un action-RPG basé sur la mythologie nordique. Incarnez une Valkyrie chargée de sauver le monde de la destruction imminente du Ragnarök.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1963210/header.jpg",
+    positives: ["Combats rapides et fluides", "Esthétique visuelle unique"],
+    negatives: ["Histoire parfois prévisible", "Environnements répétitifs"]
   },
   {
     title: "Wild Hearts",
@@ -648,11 +966,21 @@ const gamesData = [
     negatives: ["Peut être répétitif", "Courbe d'apprentissage abrupte"]
   },
   {
+    title: "World of Final Fantasy",
+    description:
+      "Un RPG au tour par tour mettant en scène des versions chibi des personnages emblématiques de Final Fantasy. Capturez et faites évoluer des monstres pour sauver le monde de Grymoire.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/552700/header.jpg",
+    positives: [
+      "Nostalgie pour les fans de Final Fantasy",
+      "Système de capture de monstres amusant"
+    ],
+    negatives: ["Peut sembler enfantin pour certains", "Histoire simple"]
+  },
+  {
     title: "Xuan Yuan 7",
     description:
       "Un RPG d'action basé sur la mythologie chinoise. Explorez un monde riche en folklore et affrontez des créatures légendaires dans des combats dynamiques.",
-    image:
-      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1249800/capsule_616x353.jpg?t=1674633249",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1249800/header.jpg",
     positives: ["Univers mythologique chinois captivant", "Combats fluides"],
     negatives: [
       "Peut être déroutant pour les non-initiés",
@@ -660,15 +988,28 @@ const gamesData = [
     ]
   },
   {
-    title: "Yakuza Like A Dragon",
+    title: "Ys Origin",
     description:
-      "Un RPG au tour par tour dans l'univers de Yakuza. Incarnez Ichiban Kasuga dans une aventure pleine d'humour et d'action dans les rues de Yokohama.",
-    image:
-      "https://images.gog-statics.com/56012eb0358a7243a1bd1d9e1590d848a3abeb3e5f6b72329abbb174f3a50196.jpg",
-    positives: ["Histoire captivante", "Mélange réussi de sérieux et d'humour"],
+      "Un action-RPG préquelle de la série Ys. Explorez la Tour de Salomon et découvrez les origines de la série à travers trois personnages jouables.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/207350/header.jpg",
+    positives: [
+      "Gameplay d'action rapide et satisfaisant",
+      "Multiples personnages jouables"
+    ],
+    negatives: ["Graphismes datés", "Histoire linéaire"]
+  },
+  {
+    title: "Ys IX: Monstrum Nox",
+    description:
+      "Le dernier opus de la série Ys. Adol se retrouve emprisonné dans la ville de Balduq et obtient des pouvoirs surnaturels pour combattre une menace mystérieuse.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1351630/header.jpg",
+    positives: [
+      "Exploration verticale innovante",
+      "Système de combat amélioré"
+    ],
     negatives: [
-      "Changement de gameplay par rapport aux précédents Yakuza",
-      "Certaines quêtes secondaires répétitives"
+      "Performance technique parfois instable",
+      "Certains éléments de l'histoire prévisibles"
     ]
   }
 ];
