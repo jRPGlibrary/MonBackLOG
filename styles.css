@@ -152,19 +152,19 @@ h2 {
     margin-right: 2%;
   }
   .card-title {
-  font-size: 20px;  
+    font-size: 20px;
   }
   .card-description {
-  font-size: 0.91em;
-}
+    font-size: 0.91em;
+  }
 
   h2 {
     font-size: 80px;
   }
   .share-icons a {
-  color: #4da8da;
-  margin-left: 10px;
-  font-size: 22px;
-  text-decoration: none;
+    color: #4da8da;
+    margin-left: 10px;
+    font-size: 22px;
+    text-decoration: none;
+  }
 }
-
