@@ -1074,6 +1074,13 @@ alphabet.split("").forEach((letter) => {
       card.classList.add("card");
       card.setAttribute("data-title", game.title);
 
+      // Gestion de l'image (utilisation d'un placeholder si pas d'image)
+      const cardImage = game.image
+        ? game.image
+        : `https://via.placeholder.com/250x140.png?text=${encodeURIComponent(
+            game.title
+          )}`;
+
       // Partie 6 : Construction du contenu HTML de la carte
       card.innerHTML = `
         <div class="card-image" style="background-image: url('${cardImage}');" loading="lazy"></div>
