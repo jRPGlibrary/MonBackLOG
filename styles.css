@@ -56,7 +56,7 @@ body {
   height: 200px;
   background-size: cover;
   background-position: center;
-  transition: opacity 0.3s;
+  transition: opacity 0.6s;
 }
 
 .card:hover .card-image {
@@ -114,6 +114,11 @@ h2 {
   color: #ffffff;
 }
 
+.card:hover .share-icons {
+  opacity: 1;
+  z-index: 10;
+}
+
 .card-details {
   background-color: rgba(22, 33, 62, 0.9);
   padding: 10px;
@@ -140,3 +145,28 @@ h2 {
   margin-bottom: 5px;
   color: #e0e0e0;
 }
+
+@media (min-width: 1024px) {
+  .card {
+    margin-right: 2%;
+    height: 415px;
+  }
+  .card-title {
+  font-size: 20px;  
+  }
+  .card-description {
+  font-size: 0.91em;
+}
+  .card:nth-child(4n) {
+    margin-right: 0;
+  }
+  h2 {
+    font-size: 80px;
+  }
+  .share-icons a {
+  color: #4da8da;
+  margin-left: 10px;
+  font-size: 22px;
+  text-decoration: none;
+}
+
