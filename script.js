@@ -4,7 +4,11 @@ const gamesData = [
     description:
       "Un jeu de plateforme et d'action en 2D avec des graphismes peints à la main. Explorez un monde fantastique rempli de créatures étranges. Un metroidvania où lutte le mal et le bien",
     image: "https://media.vandal.net/m/5-2023/202352510325157_1.jpg",
-    positives: ["Graphismes peints à la main", "Monde fantastique immersif"],
+    positives: [
+      "Graphismes peints à la main",
+      "Monde fantastique immersif",
+      "Le Mal VS Le Bien"
+    ],
     negatives: ["Difficulté élevée", "Certaines mécaniques répétitives"]
   },
   {
@@ -589,7 +593,8 @@ const gamesData = [
     positives: ["Histoire captivante", "Mélange réussi de sérieux et d'humour"],
     negatives: [
       "Changement de gameplay par rapport aux précédents Yakuza",
-      "Certaines quêtes secondaires répétitives"
+      "Certaines quêtes secondaires répétitives",
+      "Pic difficulté trop violent"
     ]
   },
   {
@@ -614,7 +619,11 @@ const gamesData = [
       "Ambiance immersive du Japon féodal",
       "Système de combat varié"
     ],
-    negatives: ["Peut être répétitif", "Histoire parfois prévisible"]
+    negatives: [
+      "Peut être répétitif",
+      "Histoire parfois prévisible",
+      "mini-jeux difficile"
+    ]
   },
   {
     title: "Mato Anomalies",
@@ -919,6 +928,20 @@ const gamesData = [
       "Histoire parfois confuse",
       "Caméra problématique dans certaines zones"
     ]
+  },
+  {
+    title: "Temtem",
+    description:
+      "Un jeu multijoueur de capture et de combat de créatures inspiré de Pokémon. Il propose des combats en 2 contre 2, une personnalisation poussée, et un monde partagé à explorer avec 165 TemTem uniques à capturer et entraîner",
+    image:
+      "https://www.geeksandcom.com/wp-content/uploads/2022/10/Temtem_Launch_XboxWire-22749b86ebea998c1317.jpeg",
+    positives: [
+      "Une centaine de Temtem",
+      "Combats stratégique",
+      "Des 'shiny' intéressant"
+    ],
+
+    negatives: ["Uniquement en ligne", "level design: aller retour répété"]
   },
   {
     title: "The Witch And The Hundred Knight 2",
