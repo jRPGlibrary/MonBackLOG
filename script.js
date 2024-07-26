@@ -1147,3 +1147,4 @@ alphabet.split("").forEach((letter) => {
     rowsContainer.appendChild(row);
   }
 });
+
