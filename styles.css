@@ -49,6 +49,13 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 100, 255, 0.3);
   border-color: rgba(77, 168, 218, 0.6);
+  width: calc(100vw - 30px);
+  height: calc(100vh - 30px);
+  margin: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .card-image {
@@ -136,6 +143,14 @@ h2 {
   color: #4da8da;
 }
 
+.card-details .positives {
+  color: #7dda58;
+}
+
+.card-details .negatives {
+  color: #d20103;
+}
+
 .card-details ul {
   list-style-type: disc;
   padding-left: 15px;
@@ -144,6 +159,10 @@ h2 {
 .card-details li {
   margin-bottom: 5px;
   color: #e0e0e0;
+}
+
+.card-derails .positives {
+  color: green;
 }
 
 @media (min-width: 1024px) {
