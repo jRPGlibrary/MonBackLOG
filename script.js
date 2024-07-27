@@ -523,7 +523,7 @@ const gamesData = [
     ]
   },
   {
-    title: "Hack//G.U. Last Recode",
+    title: ".Hack//G.U. Last Recode",
     description:
       "Une collection remasterisée de la trilogie .hack//G.U. avec un nouvel épisode. Plongez dans un MMORPG simulé, incarnez Haseo dans sa quête pour sauver son ami et découvrez les mystères derrière le jeu 'The World'.",
     image:
@@ -1042,7 +1042,7 @@ gamesData.sort((a, b) => a.title.localeCompare(b.title));
 
 // Partie 2 : Initialisation des éléments principaux
 const rowsContainer = document.getElementById("rows-container");
-const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const alphabet = ".ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // Partie 3 : Boucle principale pour chaque lettre de l'alphabet
 alphabet.split("").forEach((letter) => {
@@ -1119,11 +1119,12 @@ alphabet.split("").forEach((letter) => {
             </div>
         </div>
         <div class="card-details" style="display: none;">
-          <h4>Points Positifs</h4>
+          
+          <h4 class="positives">+ Points Positifs</h4>
           <ul>
             ${game.positives.map((point) => `<li>${point}</li>`).join("")}
           </ul>
-          <h4>Points Négatifs</h4>
+          <h4 class="negatives"">- Points Négatifs</h4>
           <ul>
             ${game.negatives.map((point) => `<li>${point}</li>`).join("")}
           </ul>
