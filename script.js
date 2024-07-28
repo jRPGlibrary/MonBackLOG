@@ -1134,9 +1134,12 @@ alphabet.split("").forEach((letter) => {
       // Ajout de la carte au conteneur de slider
       sliderContainer.appendChild(card);
 
-       // Événement de survol pour afficher les détails
+      // Événement de survol pour afficher les détails
       card.addEventListener("mouseenter", () => {
         card.querySelector(".card-details").style.display = "block";
+      });
+      card.addEventListener("mouseup", () => {
+        card.querySelector(".card-details").style.display = "none";
       });
       card.addEventListener("mouseleave", () => {
         card.querySelector(".card-details").style.display = "none";
