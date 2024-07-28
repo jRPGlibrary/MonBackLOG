@@ -50,7 +50,7 @@ body {
   box-shadow: 0 6px 12px rgba(0, 100, 255, 0.3);
   border-color: rgba(77, 168, 218, 0.6);
   width: calc(100vw - 30px);
-  height: calc(100vh - 30px);
+  height: calc(90vh - 30px);
   margin: 15px;
   position: fixed;
   top: 0;
