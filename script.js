@@ -1134,41 +1134,14 @@ alphabet.split("").forEach((letter) => {
       // Ajout de la carte au conteneur de slider
       sliderContainer.appendChild(card);
 
-      function handleInteraction(element) {
-  let isActive = false;
-
-  // Pour les appareils de bureau
-  element.addEventListener('mouseenter', activate);
-  element.addEventListener('mouseleave', deactivate);
-
-  // Pour les appareils mobiles
-  element.addEventListener('touchstart', toggleActive);
-  element.addEventListener('touchend', handleTouchEnd);
-
-  function activate() {
-    isActive = true;
-    // Code pour activer l'effet de survol
-  }
-
-  function deactivate() {
-    isActive = false;
-    // Code pour désactiver l'effet de survol
-  }
-
-  function toggleActive(event) {
-    event.preventDefault(); // Empêche le défilement sur mobile
-    isActive = !isActive;
-    if (isActive) {
-      activate();
-    } else {
-      deactivate();
-    }
-  }
-
-  function handleTouchEnd(event) {
-    // Gérer la fin du toucher si nécessaire
-  }
-}
+       // Événement de survol pour afficher les détails
+      card.addEventListener("mouseenter", () => {
+        card.querySelector(".card-details").style.display = "block";
+      });
+      card.addEventListener("mouseleave", () => {
+        card.querySelector(".card-details").style.display = "none";
+      });
+    });
 
     // Partie 7 : Ajout des éléments créés à la structure DOM
     row.appendChild(sliderContainer);
