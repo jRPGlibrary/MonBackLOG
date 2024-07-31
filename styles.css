@@ -132,8 +132,7 @@ h2 {
 .card-details {
   background-color: rgba(22, 33, 62, 0.9);
   position: absolute;
-  top: 65%;
-  bottom: 50%;
+  top: 55%;
   left: 0;
   right: 0;
   width: 100%; 
@@ -142,7 +141,7 @@ h2 {
   overflow-y: auto;
   display: none;
   margin: auto;
-  padding: 10px; 
+  padding: 12px; 
   box-sizing: border-box; /* Inclut le padding dans la largeur/hauteur totale */
   word-wrap: break-word; /* Empêche les mots d'être coupés */
   overflow-wrap: break-word; /* Version plus moderne de word-wrap */
