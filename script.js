@@ -617,12 +617,13 @@ const gamesData = [
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1805480/capsule_616x353.jpg?t=1717079037",
     positives: [
       "Ambiance immersive du Japon féodal",
-      "Système de combat varié"
+      "Système de combat varié",
+      "Arbres de compétences asser vaste"
     ],
     negatives: [
       "Peut être répétitif",
       "Histoire parfois prévisible",
-      "mini-jeux difficile"
+      "Mini-jeux difficile"
     ]
   },
   {
@@ -1044,16 +1045,22 @@ gamesData.sort((a, b) => a.title.localeCompare(b.title));
 const rowsContainer = document.getElementById("rows-container");
 const alphabet = ".ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+// Fonction pour détecter si l'appareil est tactile
+function isTouchDevice() {
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
+
 // Partie 3 : Boucle principale pour chaque lettre de l'alphabet
 alphabet.split("").forEach((letter) => {
-  // Filtrer les jeux commençant par la lettre actuelle
   const gamesForLetter = gamesData.filter((game) =>
     game.title.toUpperCase().startsWith(letter)
   );
 
-  // Vérifier s'il y a des jeux pour cette lettre
   if (gamesForLetter.length > 0) {
-    // Partie 4 : Création de la structure de base pour chaque lettre
     const row = document.createElement("div");
     row.classList.add("row");
 
@@ -1068,20 +1075,17 @@ alphabet.split("").forEach((letter) => {
       `Jeux vidéo commençant par la lettre ${letter}`
     );
 
-    // Partie 5 : Création des cartes pour chaque jeu
     gamesForLetter.forEach((game) => {
       const card = document.createElement("div");
       card.classList.add("card");
       card.setAttribute("data-title", game.title);
 
-      // Gestion de l'image (utilisation d'un placeholder si pas d'image)
       const cardImage = game.image
         ? game.image
         : `https://via.placeholder.com/250x140.png?text=${encodeURIComponent(
             game.title
           )}`;
 
-      // Partie 6 : Construction du contenu HTML de la carte
       card.innerHTML = `
         <div class="card-image" style="background-image: url('${cardImage}');" loading="lazy"></div>
         <div class="card-content">
@@ -1118,36 +1122,77 @@ alphabet.split("").forEach((letter) => {
                 </a>
             </div>
         </div>
-        <div class="card-details" style="display: none;">
-          
-          <h4 class="positives">+ Points Positifs</h4>
-          <ul>
-            ${game.positives.map((point) => `<li>${point}</li>`).join("")}
-          </ul>
-          <h4 class="negatives"">- Points Négatifs</h4>
-          <ul>
-            ${game.negatives.map((point) => `<li>${point}</li>`).join("")}
-          </ul>
-        </div>
+<div class="card-details" style="display: none;">
+  <div class="columns-container">
+    <div class="column">
+      <h4 class="positives">+ Points Positifs</h4>
+      <ul>
+        ${game.positives.map((point) => `<li>${point}</li>`).join("")}
+      </ul>
+    </div>
+    <div class="column">
+      <h4 class="negatives">- Points Négatifs</h4>
+      <ul>
+        ${game.negatives.map((point) => `<li>${point}</li>`).join("")}
+      </ul>
+    </div>
+  </div>
+</div>
       `;
 
-      // Ajout de la carte au conteneur de slider
       sliderContainer.appendChild(card);
 
-      // Événement de survol pour afficher les détails
-      card.addEventListener("mouseenter", () => {
-        card.querySelector(".card-details").style.display = "block";
-      });
-      card.addEventListener("mouseup", () => {
-        card.querySelector(".card-details").style.display = "none";
-      });
-      card.addEventListener("mouseleave", () => {
-        card.querySelector(".card-details").style.display = "none";
-      });
+      const cardDetails = card.querySelector(".card-details");
+
+      if (isTouchDevice()) {
+        // Gestion des événements tactiles
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        card.addEventListener("touchstart", (e) => {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        });
+
+        card.addEventListener("touchend", (e) => {
+          const touchEndX = e.changedTouches[0].clientX;
+          const touchEndY = e.changedTouches[0].clientY;
+          const deltaX = Math.abs(touchEndX - touchStartX);
+          const deltaY = Math.abs(touchEndY - touchStartY);
+
+          // Si le mouvement est minimal (considéré comme un tap)
+          if (deltaX < 10 && deltaY < 10) {
+            if (cardDetails.style.display === "none") {
+              cardDetails.style.display = "block";
+            } else {
+              cardDetails.style.display = "none";
+            }
+          }
+        });
+      } else {
+        // Gestion des événements pour les appareils non tactiles
+        card.addEventListener("mouseenter", () => {
+          cardDetails.style.display = "block";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          cardDetails.style.display = "none";
+        });
+      }
     });
 
-    // Partie 7 : Ajout des éléments créés à la structure DOM
     row.appendChild(sliderContainer);
     rowsContainer.appendChild(row);
   }
 });
+
+// Fermer les détails ouverts lorsqu'on touche en dehors d'une carte (pour les appareils tactiles)
+if (isTouchDevice()) {
+  document.addEventListener("touchstart", (e) => {
+    if (!e.target.closest(".card")) {
+      document.querySelectorAll(".card-details").forEach((details) => {
+        details.style.display = "none";
+      });
+    }
+  });
+}
