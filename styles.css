@@ -131,14 +131,21 @@ h2 {
 
 .card-details {
   background-color: rgba(22, 33, 62, 0.9);
-  padding: 10px;
   position: absolute;
-  top: 0;
+  top: 50%;
+  bottom: 10%;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  width: 95%; 
+  height: 50%;
+  max-height: 50%;
   overflow-y: auto;
   display: none;
+  margin: auto;
+  padding: 10px; 
+  box-sizing: border-box; /* Inclut le padding dans la largeur/hauteur totale */
+  word-wrap: break-word; /* Empêche les mots d'être coupés */
+  overflow-wrap: break-word; /* Version plus moderne de word-wrap */
 }
 
 .card-details h4 {
