@@ -624,7 +624,9 @@ const gamesData = [
       "Peut être répétitif",
       "Histoire parfois prévisible",
       "Mini-jeux difficile"
-    ]
+    ],
+    avis:
+      "Après une trentaine d'heures, proche des quarante, je peux dire que j'ai apprécié l'histoire. Le gameplay ainsi que sa variété d'armes permettent de se forger un style unique grâce à chaque arbre de compétences. Cependant, pour moi, le point noir reste les quêtes beaucoup trop présentes et les mini-jeux, comme tous les jeux de cartes, etc., où je vous avoue ne rien avoir compris. Yakuza Ishin reste un très bon jeu que je conseille fortement."
   },
   {
     title: "Mato Anomalies",
@@ -1122,23 +1124,31 @@ alphabet.split("").forEach((letter) => {
                 </a>
             </div>
         </div>
-<div class="card-details" style="display: none;">
-  <div class="columns-container">
-    <div class="column">
-      <h4 class="positives">+ Points Positifs</h4>
-      <ul>
-        ${game.positives.map((point) => `<li>${point}</li>`).join("")}
-      </ul>
-    </div>
-    <div class="column">
-      <h4 class="negatives">- Points Négatifs</h4>
-      <ul>
-        ${game.negatives.map((point) => `<li>${point}</li>`).join("")}
-      </ul>
-    </div>
-  </div>
-</div>
-      `;
+        <div class="card-details" style="display: none;">
+            <div class="game-avis">
+                <h3>Ce que j'en pense: ${game.title}</h3>
+                <p>${game.avis || "Aucun avis disponible pour le moment."}</p>
+            </div>
+            <div class="columns-container">
+                <div class="column">
+                    <h4 class="positives">+ Points Positifs</h4>
+                    <ul>
+                        ${game.positives
+                          .map((point) => `<li>${point}</li>`)
+                          .join("")}
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4 class="negatives">- Points Négatifs</h4>
+                    <ul>
+                        ${game.negatives
+                          .map((point) => `<li>${point}</li>`)
+                          .join("")}
+                    </ul>
+                </div>
+            </div>
+        </div>
+`;
 
       sliderContainer.appendChild(card);
 
