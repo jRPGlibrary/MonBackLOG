@@ -164,6 +164,20 @@ h2 {
   color: #e0e0e0;
 }
 
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+
+  margin-right: 10px;
+  margin-left: 5px;
+  width: 70%;
+  
+
+}
+
 @media (min-width: 1024px) {
   .card {
     height: 415px;
