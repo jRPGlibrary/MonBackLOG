@@ -182,6 +182,15 @@ const gamesData = [
     ]
   },
   {
+    title: "Cat Quest III",
+    description:
+      "Dans Cat Quest III, vous incarnez un purriveur dans un monde ouvert 2.5D librement explorable grouillant de rats Pi. Vous pouvez naviguer sur les mers de votre navire pour les trésors à gogo! Mais préparez-vous au péril, car le Roi Pirate vise à vous traquer...",
+    image:
+      "https://imgs.search.brave.com/nxEVXoq2ymDM00nAkGPiCGfpUb0lVm2WpI7nD-FGNOM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubmludGVuZG8u/Y29tL2ltYWdlL3Vw/bG9hZC9hcl8xNjo5/LGNfbHBhZCx3XzEy/NDAvYl93aGl0ZS9m/X2F1dG8vcV9hdXRv/L25jb20vc29mdHdh/cmUvc3dpdGNoLzcw/MDEwMDAwMDY3ODY1/LzZhYmY5NDVkYzNh/N2VjZDE0ZWRkODcy/YTFhNjFkNGRlYzVj/N2VmMmM4MmYwNGIw/NTZiMGQyYzQ0MWM0/OThiY2M.jpeg",
+    positives: ["", ""],
+    negatives: ["", ""]
+  },
+  {
     title: "Cladun Returns: This Is Sengoku",
     description:
       "Un RPG d'action rétro se déroulant dans le Japon féodal. Créez votre personnage, explorez des donjons générés aléatoirement et combattez dans un style pixel art unique.",
@@ -249,6 +258,15 @@ const gamesData = [
       "Univers riche de Donjons & Dragons"
     ],
     negatives: ["Bugs fréquents", "IA des ennemis médiocre"]
+  },
+  {
+    title: "Darksiders III",
+    description:
+      "Un Hack&Slash où les joueurs jouent le rôle de FURY dans sa quête pour traquer et éliminer les Sept Péchés Capitaux.. En tant que mage, FURY compte sur son fouet et sa magie pour rétablir l'équilibre entre le bien et le mal.",
+    image:
+      "https://imgs.search.brave.com/QA-RK1NvK_6Hq9OCjS5CH1PWkqmumjNXEY_TF1JZBiw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9nYW1p/bmctY2RuLmNvbS9p/bWFnZXMvcHJvZHVj/dHMvMjA2MS82MTZ4/MzUzL2RhcmtzaWRl/cnMtaWlpLXBjLWpl/dS1zdGVhbS1jb3Zl/ci5qcGc_dj0xNjg4/MzkwNjg5",
+    positives: ["#", "#"],
+    negatives: ["#", "#"]
   },
   {
     title: "Destiny Connect",
@@ -981,6 +999,15 @@ const gamesData = [
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1963210/header.jpg",
     positives: ["Combats rapides et fluides", "Esthétique visuelle unique"],
     negatives: ["Histoire parfois prévisible", "Environnements répétitifs"]
+  },
+  {
+    title: "Vision Of Mana",
+    description:
+      "Pour la première fois depuis plus de 15 ans, une toute nouvelle entrée dans la série principale Mana arrive! Embarquez pour une nouvelle aventure avec Val, la nouvelle garde de l'âme, alors qu'il entreprend un voyage à travers le monde pour accompagner son amie dans son pèlerinage à l'arbre de Mana.",
+    image:
+      "https://imgs.search.brave.com/plzgPqhtyGopdc_z5sPclig5wZ8LuEBmS8vqjryjm9k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2FtZXJlYWN0b3Iu/ZnIvbWVkaWEvMDkv/XzQxNjA5MDNfNjUw/eC5wbmc",
+    positives: ["", ""],
+    negatives: ["", ""]
   },
   {
     title: "Wild Hearts",
