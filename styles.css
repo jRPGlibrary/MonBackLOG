@@ -53,15 +53,6 @@ body {
   transition: opacity 0.6s;
 }
 
-.card:hover .card-content {
-  opacity: 1;
-}
-
-.card:hover .card-image {
-  opacity: 0.9;
-  height: 100%;
-}
-
 .card-content {
   padding: 15px;
   height: calc(100% - 140px);
@@ -208,4 +199,3 @@ h2 {
     text-decoration: none;
   }
 }
-
