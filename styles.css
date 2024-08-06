@@ -34,7 +34,8 @@ h2 {
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 10px 0;
-  padding-right: 10px; 
+  padding-left: 15px;
+  padding-right: 15px;
 
   /* Supprimer la barre de défilement */
   &::-webkit-scrollbar {
@@ -58,11 +59,6 @@ h2 {
   white-space: normal;
   vertical-align: top;
   position: relative;
-
-  /* Style de la dernière carte */
-  &:last-child {
-    margin-right: 10px; /* Ajout d'une marge à droite pour la dernière carte */
-  }
 }
 
 /* Style de l'image de la carte */
@@ -107,6 +103,12 @@ h2 {
   position: absolute;
   bottom: 10px;
   right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .share-icons {
+  opacity: 1;
 }
 
 .share-icons a {
