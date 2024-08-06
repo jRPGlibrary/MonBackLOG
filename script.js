@@ -648,6 +648,22 @@ const gamesData = [
       "Après une trentaine d'heures, proche des quarante, je peux dire que j'ai apprécié l'histoire. Le gameplay ainsi que sa variété d'armes permettent de se forger un style unique grâce à chaque arbre de compétences. Cependant, pour moi, le point noir reste les quêtes beaucoup trop présentes et les mini-jeux, comme tous les jeux de cartes, etc., où je vous avoue ne rien avoir compris. Yakuza Ishin reste un très bon jeu que je conseille fortement."
   },
   {
+    title: "Lord of the Fallen 2",
+    description:
+      "Une suite du jeu d'action RPG soulslike. Explorez un vaste monde interconnecté, affrontez des boss redoutables et choisissez votre classe pour vaincre le dieu démoniaque Adyr.",
+    image:
+      "https://cdn.akamai.steamstatic.com/steam/apps/1501750/header.jpg",
+    positives: [
+      "Graphismes impressionnants",
+      "Monde vaste et interconnecté",
+      "Système de combat amélioré"
+    ],
+    negatives: [
+      "Peut être très difficile pour certains joueurs",
+      "Histoire parfois confuse"
+    ]
+  },
+  {
     title: "Mato Anomalies",
     description:
       "Un RPG d'enquête cyberpunk se déroulant dans une version futuriste de Shanghai. Incarnez le détective Doe et le combattant d'exorcisme Gram pour résoudre des mystères et combattre des démons.",
@@ -712,6 +728,13 @@ const gamesData = [
       "https://cdn.akamai.steamstatic.com/steam/apps/798460/capsule_616x353.jpg?t=1693523220",
     positives: ["Direction artistique magnifique", "Histoire touchante"],
     negatives: ["Combats parfois frustrants", "Rythme inégal"]
+  },
+  {
+    title: "Ni No Kuni II: Revenant Kingdom",
+    description: "Un RPG d'action enchanteur qui suit le jeune roi Evan dans sa quête pour bâtir un nouveau royaume. Avec un système de combat en temps réel, la gestion d'un royaume et des graphismes inspirés du Studio Ghibli.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/589360/header.jpg",
+    positives: ["Graphismes magnifiques", "Gameplay varié"],
+    negatives: ["Histoire parfois simpliste", "Combats potentiellement répétitifs"]
   },
   {
     title: "Octopath Traveler II",
@@ -828,6 +851,13 @@ const gamesData = [
     negatives: ["Narration parfois lente", "Environnements répétitifs"]
   },
   {
+    title: "Star Ocean: First Departure R",
+    description: "Un remake du premier jeu Star Ocean, originalement sorti sur Super Famicom. Ce RPG d'action spatial suit l'histoire de Roddick et ses amis alors qu'ils voyagent à travers l'espace pour sauver leur planète.",
+    image: "https://imgs.search.brave.com/U9VOwnwFAM_RC88hLlS7NnOwEY1AeI6x2xosmCd-UJg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubmludGVuZG8u/Y29tL2ltYWdlL3Vw/bG9hZC9mX2F1dG8v/cV9hdXRvL2Rwcl8x/LjUvbmNvbS9zb2Z0/d2FyZS9zd2l0Y2gv/NzAwMTAwMDAwMjIx/NTAvZGE1NWVlZWUz/MWY4M2EyNWEyMzc0/YTc3MjE0YjE0M2Vl/NmZmOTYxNjg1OWM1/YzJhZTgxZDY0NTRh/OWM1YjE4NQ",
+    positives: ["Graphismes et audio améliorés", "Système de combat en temps réel"],
+    negatives: ["Peut sembler daté pour certains", "Histoire linéaire"]
+  },
+  {
     title: "Star Ocean: Integrity and Faithlessness",
     description:
       "Un RPG d'action se déroulant dans l'univers de Star Ocean. Suivez Fidel Camuze et son groupe dans leur quête pour protéger une mystérieuse jeune fille.",
@@ -859,6 +889,13 @@ const gamesData = [
       "Peut sembler daté dans certains aspects",
       "Progression parfois lente"
     ]
+  },
+  {
+    title: "Star Ocean: Till The End Of Time",
+    description: "Le troisième opus de la série Star Ocean, maintenant disponible en version HD. Suivez Fayt Leingod dans une aventure épique à travers l'espace, mêlant science-fiction et fantasy dans un univers riche et complexe.",
+    image: "https://imgs.search.brave.com/N9H-9fQkXfPmU2blRKIIL9Qfnl6TjJ9EU8VMrWd2Ijc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5qZXV4dmlkZW8u/Y29tL21lZGlhcy1t/ZC8xNDg3NzcvMTQ4/Nzc3MDE2NC0yNzE4/LWNhcmQuanBn",
+    positives: ["Histoire complexe et profonde", "Système de combat dynamique"],
+    negatives: ["Certains aspects du gameplay ont vieilli", "Peut être déroutant pour les nouveaux joueurs"]
   },
   {
     title: "Stranger of Paradise: Final Fantasy Origin",

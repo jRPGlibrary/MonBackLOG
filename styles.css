@@ -28,15 +28,16 @@ h2 {
 /* Style du conteneur du carrousel */
 .slider-container {
   margin-left: 15px;
-  width: 100%;
+  width: calc(100% - 30px); /* Ajustement pour tenir compte des marges */
   overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 10px 0;
+  padding-right: 10px; 
 
   /* Supprimer la barre de défilement */
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     display: none;
   }
 }
@@ -60,7 +61,7 @@ h2 {
 
   /* Style de la dernière carte */
   &:last-child {
-    margin-right: 0;
+    margin-right: 10px; /* Ajout d'une marge à droite pour la dernière carte */
   }
 }
 
