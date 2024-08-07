@@ -261,6 +261,14 @@ const gamesData = [
     negatives: ["Bugs fréquents", "IA des ennemis médiocre"]
   },
   {
+    title: "Darksiders II",
+    description:
+      "Un action-RPG où vous incarnez Mort, l'un des quatre Cavaliers de l'Apocalypse. Explorez un vaste monde, résolvez des énigmes et combattez des hordes d'ennemis pour prouver l'innocence de votre frère, Guerre.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/388410/header.jpg",
+    positives: ["Monde vaste à explorer", "Système de combat fluide"],
+    negatives: ["", ""]
+  },
+  {
     title: "Darksiders III",
     description:
       "Un Hack&Slash où les joueurs jouent le rôle de FURY dans sa quête pour traquer et éliminer les Sept Péchés Capitaux.. En tant que mage, FURY compte sur son fouet et sa magie pour rétablir l'équilibre entre le bien et le mal.",
@@ -1036,6 +1044,14 @@ const gamesData = [
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1963210/header.jpg",
     positives: ["Combats rapides et fluides", "Esthétique visuelle unique"],
     negatives: ["Histoire parfois prévisible", "Environnements répétitifs"]
+  },
+  {
+    title: "Vampyr",
+    description:
+      "Un RPG d'action sombre se déroulant à Londres pendant l'épidémie de grippe espagnole. Incarnez un médecin récemment transformé en vampire, tiraillé entre son serment d'Hippocrate et sa soif de sang.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/427290/header.jpg",
+    positives: ["Ambiance gothique captivante", "Choix moraux impactants"],
+    negatives: ["Combats parfois répétitifs", "Performances techniques inégales"]
   },
   {
     title: "Vision Of Mana",
