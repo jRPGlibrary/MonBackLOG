@@ -193,7 +193,6 @@ h2 {
 
 .trailer iframe {
   width: 100%;
-  max-width: 560px; /* Largeur maximale pour le lecteur */
   height: 315px;
   border: none;
   border-radius: 8px;
