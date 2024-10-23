@@ -1257,6 +1257,10 @@ alphabet.split("").forEach((letter) => {
                     </ul>
                 </div>
             </div>
+            <!-- Mini player YouTube -->
+            <div class="trailer">
+                <iframe src="${game.trailer}" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
       `;
     
