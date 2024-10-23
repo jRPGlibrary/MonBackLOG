@@ -287,6 +287,18 @@ const gamesData = [
     negatives: ["Gameplay répétitif", "Histoire linéaire"]
   },
   {
+    title: "Deus Ex: Mankind Divided",
+    description:
+      "Un RPG d'action cyberpunk développé par Eidos Montréal. Incarnez Adam Jensen, un agent augmenté, dans un monde où les tensions entre humains et augmentés sont à leur comble. Explorez un univers riche avec des choix influençant l'histoire.",
+    image: "https://example.com/deus-ex-mankind-divided-image.jpg",
+    positives: [
+      "Univers cyberpunk immersif",
+      "Système de choix et conséquences",
+      "Gameplay diversifié"
+    ],
+    negatives: ["Histoire principale courte", "DLC nécessaires pour l'histoire complète"]
+  },
+  {
     title: "Devil May Cry 5 Special Edition",
     description:
       "Une version améliorée du jeu d'action stylisé avec de nouveaux personnages jouables, des graphismes améliorés et des modes de jeu supplémentaires. Incarnez Dante, Nero et Vergil dans des combats intenses contre des démons.",
@@ -305,6 +317,18 @@ const gamesData = [
       "https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000045379/89b77052967271f0fc10309eeee8cd930eb3b46cefe3743b15cf3eb186436672",
     positives: ["Gameplay stratégique profond", "Histoire captivante"],
     negatives: ["Courbe d'apprentissage élevée", "Graphismes datés"]
+  },
+  {
+    title: "Dishonored 2",
+    description:
+      "Un jeu d'action-aventure en vue subjective développé par Arkane Studios. Incarnez Emily Kaldwin ou Corvo Attano dans une quête pour récupérer le trône usurpé. Utilisez des pouvoirs surnaturels, gadgets et armes pour éliminer vos ennemis.",
+    image: "https://example.com/dishonored-2-image.jpg",
+    positives: [
+      "Level design innovant",
+      "Liberté d'approche dans le gameplay",
+      "Ambiance immersive"
+    ],
+    negatives: ["IA parfois prévisible", "Quelques problèmes de performance"]
   },
   {
     title: "Dragon's Dogma II",
@@ -684,6 +708,29 @@ const gamesData = [
     negatives: ["Histoire parfois confuse", "Combats répétitifs"]
   },
   {
+    title: "Metal Gear Solid V: The Phantom Pain",
+    description:
+      "Un jeu d'infiltration en monde ouvert développé par Kojima Productions. Suivez Snake dans une mission de vengeance à travers l'Afghanistan et l'Afrique centrale, en utilisant furtivité, stratégie et un vaste arsenal d'armes.",
+    image: "https://example.com/mgs-phantom-pain-image.jpg",
+    positives: [
+      "Monde ouvert détaillé",
+      "Gameplay varié et flexible",
+      "Histoire captivante"
+    ],
+    negatives: ["Narration fragmentée", "Fin abrupte"]
+  },
+  {
+    title: "Metal Gear Survive",
+    description:
+      "Un spin-off de la série Metal Gear qui se concentre sur la survie et la coopération. Les joueurs doivent construire des bases, collecter des ressources et combattre des créatures dans un univers alternatif.",
+    image: "https://example.com/metal-gear-survive-image.jpg",
+    positives: [
+      "Coopération multijoueur",
+      "Système de survie engageant"
+    ],
+    negatives: ["Manque d'originalité", "Microtransactions"]
+  },
+  {
     title: "Monochrome Mobius",
     description:
       "Un RPG tactique se déroulant dans l'univers d'Utawarerumono. Suivez l'histoire d'Oshtor dans un monde fantastique mêlant mythologie et politique.",
@@ -1061,6 +1108,18 @@ const gamesData = [
       "https://imgs.search.brave.com/plzgPqhtyGopdc_z5sPclig5wZ8LuEBmS8vqjryjm9k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2FtZXJlYWN0b3Iu/ZnIvbWVkaWEvMDkv/XzQxNjA5MDNfNjUw/eC5wbmc",
     positives: ["", ""],
     negatives: ["", ""]
+  },
+  {
+    title: "Watch Dogs 2",
+    description:
+      "Un jeu d'action-aventure en monde ouvert développé par Ubisoft. Incarnez Marcus Holloway, un hacker talentueux, dans la ville de San Francisco. Utilisez vos compétences pour pirater le système ctOS 2.0 et combattre les injustices sociales.",
+    image: "https://example.com/watch-dogs-2-image.jpg",
+    positives: [
+      "Monde ouvert vivant",
+      "Humour et scénario engageant",
+      "Varitété des missions"
+    ],
+    negatives: ["IA parfois incohérente", "Quelques bugs techniques"]
   },
   {
     title: "Wild Hearts",
