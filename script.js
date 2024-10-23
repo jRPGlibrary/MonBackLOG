@@ -1259,7 +1259,7 @@ alphabet.split("").forEach((letter) => {
             </div>
             <!-- Mini player YouTube -->
             <div class="trailer">
-                <iframe width="560" height="315" src="${game.trailer}" frameborder="0" allowfullscreen></iframe>
+                <iframe src="${game.trailer}" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
       `;
