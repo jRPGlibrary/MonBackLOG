@@ -10,7 +10,8 @@ const gamesData = [
       "Monde fantastique immersif",
       "Le Mal VS Le Bien"
     ],
-    negatives: ["Difficulté élevée", "Certaines mécaniques répétitives"]
+    negatives: ["Difficulté élevée", "Certaines mécaniques répétitives"],
+    trailer: "https://www.youtube.com/watch?v=wIclTw2Qvm8" 
   },
   {
     title: "Afterimage",
@@ -1221,78 +1222,48 @@ alphabet.split("").forEach((letter) => {
       const card = document.createElement("div");
       card.classList.add("card");
       card.setAttribute("data-title", game.title);
-
+    
       const cardImage = game.image
         ? game.image
         : `https://via.placeholder.com/250x140.png?text=${encodeURIComponent(
             game.title
           )}`;
-
+    
       card.innerHTML = `
-                        <div class="card-image" style="background-image: url('${cardImage}');" loading="lazy"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">${game.title}</h3>
-                            <p class="card-description">${game.description}</p>
-                            <div class="share-icons">
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                                  window.location.href
-                                )}" target="_blank" aria-label="Partager sur Facebook">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(
-                                  game.title +
-                                    " - " +
-                                    game.description +
-                                    " " +
-                                    window.location.href
-                                )}" target="_blank" aria-label="Partager sur WhatsApp">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                                <a href="https://reddit.com/submit?url=${encodeURIComponent(
-                                  window.location.href
-                                )}&title=${encodeURIComponent(
-        game.title
-      )}" target="_blank" aria-label="Partager sur Reddit">
-                                    <i class="fab fa-reddit"></i>
-                                </a>
-                                <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                                  window.location.href
-                                )}&text=${encodeURIComponent(
-        game.title + " - " + game.description
-      )}" target="_blank" aria-label="Partager sur X (Twitter)">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card-details" style="display: none;">
-                            <div class="game-avis">
-                                <h3>Ce que j'en pense: ${game.title}</h3>
-                                <p>${
-                                  game.avis ||
-                                  "Aucun avis disponible pour le moment."
-                                }</p>
-                            </div>
-                            <div class="columns-container">
-                                <div class="column">
-                                    <h4 class="positives">+ Points Positifs</h4>
-                                    <ul>
-                                        ${game.positives
-                                          .map((point) => `<li>${point}</li>`)
-                                          .join("")}
-                                    </ul>
-                                </div>
-                                <div class="column">
-                                    <h4 class="negatives">- Points Négatifs</h4>
-                                    <ul>
-                                        ${game.negatives
-                                          .map((point) => `<li>${point}</li>`)
-                                          .join("")}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-
+        <div class="card-image" style="background-image: url('${cardImage}');" loading="lazy"></div>
+        <div class="card-content">
+            <h3 class="card-title">${game.title}</h3>
+            <p class="card-description">${game.description}</p>
+            <div class="share-icons">
+                <!-- Les icônes de partage -->
+            </div>
+        </div>
+        <div class="card-details" style="display: none;">
+            <div class="game-avis">
+                <h3>Ce que j'en pense: ${game.title}</h3>
+                <p>${game.avis || "Aucun avis disponible pour le moment."}</p>
+            </div>
+            <div class="columns-container">
+                <div class="column">
+                    <h4 class="positives">+ Points Positifs</h4>
+                    <ul>
+                        ${game.positives.map((point) => `<li>${point}</li>`).join("")}
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4 class="negatives">- Points Négatifs</h4>
+                    <ul>
+                        ${game.negatives.map((point) => `<li>${point}</li>`).join("")}
+                    </ul>
+                </div>
+            </div>
+            <!-- Mini player YouTube -->
+            <div class="trailer">
+                <iframe width="560" height="315" src="${game.trailer}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+      `;
+    
       sliderContainer.appendChild(card);
 
       const cardDetails = card.querySelector(".card-details");
