@@ -332,6 +332,15 @@ const gamesData = [
     negatives: ["#", "#"]
   },
   {
+    title: "Dead Cells Castlevania",
+    description:
+      "",
+    image:
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.HOrbdUu5KEepIJke3cQDEQHaEK%26pid%3DApi&sp=1733741264Tfd7711c09d0a909c6b8b14382a3200fc94da0612132edf2515baeb2514d36c92",
+    positives: ["#", "#"],
+    negatives: ["#", "#"]
+  },
+  {
     title: "Destiny Connect",
     description:
       "Un RPG où vous voyagez dans le temps pour sauver la ville de Clocknee d'une catastrophe imminente. Résolvez des énigmes et combattez des ennemis mécaniques avec l'aide de vos compagnons.",
