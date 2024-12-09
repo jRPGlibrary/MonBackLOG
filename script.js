@@ -43,7 +43,7 @@ const gamesData = [
     description:
       "L'égypte Antique. Une terre majestueuse au bord du chaos, manipulée par des forces obscures. Voyagez juqu'aux origines du credo des assassins et prenez part à ses évenements fondateurs.",
     image:
-      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.nhQxuqzSNJ2ow0iDWBM3oAHaEK%26pid%3DApi&sp=1733739756T8a7c7192e0ec30377c001d2436c4b14ff00a345a319ffeb2685fac88f577c64f",
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.D7pnn3G3EGg2hEZ9srwo9gHaEK%26pid%3DApi&sp=1733740222Tdf35895a41b30a31635426f64e38a3a7c3334f2894158b2644600b70cb7d88a9",
     positives: ["", ""],
     negatives: ["", ""]
   },
