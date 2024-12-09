@@ -39,6 +39,15 @@ const gamesData = [
     negatives: ["Rythme lent", "Système de combat complexe"]
   },
   {
+    title: "Astro Bot",
+    description:
+      "Embarquez pour une aventure Gigantesque avec notre petit robot fétiche dans ce sublime jeu de plateforme rempli de références.",
+    image:
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.oqgi_P-DpbHKMlRny3USigHaEK%26pid%3DApi&sp=1733739206T2bb0daabc53323789d9522f696ad6a15da6640370cd81f1c1523394c088eca52",
+    positives: ["Références a gogo", "Graphisme", "Nombreux monde"],
+    negatives: ["Manque certaines Références",]
+  },
+  {
     title: "Atelier Firis",
     description:
       "Un RPG d'alchimie où vous suivez le voyage de Firis pour devenir une alchimiste certifiée. Explorez un vaste monde ouvert et créez des objets pour résoudre des énigmes.",
