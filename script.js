@@ -48,6 +48,15 @@ const gamesData = [
     negatives: ["", ""]
   },
   {
+    title: "Assassin's Creed Syndicate",
+    description:
+      "Londre 1868. Au coeur de la révolution industrielle. Incarnez les jumeaux assassins Jacob et Evie Frye et menez votre dans un combat contre les oppresseurs des classes populaires.",
+    image:
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.50Q40ZfyFKTOCCjqIiHZuwHaEK%26pid%3DApi&sp=1733740420T629462fec609f338c3619c06a8cea5c2e583e79ea9aee95303ede59c5e805a93",
+    positives: ["", ""],
+    negatives: ["", ""]
+  },
+  {
     title: "Astria Ascending",
     description:
       "Un JRPG avec des graphismes dessinés à la main. Plongez dans une histoire épique avec huit héros uniques et un système de combat au tour par tour stratégique.",
