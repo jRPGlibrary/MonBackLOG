@@ -189,6 +189,15 @@ const gamesData = [
     negatives: ["", ""]
   },
   {
+    title: "Borderlands 3",
+    description:
+      "Samez le Chaos, Mitraillez et lootez tout sur votre passage das une aventure complétement folle. En solo ou en coop, équipez un trilliard de flingues et sauvez la galaxie d'une nouvelle menace.",
+    image:
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.SvDfer0sPOxn5DPiKLsrTQHaEU%26pid%3DApi&sp=1733740963T54b3518862e4b2272a69087f65f67f13f8db27ae598482795e9fcfbae7a474b0",
+    positives: ["", ""],
+    negatives: ["", ""]
+  },
+  {
     title: "Call of Duty Black Ops 3",
     description:
       "Un jeu de tir à la première personne avec une campagne immersive et des modes multijoueurs compétitifs. Plongez dans un futur dystopique avec des soldats augmentés et des armes high-tech.",
