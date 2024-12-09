@@ -180,6 +180,15 @@ const gamesData = [
     negatives: ["Combat parfois simpliste", "Rythme lent au début"]
   },
   {
+    title: "Borderlands The Handsome Collection",
+    description:
+      "",
+    image:
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ENY99jNKNk5iRfdSRZdJ5wHaEK%26pid%3DApi&sp=1733740751T57661a91e9f7bfed421ed458d7434bd003e7c5d157f2215b72c3f94fd990a774",
+    positives: ["", ""],
+    negatives: ["", ""]
+  },
+  {
     title: "Call of Duty Black Ops 3",
     description:
       "Un jeu de tir à la première personne avec une campagne immersive et des modes multijoueurs compétitifs. Plongez dans un futur dystopique avec des soldats augmentés et des armes high-tech.",
