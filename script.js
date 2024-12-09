@@ -334,9 +334,9 @@ const gamesData = [
   {
     title: "Dead Cells Castlevania",
     description:
-      "",
+      "Dead Cells: Return to Castlevania est une extension mêlant l'univers de Dead Cells et celui de Castlevania. Explorez le château iconique de Dracula, affrontez des boss légendaires comme Dracula et la Mort, et découvrez des armes emblématiques dans un gameplay roguelite frénétique",
     image:
-      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.HOrbdUu5KEepIJke3cQDEQHaEK%26pid%3DApi&sp=1733741264Tfd7711c09d0a909c6b8b14382a3200fc94da0612132edf2515baeb2514d36c92",
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ljwBsY-bmhV-h4JxnCRJiwHaEK%26pid%3DApi&sp=1733741398Td9becdae2e23f2f2cc9ed639595d1346df3bee4f67150af8917c692eecbae4c6",
     positives: ["#", "#"],
     negatives: ["#", "#"]
   },
@@ -505,6 +505,21 @@ const gamesData = [
     negatives: [
       "Difficulté élevée",
       "Peut être frustrant pour certains joueurs"
+    ]
+  },
+  {
+    title: "Ender Lilies",
+    description:
+      "Un metroidvania sombre où vous incarnez Lily, une prêtresse explorant un royaume ravagé par une pluie maudite. Libérez des esprits pour les utiliser en combat et découvrez une histoire empreinte de mélancolie.",
+    image:
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fassets.nintendo.com%2Fimage%2Fupload%2Fc_fill%2Cw_1200%2Fq_auto%3Abest%2Ff_auto%2Fdpr_2.0%2Fncom%2Ffr_CA%2Fgames%2Fswitch%2Fe%2Fender-lilies-quietus-of-the-knights-switch%2Fhero&sp=1733742141Tf8ea09004ff38d2a827a420307733f68e227a519e1ce468d978af1a9d8353ec2",
+    positives: [
+      "Histoire captivante",
+      "Gameplay jouissif"
+    ],
+    negatives: [
+      "",
+      ""
     ]
   },
   {
@@ -697,6 +712,18 @@ const gamesData = [
     negatives: [
       "Histoire complexe pour les non-initiés",
       "Certains trouvent le gameplay trop facile"
+    ]
+  },
+  {
+    title: "Les Sims 4",
+    description:
+      "Un jeu de simulation de vie où vous créez et contrôlez des personnages, construisez des maisons et façonnez leur destin dans un monde rempli de possibilités et d'interactions sociales.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fmedia.contentapi.ea.com%2Fcontent%2Fdam%2Feacom%2FSIMS%2Fbrand-refresh-assets%2Fimages%2F2019%2F07%2Fts4-featured-image-base-refresh.png.adapt.crop191x100.1200w.png&sp=1733742895Tc63f3a882c79e53d5e9ca49afdd114bcfddbfc8c41c8bb8daa19dd6f613f6cc9",
+    positives: ["Personnalisation avancée", "Graphismes améliorés "],
+    negatives: [
+      "Contenu de base limité",
+      "Absence de monde ouvert",
+      "Dépendance aux DLC"
     ]
   },
   {
