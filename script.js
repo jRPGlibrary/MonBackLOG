@@ -138,6 +138,18 @@ const gamesData = [
     negatives: ["Narration faible", "Difficulté inégale"]
   },
   {
+    title: "Badlo",
+    description:
+      "Plongez dans un monde magique rempli de mystères à résoudre, de temples à explorer, de villes à découvrir et de monstre à terrasser",
+    image:
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fonigamers.com%2Fwp-content%2Fuploads%2F2022%2F05%2FBaldo-The-Guardian-Owls-Principal-1920x1080.jpg&sp=1741610717T61170408ba56019c0e9feeb3ccc918e8fcde03c65f0d34c3df12034af4c63efe",
+    positives: [
+      "",
+      ""
+    ],
+    negatives: ["", ""]
+  },
+  {
     title: "Banishers",
     description:
       "Un jeu d'action RPG où vous incarnez des chasseurs de fantômes dans un monde surnaturel. Explorez des environnements hantés, combattez des esprits malveillants et découvrez les mystères cachés de ce monde.",
@@ -394,6 +406,18 @@ const gamesData = [
     negatives: ["IA parfois prévisible", "Quelques problèmes de performance"]
   },
   {
+    title: "Dragon Age: The Veilguard",
+    description:
+      "Plongez dans un combat épique pour sauver Thédas alors que le Voile menace de s'effondrer. Face à des dieux elfes anciens et des choix déchirants, votre destin façonnera l'avenir du monde",
+    image:
+      "https://cdn1.epicgames.com/offer/4583306dbdc34076ac7ac2bf19bf7096/EGS_DragonAgeTheVeilguard_Bioware_S1_2560x1440-0c5844de6318595b22d3dece8fff0fb6_2560x1440-0c5844de6318595b22d3dece8fff0fb6",
+    positives: ["", ""],
+    negatives: [
+      "",
+      ""
+    ]
+  },
+  {
     title: "Dragon's Dogma II",
     description:
       "La suite très attendue du RPG d'action Dragon's Dogma. Explorez un monde ouvert rempli de créatures fantastiques et engagez-vous dans des combats dynamiques avec des compagnons IA.",
@@ -427,13 +451,34 @@ const gamesData = [
     negatives: ["Peut devenir répétitif", "Certaines mécaniques peu intuitives"]
   },
   {
-    title: "Dragon Quest Heroes : Le Crépuscule de l'Arbre du Monde",
+    title: "Dragon Quest Heroes I : Le Crépuscule de l'Arbre du Monde",
     description:
       "La suite du spin-off d'action de Dragon Quest. Incarnez des héros emblématiques de la série et combattez des hordes de monstres dans des batailles épiques.",
     image:
       "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/410850/capsule_616x353_french.jpg?t=1596103807",
     positives: ["Combats dynamiques", "Personnages emblématiques"],
     negatives: ["Scénario peu profond", "Répétitivité des combats"]
+  },
+  {
+    title: "Dragon Quest Heroes II",
+    description:
+      "Une nouvelle aventure commence. Après mille ans de plaix, les Sept royaumes se retrouvent plongés dans un conflit, comme guidés par une force aussis mystérieuse que maléfique. A présent, vous devez prendre la tête d'un groupe de puissants héros pour venir à bout du mal et sauver le monde de la guerre qui le déchire !",
+    image:
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/574050/capsule_616x353.jpg?t=1727790087",
+    positives: ["", ""],
+    negatives: ["", ""]
+  },
+  {
+    title: "Dragon Quest III HD-2D Remake",
+    description:
+      "incarnez l'enfant du héros légendaire Ortega et partez en quête pour vaincre l'Archidémon Baramos. Sur fond de paysages magnifiques et d'une narration enrichie, ce remake modernise un classique tout en préservant son essence intemporelle.",
+    image:
+      "https://fyre.cdn.sewest.net/dragon-quest-hub/6658a7475a1a8ff866fbbea7/dq3-keyart-16-9-157575995737403.jpg?quality=85&width=3840",
+    positives: ["Remake 2D-HD magnifique", "OST sublime"],
+    negatives: [
+      "Trop de leveling",
+      "Difficile pour les amateurs"
+    ]
   },
   {
     title: "Dragon Quest XI Definitive Edition",
@@ -541,6 +586,15 @@ const gamesData = [
     negatives: ["Gameplay parfois simpliste", "Durée de vie courte"]
   },
   {
+    title: "Fantasian: Néo Dimension",
+    description:
+      "Le père de Final Fantasy, Hironobu Sakaguchunn, Bonuo Uematsu reviennent. Incarnez Leo, un jeune homme amnésique, et explorez un monde menacé par la Mechteria. Aidé de Kina et d'autres alliés, découvrez vos souvenirs et sauvez le monde à travers des combats stratégiques et une exploration multidimensionnelle.",
+    image:
+      "https://images8.alphacoders.com/138/thumb-1920-1383960.jpg",
+    positives: ["+ 150 dioramas à la main", "Gameplay intense"],
+    negatives: ["Uniquement en Anglais", ""]
+  },
+  {
     title: "Final Fantasy Type-0 HD",
     description:
       "Un spin-off de Final Fantasy avec un gameplay d'action. Dirigez une équipe de 14 cadets magiques dans des missions de combat intenses pour libérer leur nation de l'oppression impériale.",
@@ -548,6 +602,15 @@ const gamesData = [
       "https://gaming-cdn.com/images/products/855/orig/final-fantasy-type-0-hd-pc-jeu-steam-cover.jpg?v=1705402458",
     positives: ["Système de combat dynamique", "Grande variété de personnages"],
     negatives: ["Graphismes datés", "Histoire complexe"]
+  },
+  {
+    title: "Final Fantasy Pixel Remaster ( I - VI )",
+    description:
+      "Les jeux qui ont inspiré toute une génération reprennent vie dans cette remasterisation définitive en 2D.",
+    image:
+      "https://gh.cdn.sewest.net/assets/ident/pulse/ead79a53/final-fantasy-pixel-remaster-pulse-c7q5dnz8m.jpg?quality=65",
+    positives: ["Pixel art amélioré", "Bande son arrangé"],
+    negatives: ["Pas de bonus PSP", "Un iniéme portage", "Prix élevé"]
   },
   {
     title: "Final Fantasy VII: Remake",
@@ -718,7 +781,7 @@ const gamesData = [
     title: "Les Sims 4",
     description:
       "Un jeu de simulation de vie où vous créez et contrôlez des personnages, construisez des maisons et façonnez leur destin dans un monde rempli de possibilités et d'interactions sociales.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fmedia.contentapi.ea.com%2Fcontent%2Fdam%2Feacom%2FSIMS%2Fbrand-refresh-assets%2Fimages%2F2019%2F07%2Fts4-featured-image-base-refresh.png.adapt.crop191x100.1200w.png&sp=1733742895Tc63f3a882c79e53d5e9ca49afdd114bcfddbfc8c41c8bb8daa19dd6f613f6cc9",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.MXsSTU7Sny6VVc4KoyDUPQHaEK%26pid%3DApi&sp=1741611895T7296157d211b0a0ad0f879bac04a08aca98ded81c02b1213a47276e3384ef292",
     positives: ["Personnalisation avancée", "Graphismes améliorés "],
     negatives: [
       "Contenu de base limité",
@@ -821,6 +884,17 @@ const gamesData = [
     negatives: ["Manque d'originalité", "Microtransactions"]
   },
   {
+    title: "Metaphor:ReFANTASIO",
+    description:
+      "Le trône est vacant suite à l'assassinat de roi. Le testament du défunt roi sans aucun héritier décrète que le prochain monarque sera élu par le peuple. Ainsi commence votre lutte pour vous emparer du trône",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwww.videogameschronicle.com%2Ffiles%2F2023%2F06%2FMetaphor-ReFantazio.jpg&sp=1741611226Tb5ad64215b5d8087dad899e94f5d97af36e08440259b9c05671384297005a300",
+    positives: [
+      "",
+      ""
+    ],
+    negatives: ["", ""]
+  },
+  {
     title: "Monochrome Mobius",
     description:
       "Un RPG tactique se déroulant dans l'univers d'Utawarerumono. Suivez l'histoire d'Oshtor dans un monde fantastique mêlant mythologie et politique.",
@@ -833,6 +907,21 @@ const gamesData = [
     negatives: [
       "Peut être déroutant pour les nouveaux venus",
       "Rythme parfois lent"
+    ]
+  },
+  {
+    title: "Monster Hunter Stories Collection",
+    description:
+      "Riders et Monsties unissent leurs foces dans ces deux JDR épique tirés de l'univers de Monster Hunter, proposés ici dans un seul pack avec des graphismes sublimés et plein de contenus bonus supplémentaires",
+    image:
+      "https://assets.nintendo.com/image/upload/q_auto/f_auto/ncom/software/switch/70070000021423/a7942d1d2e37354670fc9c2b5bdadaea17fea1dafcf974ac88d612a1bd594ed4",
+    positives: [
+      "",
+      ""
+    ],
+    negatives: [
+      "",
+      ""
     ]
   },
   {
@@ -933,6 +1022,36 @@ const gamesData = [
     ]
   },
   {
+    title: "Persona 5 Tactica",
+    description:
+      "Rejoignez les voleurs fantômes et prenez la tête d'une révolte poupulaire dans une aventure aux combats stratégiques palpitants prenant plance dans l'univers emblématique de Persona !",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStwk1hI8t5AuMIZtQfGwhvEhWxGhJLlthUUg&s",
+    positives: [
+      "",
+      ""
+    ],
+    negatives: [
+      "",
+      ""
+    ]
+  },
+  {
+    title: "Reynatis",
+    description:
+      "LIBEREZ VOTRE MONDE ! Quand la fiction rencontre la réalité. C'est à Shibuya, au sein d'un Tokyo ou liberté et justice font loi, que des dénèbres sont sur le point de s'abattre sur le monde...",
+    image:
+      "https://www.geeknplay.fr/wp-content/uploads/2024/02/REYNATIS.jpg",
+    positives: [
+      "",
+      ""
+    ],
+    negatives: [
+      "",
+      ""
+    ]
+  },
+  {
     title: "Sakuna: Of Rice and Ruin",
     description:
       "Un mélange unique de simulation agricole et de jeu de plateforme d'action. Incarnez Sakuna, une déesse déchue, qui doit cultiver du riz et combattre des démons pour racheter ses fautes.",
@@ -942,6 +1061,18 @@ const gamesData = [
     negatives: [
       "Peut devenir répétitif",
       "Courbe d'apprentissage abrupte pour la culture du riz"
+    ]
+  },
+  {
+    title: "SandLand",
+    description:
+      "Une aventure démoniquement fun ! Crée par AKIRA TORIYAMA , Embarquez pour une aventure épique, terrassez vos ennemies avec de puissants véhicules, des possibilités de personnalisation infinies",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDz-nZ97_WtZW6njY2ZkbJbqjGm7ammfTwuw&s",
+    positives: ["", ""],
+    negatives: [
+      "",
+      ""
     ]
   },
   {
@@ -1256,7 +1387,7 @@ const gamesData = [
   {
     title: "Ys IX: Monstrum Nox",
     description:
-      "Le dernier opus de la série Ys. Adol se retrouve emprisonné dans la ville de Balduq et obtient des pouvoirs surnaturels pour combattre une menace mystérieuse.",
+      "Adol se retrouve emprisonné dans la ville de Balduq et obtient des pouvoirs surnaturels pour combattre une menace mystérieuse.",
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1351630/header.jpg",
     positives: [
       "Exploration verticale innovante",
@@ -1266,7 +1397,22 @@ const gamesData = [
       "Performance technique parfois instable",
       "Certains éléments de l'histoire prévisibles"
     ]
+  },
+  {
+    title: "Ys X: Nordics",
+    description:
+      "Deux héros, une aventure épique et une débordante de découvertes. Découvrez les dangers du golfe d'Obelia à travers les yeux d'Adol Christin et de sa nouvelle alliée, la pirate Karja Balta",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fi0.wp.com%2Fwww.nintendo-town.fr%2Fwp-content%2Fuploads%2F2023%2F06%2FYs-X-Nordics-1.jpg%3Ffit%3D1920%2C1080%26ssl%3D1&sp=1741611622T4bdafa72799d8f599a36536b925046e596cd61da40c73c5416214362d9ee5288",
+    positives: [
+      "",
+      ""
+    ],
+    negatives: [
+      "",
+      ""
+    ]
   }
+
 ];
 
 
