@@ -1458,76 +1458,81 @@ alphabet.split("").forEach((letter) => {
       card.classList.add("card");
       card.setAttribute("data-title", game.title);
 
+      const cardInner = document.createElement("div");
+      cardInner.classList.add("card-inner");
+
+      const cardFront = document.createElement("div");
+      cardFront.classList.add("card-front");
+
+      const cardBack = document.createElement("div");
+      cardBack.classList.add("card-back");
+
       const cardImage = game.image
         ? game.image
-        : `https://via.placeholder.com/250x140.png?text=${encodeURIComponent(
-            game.title
-          )}`;
+        : `https://via.placeholder.com/250x140.png?text=${encodeURIComponent(game.title)}`;
 
-      card.innerHTML = `
-                        <div class="card-image" style="background-image: url('${cardImage}');" loading="lazy"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">${game.title}</h3>
-                            <p class="card-description">${game.description}</p>
-                            <div class="share-icons">
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                                  window.location.href
-                                )}" target="_blank" aria-label="Partager sur Facebook">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(
-                                  game.title +
-                                    " - " +
-                                    game.description +
-                                    " " +
-                                    window.location.href
-                                )}" target="_blank" aria-label="Partager sur WhatsApp">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                                <a href="https://reddit.com/submit?url=${encodeURIComponent(
-                                  window.location.href
-                                )}&title=${encodeURIComponent(
-        game.title
-      )}" target="_blank" aria-label="Partager sur Reddit">
-                                    <i class="fab fa-reddit"></i>
-                                </a>
-                                <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                                  window.location.href
-                                )}&text=${encodeURIComponent(
-        game.title + " - " + game.description
-      )}" target="_blank" aria-label="Partager sur X (Twitter)">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card-details" style="display: none;">
-                            <div class="game-avis">
-                                <h3>Ce que j'en pense: ${game.title}</h3>
-                                <p>${
-                                  game.avis ||
-                                  "Aucun avis disponible pour le moment."
-                                }</p>
-                            </div>
-                            <div class="columns-container">
-                                <div class="column">
-                                    <h4 class="positives">+ Points Positifs</h4>
-                                    <ul>
-                                        ${game.positives
-                                          .map((point) => `<li>${point}</li>`)
-                                          .join("")}
-                                    </ul>
-                                </div>
-                                <div class="column">
-                                    <h4 class="negatives">- Points Négatifs</h4>
-                                    <ul>
-                                        ${game.negatives
-                                          .map((point) => `<li>${point}</li>`)
-                                          .join("")}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    `;
+      cardFront.innerHTML = `
+        <div class="card-image" style="background-image: url('${cardImage}');" loading="lazy"></div>
+        <div class="card-content">
+          <h3 class="card-title">${game.title}</h3>
+          <p class="card-description">${game.description}</p>
+          <div class="share-icons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank" aria-label="Partager sur Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(game.title + " - " + game.description + " " + window.location.href)}" target="_blank" aria-label="Partager sur WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://reddit.com/submit?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(game.title)}" target="_blank" aria-label="Partager sur Reddit">
+              <i class="fab fa-reddit"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(game.title + " - " + game.description)}" target="_blank" aria-label="Partager sur X (Twitter)">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      `;
+
+      cardBack.innerHTML = `
+        <div class="card-details">
+          <div class="game-avis">
+            <h3>Ce que j'en pense: ${game.title}</h3>
+            <p>${game.avis || "Aucun avis disponible pour le moment."}</p>
+          </div>
+          <div class="columns-container">
+            <div class="column">
+              <h4 class="positives">+ Points Positifs</h4>
+              <ul>
+                ${game.positives.map((point) => `<li>${point}</li>`).join("")}
+              </ul>
+            </div>
+            <div class="column">
+              <h4 class="negatives">- Points Négatifs</h4>
+              <ul>
+                ${game.negatives.map((point) => `<li>${point}</li>`).join("")}
+              </ul>
+            </div>
+          </div>
+          <div class="share-icons">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank" aria-label="Partager sur Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(game.title + " - " + game.description + " " + window.location.href)}" target="_blank" aria-label="Partager sur WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://reddit.com/submit?url=${encodeURIComponent(window.location.href)}&title=${encodeURIComponent(game.title)}" target="_blank" aria-label="Partager sur Reddit">
+              <i class="fab fa-reddit"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(game.title + " - " + game.description)}" target="_blank" aria-label="Partager sur X (Twitter)">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      `;
+
+      cardInner.appendChild(cardFront);
+      cardInner.appendChild(cardBack);
+      card.appendChild(cardInner);
 
       sliderContainer.appendChild(card);
 
@@ -1551,22 +1556,23 @@ alphabet.split("").forEach((letter) => {
 
           // Si le mouvement est minimal (considéré comme un tap)
           if (deltaX < 10 && deltaY < 10) {
-            if (cardDetails.style.display === "none") {
-              cardDetails.style.display = "block";
-            } else {
-              cardDetails.style.display = "none";
-            }
+            // Toggle la classe flipped pour activer l'animation CSS
+            card.classList.toggle('flipped');
+            
+            // Empêcher le comportement par défaut pour éviter les clics indésirables
+            e.preventDefault();
           }
         });
+        
+        // Assurer que les liens de partage fonctionnent correctement sur les appareils tactiles
+        card.querySelectorAll('.share-icons a').forEach(link => {
+          link.addEventListener('touchend', (e) => {
+            e.stopPropagation(); // Empêcher la propagation pour éviter de retourner la carte
+          });
+        });
       } else {
-        // Gestion des événements pour les appareils non tactiles
-        card.addEventListener("mouseenter", () => {
-          cardDetails.style.display = "block";
-        });
-
-        card.addEventListener("mouseleave", () => {
-          cardDetails.style.display = "none";
-        });
+        // Pour les appareils non tactiles, utiliser hover pour le flip
+        // Le CSS .card:hover gère déjà la rotation
       }
     });
 
@@ -1575,12 +1581,12 @@ alphabet.split("").forEach((letter) => {
   }
 });
 
-// Fermer les détails ouverts lorsqu'on touche en dehors d'une carte (pour les appareils tactiles)
+// Fermer les cartes retournées lorsqu'on touche en dehors d'une carte (pour les appareils tactiles)
 if (isTouchDevice()) {
   document.addEventListener("touchstart", (e) => {
     if (!e.target.closest(".card")) {
-      document.querySelectorAll(".card-details").forEach((details) => {
-        details.style.display = "none";
+      document.querySelectorAll(".card.flipped").forEach((card) => {
+        card.classList.remove("flipped");
       });
     }
   });

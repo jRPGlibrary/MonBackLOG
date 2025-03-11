@@ -45,35 +45,70 @@ h2 {
 /* Style des cartes */
 .card {
   display: inline-block;
-  background-color: #16213e;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin-right: 15px;
   margin-left: 15px;
-  width: 320px;
-  height: 390px;
-  overflow: hidden;
+  width: 300px;
+  height: 400px;
   text-align: left;
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid rgba(77, 168, 218, 0.3);
   white-space: normal;
   vertical-align: top;
   position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 20px;
+  cursor: pointer;
 }
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transform-style: preserve-3d;
+}
+
+.card:hover, .card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: linear-gradient(135deg, #1a1f35, #16213e);
+  border-radius: 20px;
+  border: 2px solid rgba(77, 168, 218, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  background-clip: padding-box;
+  overflow: hidden;
+  transition: all 1.5s ease-in-out;
+}
+
+.card-front {
+  background: linear-gradient(45deg, #16213e, #1a1a2e);
+}
+
+.card-back {
+  background: linear-gradient(135deg, #16213e, #1a1a2e);
+  transform: rotateY(180deg);
+}
+
+/* Removed hover effect on card as it's now handled by the transform */
 
 /* Style de l'image de la carte */
 .card-image {
   width: 100%;
-  height: 200px;
+  height: 180px;
   background-size: cover;
   background-position: center;
-  transition: opacity 0.6s;
+  transition: opacity 0.4s;
 }
 
 /* Style du contenu de la carte */
 .card-content {
   padding: 15px;
-  height: calc(100% - 140px);
+  height: calc(100% - 180px);
   display: flex;
   flex-direction: column;
 }
@@ -83,6 +118,9 @@ h2 {
   font-size: 17px;
   margin: 0 0 8px;
   color: #4da8da;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Style de la description de la carte */
@@ -103,12 +141,37 @@ h2 {
   position: absolute;
   bottom: 10px;
   right: 15px;
-  opacity: 0;
+  opacity: 1; /* Toujours visible par défaut */
   transition: opacity 0.3s ease;
+  z-index: 10; /* Ensure icons appear above other elements */
 }
 
-.card:hover .share-icons {
-  opacity: 1;
+/* Nous gardons cette règle pour assurer la compatibilité avec le code existant */
+.card:hover .share-icons, .card.flipped .share-icons {
+  z-index: 1000;
+}
+
+/* Amélioration pour les appareils tactiles */
+@media (pointer: coarse) {
+  .share-icons a {
+    padding: 8px; /* Zone de tap plus grande */
+    margin-left: 12px; /* Plus d'espace entre les icônes */
+  }
+}
+
+/* Style des icônes sur le recto de la carte */
+.card-front .share-icons {
+  transform: rotateY(0deg); /* Maintient l'orientation correcte des icônes */
+  backface-visibility: hidden;
+}
+
+/* Style des icônes sur le verso de la carte */
+.card-back .share-icons {
+  transform: rotateY(0deg); /* Correction de l'orientation pour le verso */
+  bottom: 10px;
+  right: 15px;
+  z-index: 1000;
+  backface-visibility: hidden;
 }
 
 .share-icons a {
@@ -116,6 +179,8 @@ h2 {
   margin-left: 10px;
   font-size: 18px;
   text-decoration: none;
+  display: inline-block;
+  padding: 5px;
 
   /* Style au survol */
   &:hover {
@@ -123,24 +188,28 @@ h2 {
   }
 }
 
-/* Style des détails de la carte (affichés au survol) */
-.card:hover .share-icons {
-  opacity: 1;
-  z-index: 1000;
+/* Style des icônes sur le recto de la carte */
+.card-front .share-icons {
+  transform: rotateY(0deg); /* Maintient l'orientation correcte des icônes */
+  backface-visibility: hidden;
 }
 
+/* Style des icônes sur le verso de la carte */
+.card-back .share-icons {
+  transform: rotateY(0deg); /* Correction de l'orientation pour le verso */
+  bottom: 10px;
+  right: 15px;
+  z-index: 1000;
+  backface-visibility: hidden;
+}
+
+
 .card-details {
-  background-color: rgba(22, 33, 62, 0.9);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  background-color: rgba(22, 33, 62, 0.95);
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 15px;
   overflow-y: auto;
-  display: none;
   margin: auto;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -148,8 +217,9 @@ h2 {
 }
 
 .card-details h3 {
-  margin: 5px;
-  font-size: medium;
+  margin: 5px 0 10px 0;
+  font-size: 16px;
+  color: #4da8da;
 }
 
 .card-details .positives {
@@ -165,7 +235,8 @@ h2 {
 .card-details ul {
   list-style-type: disc;
   padding-left: 15px;
-  font-size: 0.8em;
+  font-size: 0.85em;
+  margin-top: 5px;
 }
 
 .card-details li {
@@ -188,37 +259,20 @@ h2 {
 /* Styles pour les écrans plus larges */
 @media (min-width: 1024px) {
   .card {
-    height: 415px;
+    width: 320px;
+    height: 420px;
     position: relative;
-    overflow: hidden;
-    transition: box-shadow 0.8s ease, border-color 0.8s ease;
+    transform-style: preserve-3d;
+    transition: transform 2.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 22px;
   }
 
-  .card:hover {
-    box-shadow: 2px 4px rgba(0, 100, 255, 0.5);
-    border-color: rgba(77, 168, 218, 0.8);
-  }
-
-  .card::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, #4da8da, #00c6ff);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.4s ease;
-  }
-
-  .card:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
 
   .card-title {
     font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .card-description {
