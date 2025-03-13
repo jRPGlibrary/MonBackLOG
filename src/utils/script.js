@@ -111,12 +111,11 @@ const gamesData = [
     positives: ["Narration non-linéaire fascinante", "Multiples fins possibles"],
     negatives: ["Durée de vie relativement courte", "Certains choix peu impactants"]
   },
-  // ... Your games data here ...
   {
     title: "Aeterna Noctis",
     description:
       "Un jeu de plateforme et d'action en 2D avec des graphismes peints à la main. Explorez un monde fantastique rempli de créatures étranges. Un metroidvania où lutte le mal et le bien",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.E-UyRCr5bdCZT1zS2vENKAHaEK%26pid%3DApi&sp=1741889780T38846d5042a43d6d6fa10cfadb0f8447e0138c93a7a716bbf3ef46bb981f9bf9",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1517160/header.jpg",
     positives: [
       "Graphismes peints à la main",
       "Monde fantastique immersif",
