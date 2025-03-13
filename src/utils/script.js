@@ -97,13 +97,7 @@ const gamesData = [
     positives: ["Histoire captivante", "Combat au sabre laser satisfaisant", "Exploration gratifiante"],
     negatives: ["Quelques problèmes techniques", "Level design parfois confus"]
   },
-  {
-    title: "Split/Second",
-    description: "Un jeu de course arcade spectaculaire où les joueurs peuvent déclencher des explosions et modifier le circuit en temps réel. Participez à une émission de télé-réalité mortelle.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/297860/header.jpg",
-    positives: ["Action explosive", "Courses intenses"],
-    negatives: ["Mode multijoueur limité", "Difficulté parfois frustrante"]
-  },
+
   {
     title: "Split Fiction",
     description: "Un jeu d'aventure narratif où vos choix façonnent l'histoire. Explorez différentes réalités parallèles et découvrez comment vos décisions affectent le cours des événements dans ce thriller psychologique captivant.",
@@ -115,7 +109,7 @@ const gamesData = [
     title: "Aeterna Noctis",
     description:
       "Un jeu de plateforme et d'action en 2D avec des graphismes peints à la main. Explorez un monde fantastique rempli de créatures étranges. Un metroidvania où lutte le mal et le bien",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1517160/header.jpg",
+    image: "assets/images/Aeterna Noctis.png",
     positives: [
       "Graphismes peints à la main",
       "Monde fantastique immersif",
@@ -135,7 +129,7 @@ const gamesData = [
     title: "Anthem",
     description:
       "Un RPG d'action en ligne où vous incarnez un Freelancer équipé d'une exo-armure. Explorez un vaste monde ouvert, personnalisez votre Javelin et combattez aux côtés d'autres joueurs.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1222690/header.jpg",
+    image: "assets/images/Anthem.jpg",
     positives: ["Graphismes magnifiques", "Gameplay dynamique"],
     negatives: ["Problèmes de serveurs", "Contenu répétitif"]
   },
@@ -175,7 +169,7 @@ const gamesData = [
     title: "Astro Bot",
     description:
       "Embarquez pour une aventure Gigantesque avec notre petit robot fétiche dans ce sublime jeu de plateforme rempli de références.",
-    image: "https://image.api.playstation.com/vulcan/ap/rnd/202008/2617/Qel8RvP2Y2oFrJKzOqbDsZeF.jpg",
+    image: "assets/images/Astro Bot.jpg",
     positives: ["Références a gogo", "Graphisme", "Nombreux monde"],
     negatives: ["Manque certaines Références",]
   },
@@ -243,15 +237,10 @@ const gamesData = [
   },
   {
     title: "Badlo",
-    description:
-      "Plongez dans un monde magique rempli de mystères à résoudre, de temples à explorer, de villes à découvrir et de monstre à terrasser",
-    image:
-      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fonigamers.com%2Fwp-content%2Fuploads%2F2022%2F05%2FBaldo-The-Guardian-Owls-Principal-1920x1080.jpg&sp=1741610717T61170408ba56019c0e9feeb3ccc918e8fcde03c65f0d34c3df12034af4c63efe",
-    positives: [
-      "",
-      ""
-    ],
-    negatives: ["", ""]
+    description: "Plongez dans un monde magique rempli de mystères à résoudre, de temples à explorer, de villes à découvrir et de monstres à terrasser. Une aventure épique inspirée de Zelda avec un style artistique unique.",
+    image: "assets/images/Baldo.jpg",
+    positives: ["Direction artistique unique", "Exploration riche", "Énigmes variées"],
+    negatives: ["Difficulté parfois frustrante", "Quelques bugs techniques"]
   },
   {
     title: "Banishers",
@@ -297,21 +286,17 @@ const gamesData = [
   },
   {
     title: "Borderlands The Handsome Collection",
-    description:
-      "",
-    image:
-      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ENY99jNKNk5iRfdSRZdJ5wHaEK%26pid%3DApi&sp=1733740751T57661a91e9f7bfed421ed458d7434bd003e7c5d157f2215b72c3f94fd990a774",
-    positives: ["", ""],
-    negatives: ["", ""]
+    description: "Une collection regroupant Borderlands 2 et Borderlands: The Pre-Sequel avec tous leurs DLC. Explorez Pandore dans ces FPS-RPG déjantés remplis d'humour et de butin.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ENY99jNKNk5iRfdSRZdJ5wHaEK%26pid%3DApi&sp=1733740751T57661a91e9f7bfed421ed458d7434bd003e7c5d157f2215b72c3f94fd990a774",
+    positives: ["Humour décalé", "Contenu massif", "Excellent en coopération"],
+    negatives: ["Peut devenir répétitif", "Histoire inégale"]
   },
   {
     title: "Borderlands 3",
-    description:
-      "Samez le Chaos, Mitraillez et lootez tout sur votre passage das une aventure complétement folle. En solo ou en coop, équipez un trilliard de flingues et sauvez la galaxie d'une nouvelle menace.",
-    image:
-      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.SvDfer0sPOxn5DPiKLsrTQHaEU%26pid%3DApi&sp=1733740963T54b3518862e4b2272a69087f65f67f13f8db27ae598482795e9fcfbae7a474b0",
-    positives: ["", ""],
-    negatives: ["", ""]
+    description: "Semez le Chaos, Mitraillez et lootez tout sur votre passage dans une aventure complètement folle. En solo ou en coop, équipez un trilliard de flingues et sauvez la galaxie d'une nouvelle menace.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.SvDfer0sPOxn5DPiKLsrTQHaEU%26pid%3DApi&sp=1733740963T54b3518862e4b2272a69087f65f67f13f8db27ae598482795e9fcfbae7a474b0",
+    positives: ["Gameplay frénétique", "Variété d'armes impressionnante", "Excellent en coopération"],
+    negatives: ["Histoire inégale", "Missions secondaires répétitives"]
   },
   {
     title: "Call of Duty Black Ops 3",
@@ -354,12 +339,10 @@ const gamesData = [
   },
   {
     title: "Cat Quest III",
-    description:
-      "Dans Cat Quest III, vous incarnez un purriveur dans un monde ouvert 2.5D librement explorable grouillant de rats Pi. Vous pouvez naviguer sur les mers de votre navire pour les trésors à gogo! Mais préparez-vous au péril, car le Roi Pirate vise à vous traquer...",
-    image:
-      "https://imgs.search.brave.com/nxEVXoq2ymDM00nAkGPiCGfpUb0lVm2WpI7nD-FGNOM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubmludGVuZG8u/Y29tL2ltYWdlL3Vw/bG9hZC9hcl8xNjo5/LGNfbHBhZCx3XzEy/NDAvYl93aGl0ZS9m/X2F1dG8vcV9hdXRv/L25jb20vc29mdHdh/cmUvc3dpdGNoLzcw/MDEwMDAwMDY3ODY1/LzZhYmY5NDVkYzNh/N2VjZDE0ZWRkODcy/YTFhNjFkNGRlYzVj/N2VmMmM4MmYwNGIw/NTZiMGQyYzQ0MWM0/OThiY2M.jpeg",
-    positives: ["", ""],
-    negatives: ["", ""]
+    description: "Dans Cat Quest III, vous incarnez un purriveur dans un monde ouvert 2.5D librement explorable grouillant de rats Pi. Vous pouvez naviguer sur les mers de votre navire pour les trésors à gogo! Mais préparez-vous au péril, car le Roi Pirate vise à vous traquer...",
+    image: "https://imgs.search.brave.com/nxEVXoq2ymDM00nAkGPiCGfpUb0lVm2WpI7nD-FGNOM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubmludGVuZG8u/Y29tL2ltYWdlL3Vw/bG9hZC9hcl8xNjo5/LGNfbHBhZCx3XzEy/NDAvYl93aGl0ZS9m/X2F1dG8vcV9hdXRv/L25jb20vc29mdHdh/cmUvc3dpdGNoLzcw/MDEwMDAwMDY3ODY1/LzZhYmY5NDVkYzNh/N2VjZDE0ZWRkODcy/YTFhNjFkNGRlYzVj/N2VmMmM4MmYwNGIw/NTZiMGQyYzQ0MWM0/OThiY2M.jpeg",
+    positives: ["Exploration maritime innovante", "Graphismes améliorés", "Nouvelles mécaniques de jeu"],
+    negatives: ["Certaines quêtes répétitives", "Navigation parfois complexe"]
   },
   {
     title: "Cladun Returns: This Is Sengoku",
