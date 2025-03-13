@@ -1,4 +1,116 @@
 const gamesData = [
+  {
+    title: "Nioh",
+    description: "Un jeu d'action-RPG exigeant dans le Japon féodal. Affrontez des yokai et des samouraïs dans des combats intenses en utilisant différents styles d'armes et des capacités mystiques.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/485510/header.jpg",
+    positives: ["Système de combat profond", "Variété d'armes et de styles", "Atmosphère japonaise authentique"],
+    negatives: ["Difficulté très élevée", "Histoire complexe"]
+  },
+  {
+    title: "Mighty No. 9",
+    description: "Un jeu de plateforme d'action inspiré des classiques du genre. Incarnez Beck, le robot No. 9, et utilisez vos capacités uniques pour sauver vos frères robots corrompus.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/314710/header.jpg",
+    positives: ["Gameplay classique", "Variété de pouvoirs"],
+    negatives: ["Graphismes décevants", "Problèmes techniques"]
+  },
+  {
+    title: "Marvel's Avengers",
+    description: "Un jeu d'action-aventure basé sur l'univers Marvel. Incarnez vos super-héros préférés dans une nouvelle histoire originale et combattez le mal en solo ou en coopération.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/997070/header.jpg",
+    positives: ["Gameplay unique pour chaque héros", "Histoire originale"],
+    negatives: ["Contenu répétitif", "Problèmes de performance"]
+  },
+  {
+    title: "Maneater",
+    description: "Un jeu de rôle d'action où vous incarnez un requin. Évoluez de petit requin à méga-prédateur en explorant un monde ouvert aquatique et en dévorant tout ce qui bouge.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/629820/header.jpg",
+    positives: ["Concept unique", "Système d'évolution amusant"],
+    negatives: ["Missions répétitives", "Durée de vie limitée"]
+  },
+  {
+    title: "Lost Epic",
+    description: "Un jeu d'action-RPG en 2D avec des graphismes dessinés à la main. Explorez un monde fantastique, combattez des dieux et devenez le héros légendaire.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1426930/header.jpg?t=1714456800",
+    positives: ["Beaux graphismes", "Combat fluide"],
+    negatives: ["Difficulté déséquilibrée", "Histoire prévisible"]
+  },
+  {
+    title: "The Sims 4",
+    description: "Un simulateur de vie où vous créez et contrôlez des personnages virtuels. Construisez leur maison, gérez leur carrière, leurs relations et leur vie quotidienne dans un monde en constante évolution.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1222670/header.jpg",
+    positives: ["Liberté de création totale", "Contenu régulièrement mis à jour", "Gameplay accessible"],
+    negatives: ["DLC nombreux et coûteux", "Intelligence artificielle parfois limitée"]
+  },
+  {
+    title: "RWBY: Arrowfell",
+    description: "Un jeu d'action-aventure basé sur la série animée RWBY. Incarnez l'équipe RWBY et utilisez les capacités uniques de chaque membre pour combattre les forces du mal et protéger le monde de Remnant.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1738010/header.jpg",
+    positives: ["Fidèle à l'univers RWBY", "Système de combat dynamique"],
+    negatives: ["Durée de vie limitée", "Graphismes simplistes"]
+  },
+  {
+    title: "Returnal",
+    description: "Un jeu de tir à la troisième personne roguelike où vous incarnez Selene, une astronaute piégée dans une boucle temporelle sur une planète hostile. Chaque mort vous ramène au début, mais plus forte et plus sage.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1649240/header.jpg",
+    positives: ["Gameplay intense et précis", "Atmosphère mystérieuse", "Graphismes impressionnants"],
+    negatives: ["Difficulté élevée", "Pas de sauvegarde en cours de cycle"]
+  },
+  {
+    title: "Ratchet & Clank: Rift Apart",
+    description: "Une aventure intergalactique explosive où Ratchet et Clank voyagent à travers différentes dimensions. Utilisez un arsenal délirant d'armes et traversez des failles dimensionnelles pour sauver l'univers.",
+    image: "https://image.api.playstation.com/vulcan/ap/rnd/202101/2921/DwVjpbKOsFOyPdNHGJKZ1xGe.jpg",
+    positives: ["Graphismes époustouflants", "Arsenal d'armes créatif", "Excellente utilisation des fonctionnalités PS5"],
+    negatives: ["Histoire prévisible", "Prix élevé"]
+  },
+  {
+    title: "Rage 2",
+    description: "Un FPS post-apocalyptique en monde ouvert où vous incarnez un Ranger, dernier espoir de l'humanité. Combinez armes dévastatrices et pouvoirs surhumains pour faire régner la justice dans un monde chaotique.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/548570/header.jpg",
+    positives: ["Combat dynamique et satisfaisant", "Monde ouvert varié"],
+    negatives: ["Histoire peu développée", "Missions secondaires répétitives"]
+  },
+  {
+    title: "The Division",
+    description: "Un jeu de tir à la troisième personne en ligne qui se déroule dans un New York post-apocalyptique. En tant qu'agent de la Division, vous devez restaurer l'ordre dans une ville ravagée par une pandémie.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/365590/header.jpg",
+    positives: ["Monde ouvert détaillé", "Système de progression approfondi", "Gameplay tactique"],
+    negatives: ["Contenu endgame limité", "Répétitivité des missions"]
+  },
+  {
+    title: "The Division 2",
+    description: "La suite du premier opus se déroulant à Washington D.C. Affrontez des factions ennemies, améliorez votre équipement et restaurez l'ordre dans la capitale américaine ravagée par une guerre civile.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2221490/header.jpg",
+    positives: ["Graphismes améliorés", "Plus de contenu endgame", "Meilleure variété de missions"],
+    negatives: ["Histoire peu captivante", "Certains bugs persistants"]
+  },
+  {
+    title: "Technomancer",
+    description: "Un RPG d'action science-fiction se déroulant sur Mars. Incarnez un Technomancer, un guerrier-mage capable de maîtriser l'électricité, et découvrez les secrets de la planète rouge.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/338390/header.jpg",
+    positives: ["Univers unique", "Système de combat varié"],
+    negatives: ["Graphismes moyens", "Animations rigides"]
+  },
+  {
+    title: "Star Wars: Jedi Fallen Order",
+    description: "Une aventure épique dans l'univers Star Wars où vous incarnez Cal Kestis, un jeune Padawan qui a survécu à l'Ordre 66. Développez vos pouvoirs de la Force et maîtrisez le sabre laser.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1172380/header.jpg",
+    positives: ["Histoire captivante", "Combat au sabre laser satisfaisant", "Exploration gratifiante"],
+    negatives: ["Quelques problèmes techniques", "Level design parfois confus"]
+  },
+  {
+    title: "Split/Second",
+    description: "Un jeu de course arcade spectaculaire où les joueurs peuvent déclencher des explosions et modifier le circuit en temps réel. Participez à une émission de télé-réalité mortelle.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/297860/header.jpg",
+    positives: ["Action explosive", "Courses intenses"],
+    negatives: ["Mode multijoueur limité", "Difficulté parfois frustrante"]
+  },
+  {
+    title: "Split Fiction",
+    description: "Un jeu d'aventure narratif où vos choix façonnent l'histoire. Explorez différentes réalités parallèles et découvrez comment vos décisions affectent le cours des événements dans ce thriller psychologique captivant.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1384900/header.jpg",
+    positives: ["Narration non-linéaire fascinante", "Multiples fins possibles"],
+    negatives: ["Durée de vie relativement courte", "Certains choix peu impactants"]
+  },
   // ... Your games data here ...
   {
     title: "Aeterna Noctis",
@@ -1411,6 +1523,70 @@ const gamesData = [
       "",
       ""
     ]
+  },
+  {
+    title: "World of Warriors",
+    description:
+      "Un jeu de combat et de stratégie où vous collectionnez et entraînez des guerriers légendaires de différentes époques historiques pour combattre dans des arènes.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    positives: ["Collection de guerriers variés", "Combats stratégiques"],
+    negatives: ["Peut devenir répétitif", "Progression parfois lente"]
+  },
+  {
+    title: "Warhammer 40,000 Inquisitor",
+    description:
+      "Un action-RPG dans l'univers sombre de Warhammer 40,000. Incarnez un Inquisiteur et purifiez les hérétiques dans des missions variées à travers la galaxie.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    positives: ["Univers Warhammer 40K riche", "Personnalisation poussée"],
+    negatives: ["Peut être répétitif", "Courbe d'apprentissage abrupte"]
+  },
+  {
+    title: "Warhammer: Chaosbane",
+    description:
+      "Un hack-and-slash dans l'univers de Warhammer Fantasy. Combattez les forces du Chaos à travers différentes régions de l'Empire avec quatre classes de personnages uniques.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    positives: ["Gameplay de hack-and-slash satisfaisant", "Coopération jusqu'à 4 joueurs"],
+    negatives: ["Contenu endgame limité", "Histoire prévisible"]
+  },
+  {
+    title: "Victor Vran",
+    description:
+      "Un action-RPG où vous incarnez Victor Vran, un chasseur de démons. Combattez des hordes de monstres avec un système de combat dynamique et personnalisez votre style de jeu avec différentes armes et pouvoirs.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    positives: ["Système de combat fluide", "Personnalisation variée"],
+    negatives: ["Histoire simple", "Environnements parfois répétitifs"]
+  },
+  {
+    title: "Unknown 9 Awakening",
+    description:
+      "Un jeu d'action-aventure où vous incarnez Haroona, une jeune femme dotée de pouvoirs surnaturels. Explorez le monde caché des Inconnus et maîtrisez la capacité de manipuler l'Éther pour combattre vos ennemis.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    positives: ["Univers mystérieux captivant", "Pouvoirs uniques"],
+    negatives: ["Durée de vie moyenne", "Mécaniques parfois répétitives"]
+  },
+  {
+    title: "Toukiden 2",
+    description:
+      "Un jeu de chasse aux monstres dans un Japon féodal envahi par des démons. Utilisez différentes armes et pouvoirs pour vaincre d'énormes créatures et sauver l'humanité.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    positives: ["Monde ouvert intéressant", "Variété d'armes et de styles de combat"],
+    negatives: ["Peut devenir répétitif", "Histoire prévisible"]
+  },
+  {
+    title: "The Surge 2",
+    description:
+      "Un action-RPG de science-fiction dans un monde dystopique. Combattez des ennemis mécaniques, récupérez leurs pièces pour améliorer votre exosquelette et survivez dans une ville en proie au chaos.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    positives: ["Système de combat technique", "Démembrement stratégique des ennemis"],
+    negatives: ["Difficulté élevée", "Histoire parfois confuse"]
+  },
+  {
+    title: "The Lord Of The Ring: Gollum",
+    description:
+      "Une aventure narrative où vous incarnez Gollum dans sa quête pour retrouver son précieux anneau. Infiltrez-vous dans des zones dangereuses et prenez des décisions qui affecteront l'équilibre entre les deux personnalités de Gollum.",
+    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    positives: ["Exploration de la psyché de Gollum", "Fidélité à l'univers de Tolkien"],
+    negatives: ["Gameplay limité", "Problèmes techniques"]
   }
 
 ];
