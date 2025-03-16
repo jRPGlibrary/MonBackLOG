@@ -24,34 +24,24 @@ h2 {
   width: 100%;
 }
 
-/* Style du conteneur du carrousel */
+/* Style du conteneur des cartes en colonne */
 .slider-container {
   width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 10px;
-  /* padding-left: 15px; */
-  /* padding-right: 15px; */
   box-sizing: border-box;
-
-  /* Supprimer la barre de défilement */
-  &::-webkit-scrollbar {
-  display: none;
-  }
 }
 
 /* Style des cartes */
 .card {
-  display: inline-block;
-  margin-right: 15px;
-  margin-left: 15px;
+  display: flex;
+  margin-bottom: 20px;
   width: 300px;
   height: 400px;
   text-align: left;
-  white-space: normal;
-  vertical-align: top;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 2.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
