@@ -1567,7 +1567,7 @@ const gamesData = [
 ];
 
 
-// Partie 1 : Tri des jeux par ordre alphabétique
+// Tri des jeux par ordre alphabétique
 gamesData.sort((a, b) => a.title.localeCompare(b.title));
 
 // Partie 2 : Initialisation des éléments principaux
