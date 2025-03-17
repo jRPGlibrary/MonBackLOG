@@ -287,14 +287,14 @@ const gamesData = [
   {
     title: "Borderlands The Handsome Collection",
     description: "Une collection regroupant Borderlands 2 et Borderlands: The Pre-Sequel avec tous leurs DLC. Explorez Pandore dans ces FPS-RPG déjantés remplis d'humour et de butin.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ENY99jNKNk5iRfdSRZdJ5wHaEK%26pid%3DApi&sp=1733740751T57661a91e9f7bfed421ed458d7434bd003e7c5d157f2215b72c3f94fd990a774",
+    image: "assets/images/BorderlandsTheHandsomeCollection.jpg",
     positives: ["Humour décalé", "Contenu massif", "Excellent en coopération"],
     negatives: ["Peut devenir répétitif", "Histoire inégale"]
   },
   {
     title: "Borderlands 3",
     description: "Semez le Chaos, Mitraillez et lootez tout sur votre passage dans une aventure complètement folle. En solo ou en coop, équipez un trilliard de flingues et sauvez la galaxie d'une nouvelle menace.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.SvDfer0sPOxn5DPiKLsrTQHaEU%26pid%3DApi&sp=1733740963T54b3518862e4b2272a69087f65f67f13f8db27ae598482795e9fcfbae7a474b0",
+    image: "assets/images/Borderlands3.jpg",
     positives: ["Gameplay frénétique", "Variété d'armes impressionnante", "Excellent en coopération"],
     negatives: ["Histoire inégale", "Missions secondaires répétitives"]
   },
