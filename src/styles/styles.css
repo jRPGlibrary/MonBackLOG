@@ -6,6 +6,93 @@ body {
   margin: 0;
 }
 
+/* Style du compteur de jeux */
+#games-counter {
+  text-align: center;
+  padding: 15px;
+  margin: 20px auto 0;
+  font-family: "Roboto", sans-serif;
+  color: #a0a0a0;
+  font-size: 1.2em;
+  background: linear-gradient(135deg, rgba(26, 31, 53, 0.7), rgba(22, 33, 62, 0.7));
+  border-radius: 30px;
+  max-width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(77, 168, 218, 0.2);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+#games-counter:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#games-counter span {
+  color: #4da8da;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+/* Style du filtre par type de jeu */
+#game-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 0 15px;
+  max-width: 900px;
+}
+
+.filter-button {
+  font-family: "Roboto", sans-serif;
+  color: #a0a0a0;
+  font-size: 0.9em;
+  background: linear-gradient(135deg, rgba(26, 31, 53, 0.7), rgba(22, 33, 62, 0.7));
+  border-radius: 20px;
+  padding: 8px 15px;
+  border: 1px solid rgba(77, 168, 218, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.filter-button .game-count {
+  font-size: 0.85em;
+  color: #4da8da;
+  font-weight: normal;
+  margin-left: 3px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #e0e0e0;
+  border-color: rgba(77, 168, 218, 0.4);
+}
+
+.filter-button:hover .game-count {
+  opacity: 1;
+  color: #5db8ea;
+}
+
+.filter-button.active {
+  background: linear-gradient(135deg, rgba(77, 168, 218, 0.3), rgba(77, 168, 218, 0.1));
+  color: #ffffff;
+  border-color: rgba(77, 168, 218, 0.6);
+  box-shadow: 0 0 15px rgba(77, 168, 218, 0.3);
+}
+
+.filter-button.active .game-count {
+  opacity: 1;
+  color: #ffffff;
+  font-weight: bold;
+}
+
 /* Style du titre principal */
 h2 {
   font-family: "Roboto", sans-serif;
@@ -60,6 +147,35 @@ h2 {
     font-size: 50px;
     margin: 20px 0;
   }
+  
+  #games-counter {
+    max-width: 250px;
+    font-size: 1em;
+    padding: 12px;
+    margin: 15px auto 0;
+  }
+  
+  #games-counter span {
+    font-size: 1.2em;
+  }
+  
+  #game-filters {
+    gap: 8px;
+    padding: 0 10px;
+    margin: 15px auto;
+    max-width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .filter-button {
+    font-size: 0.8em;
+    padding: 6px 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
 }
 
 /* Style des cartes */
@@ -71,7 +187,7 @@ h2 {
   text-align: left;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 2.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 20px;
   cursor: pointer;
 }
@@ -274,7 +390,7 @@ h2 {
     height: 420px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 2.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 3s cubic-bezier(0.4, 0.0, 0.2, 1);
     border-radius: 22px;
   }
 
@@ -299,5 +415,32 @@ h2 {
     margin-left: 10px;
     font-size: 22px;
     text-decoration: none;
+  }
+  
+  #games-counter {
+    max-width: 350px;
+    font-size: 1.4em;
+    padding: 18px;
+    margin: 30px auto 10px;
+  }
+  
+  #games-counter span {
+    font-size: 1.5em;
+  }
+  
+  #game-filters {
+    max-width: 1200px;
+    margin: 25px auto;
+    gap: 15px;
+  }
+  
+  .filter-button {
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 25px;
+  }
+  
+  .filter-button:hover {
+    transform: translateY(-3px);
   }
 }
