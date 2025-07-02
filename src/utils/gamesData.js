@@ -1,118 +1,6 @@
 // Définition de la variable gamesData dans le scope global
 window.gamesData = [
   {
-    title: "Nioh",
-    description: "Un jeu d'action-RPG exigeant dans le Japon féodal. Affrontez des yokai et des samouraïs dans des combats intenses en utilisant différents styles d'armes et des capacités mystiques.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/485510/header.jpg",
-    positives: ["Système de combat profond", "Variété d'armes et de styles", "Atmosphère japonaise authentique"],
-    negatives: ["Difficulté très élevée", "Histoire complexe"],
-    types: ["action-rpg", "action"]
-  },
-  {
-    title: "Mighty No. 9",
-    description: "Un jeu de plateforme d'action inspiré des classiques du genre. Incarnez Beck, le robot No. 9, et utilisez vos capacités uniques pour sauver vos frères robots corrompus.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/314710/header.jpg",
-    positives: ["Gameplay classique", "Variété de pouvoirs"],
-    negatives: ["Graphismes décevants", "Problèmes techniques"],
-    types: ["plateformer", "action"]
-  },
-  {
-    title: "Marvel's Avengers",
-    description: "Un jeu d'action-aventure basé sur l'univers Marvel. Incarnez vos super-héros préférés dans une nouvelle histoire originale et combattez le mal en solo ou en coopération.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/997070/header.jpg",
-    positives: ["Gameplay unique pour chaque héros", "Histoire originale"],
-    negatives: ["Contenu répétitif", "Problèmes de performance"],
-    types: ["action", "aventure"]
-  },
-  {
-    title: "Maneater",
-    description: "Un jeu de rôle d'action où vous incarnez un requin. Évoluez de petit requin à méga-prédateur en explorant un monde ouvert aquatique et en dévorant tout ce qui bouge.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/629820/header.jpg",
-    positives: ["Concept unique", "Système d'évolution amusant"],
-    negatives: ["Missions répétitives", "Durée de vie limitée"],
-    types: ["rpg", "action"]
-  },
-  {
-    title: "Lost Epic",
-    description: "Un jeu d'action-RPG en 2D avec des graphismes dessinés à la main. Explorez un monde fantastique, combattez des dieux et devenez le héros légendaire.",
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/1426490/header.jpg",
-    positives: ["Beaux graphismes", "Combat fluide"],
-    negatives: ["Difficulté déséquilibrée", "Histoire prévisible"]
-  },
-  {
-    title: "The Sims 4",
-    description: "Un simulateur de vie où vous créez et contrôlez des personnages virtuels. Construisez leur maison, gérez leur carrière, leurs relations et leur vie quotidienne dans un monde en constante évolution.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1222670/header.jpg",
-    positives: ["Liberté de création totale", "Contenu régulièrement mis à jour", "Gameplay accessible"],
-    negatives: ["DLC nombreux et coûteux", "Intelligence artificielle parfois limitée"]
-  },
-  {
-    title: "RWBY: Arrowfell",
-    description: "Un jeu d'action-aventure basé sur la série animée RWBY. Incarnez l'équipe RWBY et utilisez les capacités uniques de chaque membre pour combattre les forces du mal et protéger le monde de Remnant.",
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/1982150/header.jpg",
-    positives: ["Fidèle à l'univers RWBY", "Système de combat dynamique"],
-    negatives: ["Durée de vie limitée", "Graphismes simplistes"]
-  },
-  {
-    title: "Returnal",
-    description: "Un jeu de tir à la troisième personne roguelike où vous incarnez Selene, une astronaute piégée dans une boucle temporelle sur une planète hostile. Chaque mort vous ramène au début, mais plus forte et plus sage.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1649240/header.jpg",
-    positives: ["Gameplay intense et précis", "Atmosphère mystérieuse", "Graphismes impressionnants"],
-    negatives: ["Difficulté élevée", "Pas de sauvegarde en cours de cycle"]
-  },
-  {
-    title: "Ratchet & Clank: Rift Apart",
-    description: "Une aventure intergalactique explosive où Ratchet et Clank voyagent à travers différentes dimensions. Utilisez un arsenal délirant d'armes et traversez des failles dimensionnelles pour sauver l'univers.",
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/1895880/header.jpg",
-    positives: ["Graphismes époustouflants", "Arsenal d'armes créatif", "Excellente utilisation des fonctionnalités PS5"],
-    negatives: ["Histoire prévisible", "Prix élevé"]
-  },
-  {
-    title: "Rage 2",
-    description:
-      "Un FPS post-apocalyptique en monde ouvert où vous incarnez un Ranger, dernier espoir de l'humanité. Combinez armes dévastatrices et pouvoirs surhumains pour faire régner la justice dans un monde chaotique.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/548570/header.jpg",
-    positives: ["Combat dynamique et satisfaisant", "Monde ouvert varié"],
-    negatives: ["Histoire peu développée", "Missions secondaires répétitives"],
-    types: ["fps", "action"]
-  },
-  {
-    title: "The Division",
-    description: "Un jeu de tir à la troisième personne en ligne qui se déroule dans un New York post-apocalyptique. En tant qu'agent de la Division, vous devez restaurer l'ordre dans une ville ravagée par une pandémie.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/365590/header.jpg",
-    positives: ["Monde ouvert détaillé", "Système de progression approfondi", "Gameplay tactique"],
-    negatives: ["Contenu endgame limité", "Répétitivité des missions"]
-  },
-  {
-    title: "The Division 2",
-    description: "La suite du premier opus se déroulant à Washington D.C. Affrontez des factions ennemies, améliorez votre équipement et restaurez l'ordre dans la capitale américaine ravagée par une guerre civile.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2221490/header.jpg",
-    positives: ["Graphismes améliorés", "Plus de contenu endgame", "Meilleure variété de missions"],
-    negatives: ["Histoire peu captivante", "Certains bugs persistants"]
-  },
-  {
-    title: "Technomancer",
-    description: "Un RPG d'action science-fiction se déroulant sur Mars. Incarnez un Technomancer, un guerrier-mage capable de maîtriser l'électricité, et découvrez les secrets de la planète rouge.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/338390/header.jpg",
-    positives: ["Univers unique", "Système de combat varié"],
-    negatives: ["Graphismes moyens", "Animations rigides"]
-  },
-  {
-    title: "Star Wars: Jedi Fallen Order",
-    description: "Une aventure épique dans l'univers Star Wars où vous incarnez Cal Kestis, un jeune Padawan qui a survécu à l'Ordre 66. Développez vos pouvoirs de la Force et maîtrisez le sabre laser.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1172380/header.jpg",
-    positives: ["Histoire captivante", "Combat au sabre laser satisfaisant", "Exploration gratifiante"],
-    negatives: ["Quelques problèmes techniques", "Level design parfois confus"]
-  },
-
-  {
-    title: "Split Fiction",
-    description: "Un jeu d'aventure narratif où vos choix façonnent l'histoire. Explorez différentes réalités parallèles et découvrez comment vos décisions affectent le cours des événements dans ce thriller psychologique captivant.",
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/2001120/header.jpg",
-    positives: ["Narration non-linéaire fascinante", "Multiples fins possibles"],
-    negatives: ["Durée de vie relativement courte", "Certains choix peu impactants"]
-  },
-  {
     title: "Aeterna Noctis",
     description:
       "Un jeu de plateforme et d'action en 2D avec des graphismes peints à la main. Explorez un monde fantastique rempli de créatures étranges. Un metroidvania où lutte le mal et le bien",
@@ -139,6 +27,16 @@ window.gamesData = [
     image: "assets/images/Anthem.jpg",
     positives: ["Graphismes magnifiques", "Gameplay dynamique"],
     negatives: ["Problèmes de serveurs", "Contenu répétitif"]
+  },
+  {
+    title: "Assassin's Creed Odyssey",
+    description:
+      "Forgez votre destin de Paria à légende vivante. Embarquez pour une odyssée ou vous leverez le voile sur les secrets de vorte passé et changerez le destin de la Grèce Antique.",
+    title: "Ratchet & Clank: Rift Apart",
+    description: "Une aventure intergalactique explosive où Ratchet et Clank voyagent à travers différentes dimensions. Utilisez un arsenal délirant d'armes et traversez des failles dimensionnelles pour sauver l'univers.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1895880/header.jpg",
+    positives: ["Graphismes époustouflants", "Arsenal d'armes créatif", "Excellente utilisation des fonctionnalités PS5"],
+    negatives: ["Histoire prévisible", "Prix élevé"]
   },
   {
     title: "Assassin's Creed Odyssey",
@@ -954,6 +852,30 @@ window.gamesData = [
     ]
   },
   {
+    title: "Lost Epic",
+    description: "Un jeu d'action-RPG en 2D avec des graphismes dessinés à la main. Explorez un monde fantastique, combattez des dieux et devenez le héros légendaire.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1426490/header.jpg",
+    positives: ["Beaux graphismes", "Combat fluide"],
+    negatives: ["Difficulté déséquilibrée", "Histoire prévisible"]
+  },
+  
+  {
+    title: "Maneater",
+    description: "Un jeu de rôle d'action où vous incarnez un requin. Évoluez de petit requin à méga-prédateur en explorant un monde ouvert aquatique et en dévorant tout ce qui bouge.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/629820/header.jpg",
+    positives: ["Concept unique", "Système d'évolution amusant"],
+    negatives: ["Missions répétitives", "Durée de vie limitée"],
+    types: ["rpg", "action"]
+  },
+  {
+    title: "Marvel's Avengers",
+    description: "Un jeu d'action-aventure basé sur l'univers Marvel. Incarnez vos super-héros préférés dans une nouvelle histoire originale et combattez le mal en solo ou en coopération.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/997070/header.jpg",
+    positives: ["Gameplay unique pour chaque héros", "Histoire originale"],
+    negatives: ["Contenu répétitif", "Problèmes de performance"],
+    types: ["action", "aventure"]
+  },
+  {
     title: "Mato Anomalies",
     description:
       "Un RPG d'enquête cyberpunk se déroulant dans une version futuriste de Shanghai. Incarnez le détective Doe et le combattant d'exorcisme Gram pour résoudre des mystères et combattre des démons.",
@@ -998,6 +920,14 @@ window.gamesData = [
       ""
     ],
     negatives: ["", ""]
+  },
+  {
+    title: "Mighty No. 9",
+    description: "Un jeu de plateforme d'action inspiré des classiques du genre. Incarnez Beck, le robot No. 9, et utilisez vos capacités uniques pour sauver vos frères robots corrompus.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/314710/header.jpg",
+    positives: ["Gameplay classique", "Variété de pouvoirs"],
+    negatives: ["Graphismes décevants", "Problèmes techniques"],
+    types: ["plateformer"]
   },
   {
     title: "Monochrome Mobius",
@@ -1076,6 +1006,14 @@ window.gamesData = [
     negatives: ["Histoire parfois simpliste", "Combats potentiellement répétitifs"]
   },
   {
+    title: "Nioh",
+    description: "Un jeu d'action-RPG exigeant dans le Japon féodal. Affrontez des yokai et des samouraïs dans des combats intenses en utilisant différents styles d'armes et des capacités mystiques.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/485510/header.jpg",
+    positives: ["Système de combat profond", "Variété d'armes et de styles", "Atmosphère japonaise authentique"],
+    negatives: ["Difficulté très élevée", "Histoire complexe"],
+    types: ["action-rpg",]
+  },
+  {
     title: "Octopath Traveler II",
     description:
       "Un RPG au tour par tour avec un style graphique HD-2D unique. Suivez les histoires entrelacées de huit voyageurs différents dans le monde de Solistia.",
@@ -1142,6 +1080,22 @@ window.gamesData = [
     ]
   },
   {
+    title: "Rage 2",
+    description:
+      "Un FPS post-apocalyptique en monde ouvert où vous incarnez un Ranger, dernier espoir de l'humanité. Combinez armes dévastatrices et pouvoirs surhumains pour faire régner la justice dans un monde chaotique.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/548570/header.jpg",
+    positives: ["Combat dynamique et satisfaisant", "Monde ouvert varié"],
+    negatives: ["Histoire peu développée", "Missions secondaires répétitives"],
+    types: ["fps", "action"]
+  },
+  {
+    title: "Returnal",
+    description: "Un jeu de tir à la troisième personne roguelike où vous incarnez Selene, une astronaute piégée dans une boucle temporelle sur une planète hostile. Chaque mort vous ramène au début, mais plus forte et plus sage.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1649240/header.jpg",
+    positives: ["Gameplay intense et précis", "Atmosphère mystérieuse", "Graphismes impressionnants"],
+    negatives: ["Difficulté élevée", "Pas de sauvegarde en cours de cycle"]
+  },
+  {
     title: "Reynatis",
     description:
       "LIBEREZ VOTRE MONDE ! Quand la fiction rencontre la réalité. C'est à Shibuya, au sein d'un Tokyo ou liberté et justice font loi, que des dénèbres sont sur le point de s'abattre sur le monde...",
@@ -1155,6 +1109,13 @@ window.gamesData = [
       "",
       ""
     ]
+  },
+  {
+    title: "RWBY: Arrowfell",
+    description: "Un jeu d'action-aventure basé sur la série animée RWBY. Incarnez l'équipe RWBY et utilisez les capacités uniques de chaque membre pour combattre les forces du mal et protéger le monde de Remnant.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1982150/header.jpg",
+    positives: ["Fidèle à l'univers RWBY", "Système de combat dynamique"],
+    negatives: ["Durée de vie limitée", "Graphismes simplistes"]
   },
   {
     title: "Sakuna: Of Rice and Ruin",
@@ -1232,6 +1193,13 @@ window.gamesData = [
     negatives: ["Narration parfois lente", "Environnements répétitifs"]
   },
   {
+    title: "Split Fiction",
+    description: "Un jeu d'aventure narratif où vos choix façonnent l'histoire. Explorez différentes réalités parallèles et découvrez comment vos décisions affectent le cours des événements dans ce thriller psychologique captivant.",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/2001120/header.jpg",
+    positives: ["Narration non-linéaire fascinante", "Multiples fins possibles"],
+    negatives: ["Durée de vie relativement courte", "Certains choix peu impactants"]
+  },
+  {
     title: "Star Ocean: First Departure R",
     description: "Un remake du premier jeu Star Ocean, originalement sorti sur Super Famicom. Ce RPG d'action spatial suit l'histoire de Roddick et ses amis alors qu'ils voyagent à travers l'espace pour sauver leur planète.",
     image: "https://imgs.search.brave.com/U9VOwnwFAM_RC88hLlS7NnOwEY1AeI6x2xosmCd-UJg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMubmludGVuZG8u/Y29tL2ltYWdlL3Vw/bG9hZC9mX2F1dG8v/cV9hdXRvL2Rwcl8x/LjUvbmNvbS9zb2Z0/d2FyZS9zd2l0Y2gv/NzAwMTAwMDAwMjIx/NTAvZGE1NWVlZWUz/MWY4M2EyNWEyMzc0/YTc3MjE0YjE0M2Vl/NmZmOTYxNjg1OWM1/YzJhZTgxZDY0NTRh/OWM1YjE4NQ",
@@ -1277,6 +1245,21 @@ window.gamesData = [
     image: "https://imgs.search.brave.com/N9H-9fQkXfPmU2blRKIIL9Qfnl6TjJ9EU8VMrWd2Ijc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5qZXV4dmlkZW8u/Y29tL21lZGlhcy1t/ZC8xNDg3NzcvMTQ4/Nzc3MDE2NC0yNzE4/LWNhcmQuanBn",
     positives: ["Histoire complexe et profonde", "Système de combat dynamique"],
     negatives: ["Certains aspects du gameplay ont vieilli", "Peut être déroutant pour les nouveaux joueurs"]
+  },
+  {
+    title: "Star Wars: Jedi Fallen Order",
+    description: "Une aventure épique dans l'univers Star Wars où vous incarnez Cal Kestis, un jeune Padawan qui a survécu à l'Ordre 66. Développez vos pouvoirs de la Force et maîtrisez le sabre laser.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1172380/header.jpg",
+    positives: ["Histoire captivante", "Combat au sabre laser satisfaisant", "Exploration gratifiante"],
+    negatives: ["Quelques problèmes techniques", "Level design parfois confus"]
+  }, 
+  {
+    title: "Stellar Blade",
+    description: "Un jeu d'action-RPG qui se déroule dans un monde post-apocalyptique. Incarnez Eve, une guerrière parachutée sur Terre pour la reconquérir des mains des Naytibas, des créatures qui ont forcé l'humanité à se réfugier sur une colonie spatiale.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/header.jpg",
+    positives: ["Graphismes époustouflants", "Système de combat profond", "Histoire intrigante"],
+    negatives: ["Certains passages difficiles", "Caméra parfois capricieuse"],
+    types: ["action-rpg", "action"]
   },
   {
     title: "Stranger of Paradise: Final Fantasy Origin",
@@ -1370,6 +1353,13 @@ window.gamesData = [
     ]
   },
   {
+    title: "Technomancer",
+    description: "Un RPG d'action science-fiction se déroulant sur Mars. Incarnez un Technomancer, un guerrier-mage capable de maîtriser l'électricité, et découvrez les secrets de la planète rouge.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/338390/header.jpg",
+    positives: ["Univers unique", "Système de combat varié"],
+    negatives: ["Graphismes moyens", "Animations rigides"]
+  },
+  {
     title: "Temtem",
     description:
       "Un jeu multijoueur de capture et de combat de créatures inspiré de Pokémon. Il propose des combats en 2 contre 2, une personnalisation poussée, et un monde partagé à explorer avec 165 TemTem uniques à capturer et entraîner",
@@ -1381,6 +1371,27 @@ window.gamesData = [
       "Des 'shiny' intéressant"
     ],
     negatives: ["Uniquement en ligne", "level design: aller retour répété"]
+  },
+  {
+    title: "The Division",
+    description: "Un jeu de tir à la troisième personne en ligne qui se déroule dans un New York post-apocalyptique. En tant qu'agent de la Division, vous devez restaurer l'ordre dans une ville ravagée par une pandémie.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/365590/header.jpg",
+    positives: ["Monde ouvert détaillé", "Système de progression approfondi", "Gameplay tactique"],
+    negatives: ["Contenu endgame limité", "Répétitivité des missions"]
+  },
+  {
+    title: "The Division 2",
+    description: "La suite du premier opus se déroulant à Washington D.C. Affrontez des factions ennemies, améliorez votre équipement et restaurez l'ordre dans la capitale américaine ravagée par une guerre civile.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2221490/header.jpg",
+    positives: ["Graphismes améliorés", "Plus de contenu endgame", "Meilleure variété de missions"],
+    negatives: ["Histoire peu captivante", "Certains bugs persistants"]
+  },
+  {
+    title: "The Sims 4",
+    description: "Un simulateur de vie où vous créez et contrôlez des personnages virtuels. Construisez leur maison, gérez leur carrière, leurs relations et leur vie quotidienne dans un monde en constante évolution.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1222670/header.jpg",
+    positives: ["Liberté de création totale", "Contenu régulièrement mis à jour", "Gameplay accessible"],
+    negatives: ["DLC nombreux et coûteux", "Intelligence artificielle parfois limitée"]
   },
   {
     title: "The Witch And The Hundred Knight 2",
@@ -1580,7 +1591,5 @@ window.gamesData = [
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1265780/header.jpg",
     positives: ["Exploration de la psyché de Gollum", "Fidélité à l'univers de Tolkien"],
     negatives: ["Gameplay limité", "Problèmes techniques"]
-  }
-
+  },
 ];
-
