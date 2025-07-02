@@ -35,7 +35,7 @@ window.gamesData = [
   {
     title: "Lost Epic",
     description: "Un jeu d'action-RPG en 2D avec des graphismes dessinés à la main. Explorez un monde fantastique, combattez des dieux et devenez le héros légendaire.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1426930/header.jpg?t=1714456800",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1426490/header.jpg",
     positives: ["Beaux graphismes", "Combat fluide"],
     negatives: ["Difficulté déséquilibrée", "Histoire prévisible"]
   },
@@ -49,7 +49,7 @@ window.gamesData = [
   {
     title: "RWBY: Arrowfell",
     description: "Un jeu d'action-aventure basé sur la série animée RWBY. Incarnez l'équipe RWBY et utilisez les capacités uniques de chaque membre pour combattre les forces du mal et protéger le monde de Remnant.",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1738010/header.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1982150/header.jpg",
     positives: ["Fidèle à l'univers RWBY", "Système de combat dynamique"],
     negatives: ["Durée de vie limitée", "Graphismes simplistes"]
   },
@@ -63,7 +63,7 @@ window.gamesData = [
   {
     title: "Ratchet & Clank: Rift Apart",
     description: "Une aventure intergalactique explosive où Ratchet et Clank voyagent à travers différentes dimensions. Utilisez un arsenal délirant d'armes et traversez des failles dimensionnelles pour sauver l'univers.",
-    image: "https://image.api.playstation.com/vulcan/ap/rnd/202101/2921/DwVjpbKOsFOyPdNHGJKZ1xGe.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1895880/header.jpg",
     positives: ["Graphismes époustouflants", "Arsenal d'armes créatif", "Excellente utilisation des fonctionnalités PS5"],
     negatives: ["Histoire prévisible", "Prix élevé"]
   },
@@ -108,7 +108,7 @@ window.gamesData = [
   {
     title: "Split Fiction",
     description: "Un jeu d'aventure narratif où vos choix façonnent l'histoire. Explorez différentes réalités parallèles et découvrez comment vos décisions affectent le cours des événements dans ce thriller psychologique captivant.",
-    image: "https://cdn.akamai.steamstatic.com/steam/apps/1384900/header.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/2001120/header.jpg",
     positives: ["Narration non-linéaire fascinante", "Multiples fins possibles"],
     negatives: ["Durée de vie relativement courte", "Certains choix peu impactants"]
   },
@@ -334,6 +334,16 @@ window.gamesData = [
     negatives: ["Courbe d'apprentissage abrupte", "Graphismes simples"]
   },
   {
+    title: "Clair Obscur Expedition 33",
+    description:
+      "Un RPG au tour par tour avec des mécaniques en temps réel, développé par Sandfall Interactive. Plongez dans un monde fantastique inspiré de la Belle Époque française, où vous dirigez une expédition dans des terres inconnues remplies de mystères et de dangers.",
+    image:
+      "https://cdn.akamai.steamstatic.com/steam/apps/1903340/header.jpg",
+    positives: ["Direction artistique somptueuse", "Mélange innovant de tour par tour et temps réel", "Univers riche et original"],
+    negatives: ["Courbe d'apprentissage parfois abrupte", "Certains combats peuvent être difficiles"],
+    types: ["tour-par-tour", "rpg"]
+  },
+  {
     title: "Cat Quest + Cat Quest II",
     description:
       "Une collection de deux RPG d'action adorables mettant en scène des chats héroïques. Explorez un monde ouvert rempli d'aventures, de quêtes et de combats amusants.",
@@ -414,7 +424,7 @@ window.gamesData = [
     description:
       "Un jeu d'action RPG basé sur l'univers de Donjons & Dragons. Combattez aux côtés de vos amis dans ce jeu coopératif, explorez des donjons dangereux et affrontez des créatures mythiques.",
     image:
-      "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/623280/capsule_616x353.jpg?t=1693497645",
+      "https://cdn.akamai.steamstatic.com/steam/apps/623280/header.jpg",
     positives: [
       "Gameplay coopératif amusant",
       "Univers riche de Donjons & Dragons"
@@ -434,7 +444,7 @@ window.gamesData = [
     description:
       "Un Hack&Slash où les joueurs jouent le rôle de FURY dans sa quête pour traquer et éliminer les Sept Péchés Capitaux.. En tant que mage, FURY compte sur son fouet et sa magie pour rétablir l'équilibre entre le bien et le mal.",
     image:
-      "https://imgs.search.brave.com/QA-RK1NvK_6Hq9OCjS5CH1PWkqmumjNXEY_TF1JZBiw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9nYW1p/bmctY2RuLmNvbS9p/bWFnZXMvcHJvZHVj/dHMvMjA2MS82MTZ4/MzUzL2RhcmtzaWRl/cnMtaWlpLXBjLWpl/dS1zdGVhbS1jb3Zl/ci5qcGc_dj0xNjg4/MzkwNjg5",
+      "https://cdn.akamai.steamstatic.com/steam/apps/606280/header.jpg",
     positives: ["#", "#"],
     negatives: ["#", "#"]
   },
@@ -443,7 +453,7 @@ window.gamesData = [
     description:
       "Dead Cells: Return to Castlevania est une extension mêlant l'univers de Dead Cells et celui de Castlevania. Explorez le château iconique de Dracula, affrontez des boss légendaires comme Dracula et la Mort, et découvrez des armes emblématiques dans un gameplay roguelite frénétique",
     image:
-      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ljwBsY-bmhV-h4JxnCRJiwHaEK%26pid%3DApi&sp=1733741398Td9becdae2e23f2f2cc9ed639595d1346df3bee4f67150af8917c692eecbae4c6",
+      "https://cdn.akamai.steamstatic.com/steam/apps/2101430/header.jpg",
     positives: ["#", "#"],
     negatives: ["#", "#"]
   },
@@ -460,7 +470,7 @@ window.gamesData = [
     title: "Deus Ex: Mankind Divided",
     description:
       "Un RPG d'action cyberpunk développé par Eidos Montréal. Incarnez Adam Jensen, un agent augmenté, dans un monde où les tensions entre humains et augmentés sont à leur comble. Explorez un univers riche avec des choix influençant l'histoire.",
-    image: "https://example.com/deus-ex-mankind-divided-image.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/337000/header.jpg",
     positives: [
       "Univers cyberpunk immersif",
       "Système de choix et conséquences",
@@ -492,7 +502,7 @@ window.gamesData = [
     title: "Dishonored 2",
     description:
       "Un jeu d'action-aventure en vue subjective développé par Arkane Studios. Incarnez Emily Kaldwin ou Corvo Attano dans une quête pour récupérer le trône usurpé. Utilisez des pouvoirs surnaturels, gadgets et armes pour éliminer vos ennemis.",
-    image: "https://example.com/dishonored-2-image.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/403640/header.jpg",
     positives: [
       "Level design innovant",
       "Liberté d'approche dans le gameplay",
@@ -637,7 +647,7 @@ window.gamesData = [
     description:
       "Un RPG d'action en monde ouvert par les créateurs de Dark Souls. Explorez un vaste monde interconnecté, combattez des ennemis redoutables et découvrez les secrets de l'Elden Ring.",
     image:
-      "https://image.api.playstation.com/vulcan/ap/rnd/202107/1612/Y5RHNmzAtc6sRYwZlYiKHAxN.png",
+      "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg",
     positives: [
       "Monde ouvert immense et détaillé",
       "Combats exigeants et satisfaisants"
@@ -652,7 +662,7 @@ window.gamesData = [
     description:
       "Un metroidvania sombre où vous incarnez Lily, une prêtresse explorant un royaume ravagé par une pluie maudite. Libérez des esprits pour les utiliser en combat et découvrez une histoire empreinte de mélancolie.",
     image:
-      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fassets.nintendo.com%2Fimage%2Fupload%2Fc_fill%2Cw_1200%2Fq_auto%3Abest%2Ff_auto%2Fdpr_2.0%2Fncom%2Ffr_CA%2Fgames%2Fswitch%2Fe%2Fender-lilies-quietus-of-the-knights-switch%2Fhero&sp=1733742141Tf8ea09004ff38d2a827a420307733f68e227a519e1ce468d978af1a9d8353ec2",
+      "https://cdn.akamai.steamstatic.com/steam/apps/1369630/header.jpg",
     positives: [
       "Histoire captivante",
       "Gameplay jouissif"
@@ -876,7 +886,7 @@ window.gamesData = [
     title: "Les Sims 4",
     description:
       "Un jeu de simulation de vie où vous créez et contrôlez des personnages, construisez des maisons et façonnez leur destin dans un monde rempli de possibilités et d'interactions sociales.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.MXsSTU7Sny6VVc4KoyDUPQHaEK%26pid%3DApi&sp=1741611895T7296157d211b0a0ad0f879bac04a08aca98ded81c02b1213a47276e3384ef292",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1222670/header.jpg",
     positives: ["Personnalisation avancée", "Graphismes améliorés "],
     negatives: [
       "Contenu de base limité",
@@ -959,7 +969,7 @@ window.gamesData = [
     title: "Metal Gear Solid V: The Phantom Pain",
     description:
       "Un jeu d'infiltration en monde ouvert développé par Kojima Productions. Suivez Snake dans une mission de vengeance à travers l'Afghanistan et l'Afrique centrale, en utilisant furtivité, stratégie et un vaste arsenal d'armes.",
-    image: "https://example.com/mgs-phantom-pain-image.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/287700/header.jpg",
     positives: [
       "Monde ouvert détaillé",
       "Gameplay varié et flexible",
@@ -971,7 +981,7 @@ window.gamesData = [
     title: "Metal Gear Survive",
     description:
       "Un spin-off de la série Metal Gear qui se concentre sur la survie et la coopération. Les joueurs doivent construire des bases, collecter des ressources et combattre des créatures dans un univers alternatif.",
-    image: "https://example.com/metal-gear-survive-image.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/543900/header.jpg",
     positives: [
       "Coopération multijoueur",
       "Système de survie engageant"
@@ -982,7 +992,7 @@ window.gamesData = [
     title: "Metaphor:ReFANTASIO",
     description:
       "Le trône est vacant suite à l'assassinat de roi. Le testament du défunt roi sans aucun héritier décrète que le prochain monarque sera élu par le peuple. Ainsi commence votre lutte pour vous emparer du trône",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwww.videogameschronicle.com%2Ffiles%2F2023%2F06%2FMetaphor-ReFantazio.jpg&sp=1741611226Tb5ad64215b5d8087dad899e94f5d97af36e08440259b9c05671384297005a300",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/2679460/header.jpg",
     positives: [
       "",
       ""
@@ -1429,7 +1439,7 @@ window.gamesData = [
     title: "Watch Dogs 2",
     description:
       "Un jeu d'action-aventure en monde ouvert développé par Ubisoft. Incarnez Marcus Holloway, un hacker talentueux, dans la ville de San Francisco. Utilisez vos compétences pour pirater le système ctOS 2.0 et combattre les injustices sociales.",
-    image: "https://example.com/watch-dogs-2-image.jpg",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/447040/header.jpg",
     positives: [
       "Monde ouvert vivant",
       "Humour et scénario engageant",
@@ -1497,21 +1507,21 @@ window.gamesData = [
     title: "Ys X: Nordics",
     description:
       "Deux héros, une aventure épique et une débordante de découvertes. Découvrez les dangers du golfe d'Obelia à travers les yeux d'Adol Christin et de sa nouvelle alliée, la pirate Karja Balta",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fi0.wp.com%2Fwww.nintendo-town.fr%2Fwp-content%2Fuploads%2F2023%2F06%2FYs-X-Nordics-1.jpg%3Ffit%3D1920%2C1080%26ssl%3D1&sp=1741611622T4bdafa72799d8f599a36536b925046e596cd61da40c73c5416214362d9ee5288",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/2731870/header.jpg",
     positives: [
-      "",
-      ""
+      "Système de combat dynamique",
+      "Exploration maritime innovante"
     ],
     negatives: [
-      "",
-      ""
+      "Peut sembler répétitif",
+      "Histoire parfois prévisible"
     ]
   },
   {
     title: "World of Warriors",
     description:
       "Un jeu de combat et de stratégie où vous collectionnez et entraînez des guerriers légendaires de différentes époques historiques pour combattre dans des arènes.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    image: "https://image.api.playstation.com/vulcan/img/rnd/202010/2723/knxU5vUGA5BK0qKqsSFEPd9A.png",
     positives: ["Collection de guerriers variés", "Combats stratégiques"],
     negatives: ["Peut devenir répétitif", "Progression parfois lente"]
   },
@@ -1519,7 +1529,7 @@ window.gamesData = [
     title: "Warhammer 40,000 Inquisitor",
     description:
       "Un action-RPG dans l'univers sombre de Warhammer 40,000. Incarnez un Inquisiteur et purifiez les hérétiques dans des missions variées à travers la galaxie.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/527430/header.jpg",
     positives: ["Univers Warhammer 40K riche", "Personnalisation poussée"],
     negatives: ["Peut être répétitif", "Courbe d'apprentissage abrupte"]
   },
@@ -1527,7 +1537,7 @@ window.gamesData = [
     title: "Warhammer: Chaosbane",
     description:
       "Un hack-and-slash dans l'univers de Warhammer Fantasy. Combattez les forces du Chaos à travers différentes régions de l'Empire avec quatre classes de personnages uniques.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/774241/header.jpg",
     positives: ["Gameplay de hack-and-slash satisfaisant", "Coopération jusqu'à 4 joueurs"],
     negatives: ["Contenu endgame limité", "Histoire prévisible"]
   },
@@ -1535,7 +1545,7 @@ window.gamesData = [
     title: "Victor Vran",
     description:
       "Un action-RPG où vous incarnez Victor Vran, un chasseur de démons. Combattez des hordes de monstres avec un système de combat dynamique et personnalisez votre style de jeu avec différentes armes et pouvoirs.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/345180/header.jpg",
     positives: ["Système de combat fluide", "Personnalisation variée"],
     negatives: ["Histoire simple", "Environnements parfois répétitifs"]
   },
@@ -1543,7 +1553,7 @@ window.gamesData = [
     title: "Unknown 9 Awakening",
     description:
       "Un jeu d'action-aventure où vous incarnez Haroona, une jeune femme dotée de pouvoirs surnaturels. Explorez le monde caché des Inconnus et maîtrisez la capacité de manipuler l'Éther pour combattre vos ennemis.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1477940/header.jpg",
     positives: ["Univers mystérieux captivant", "Pouvoirs uniques"],
     negatives: ["Durée de vie moyenne", "Mécaniques parfois répétitives"]
   },
@@ -1551,7 +1561,7 @@ window.gamesData = [
     title: "Toukiden 2",
     description:
       "Un jeu de chasse aux monstres dans un Japon féodal envahi par des démons. Utilisez différentes armes et pouvoirs pour vaincre d'énormes créatures et sauver l'humanité.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/551730/header.jpg",
     positives: ["Monde ouvert intéressant", "Variété d'armes et de styles de combat"],
     negatives: ["Peut devenir répétitif", "Histoire prévisible"]
   },
@@ -1559,7 +1569,7 @@ window.gamesData = [
     title: "The Surge 2",
     description:
       "Un action-RPG de science-fiction dans un monde dystopique. Combattez des ennemis mécaniques, récupérez leurs pièces pour améliorer votre exosquelette et survivez dans une ville en proie au chaos.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/644830/header.jpg",
     positives: ["Système de combat technique", "Démembrement stratégique des ennemis"],
     negatives: ["Difficulté élevée", "Histoire parfois confuse"]
   },
@@ -1567,7 +1577,7 @@ window.gamesData = [
     title: "The Lord Of The Ring: Gollum",
     description:
       "Une aventure narrative où vous incarnez Gollum dans sa quête pour retrouver son précieux anneau. Infiltrez-vous dans des zones dangereuses et prenez des décisions qui affecteront l'équilibre entre les deux personnalités de Gollum.",
-    image: "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Nh-Vy3YQTYnZnPCZQQnCwQHaEK%26pid%3DApi&sp=1741612500T5a0e5c1e7a9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b9d9c9e5b",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/1265780/header.jpg",
     positives: ["Exploration de la psyché de Gollum", "Fidélité à l'univers de Tolkien"],
     negatives: ["Gameplay limité", "Problèmes techniques"]
   }

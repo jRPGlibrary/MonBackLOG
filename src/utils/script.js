@@ -14,15 +14,16 @@ document.body.insertBefore(counterContainer, rowsContainer);
 // Création du filtre par type de jeu
 const gameTypes = [
   { id: "all", name: "Tous les jeux" },
-  { id: "rpg", name: "RPG" },
-  { id: "jrpg", name: "JRPG" },
+  { id: "tour-par-tour", name: "Tour par tour" },
   { id: "action-rpg", name: "Action RPG" },
-  { id: "aventure", name: "Aventure" },
-  { id: "fps", name: "FPS" },
-  { id: "metroidvania", name: "Metroidvania" },
   { id: "tactical-rpg", name: "Tactical RPG" },
+  { id: "rpg", name: "RPG" },
+  { id: "darksouls", name: "DarkSouls" },
+  { id: "aventure", name: "Aventure" },
   { id: "action", name: "Action" },
-  { id: "plateformer", name: "Plateformer" }
+  { id: "metroidvania", name: "Metroidvania" },
+  { id: "plateformer", name: "Plateformer" },
+  { id: "fps", name: "FPS" }
 ];
 
 // Fonction pour obtenir le type de jeu, soit depuis le champ types, soit en le détectant
@@ -46,13 +47,23 @@ function getGameTypes(game) {
   
   if (description.includes("action-rpg") || description.includes("action rpg")) {
     types.push("action-rpg");
-  } else if (description.includes("jrpg") || 
+  } else if (description.includes("tour par tour") || 
             (description.includes("rpg") && (title.includes("final fantasy") || 
                                            title.includes("dragon quest") || 
                                            title.includes("persona")))) {
-    types.push("jrpg");
+    types.push("tour-par-tour");
   } else if (description.includes("rpg") || description.includes("rôle")) {
     types.push("rpg");
+  }
+  
+  if (title.includes("dark souls") || title.includes("darksouls") || 
+      description.includes("dark souls") || description.includes("darksouls") ||
+      title.includes("demon souls") || title.includes("demons souls") ||
+      description.includes("demon souls") || description.includes("demons souls") ||
+      title.includes("elden ring") || description.includes("elden ring") ||
+      title.includes("bloodborne") || description.includes("bloodborne") ||
+      title.includes("sekiro") || description.includes("sekiro")) {
+    types.push("darksouls");
   }
   
   if (description.includes("fps") || description.includes("first-person shooter") || 
