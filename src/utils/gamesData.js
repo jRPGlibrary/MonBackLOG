@@ -2,15 +2,11 @@
 window.gamesData = [
   {
     title: "Aeterna Noctis",
-    description:
-      "Un jeu de plateforme et d'action en 2D avec des graphismes peints à la main. Explorez un monde fantastique rempli de créatures étranges. Un metroidvania où lutte le mal et le bien",
+    description:"Un jeu de plateforme et d'action en 2D avec des graphismes peints à la main. Explorez un monde fantastique rempli de créatures étranges. Un metroidvania où lutte le mal et le bien",
     image: "assets/images/Aeterna Noctis.png",
-    positives: [
-      "Graphismes peints à la main",
-      "Monde fantastique immersif",
-      "Le Mal VS Le Bien"
-    ],
-    negatives: ["Difficulté élevée", "Certaines mécaniques répétitives"]
+    positives: ["Graphismes peints à la main","Monde fantastique immersif","Le Mal VS Le Bien"],
+    negatives: ["Difficulté élevée", "Certaines mécaniques répétitives"],
+    types:["plateformer","metroidvania"]
   },
   {
     title: "Afterimage",
@@ -18,7 +14,8 @@ window.gamesData = [
       "Un jeu de plateforme et d'action en 2D avec des graphismes peints à la main. Le joueur explore un monde fantastique rempli de créatures étranges et de paysages spectaculaires.",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1701520/header.jpg",
     positives: ["Graphismes époustouflants", "Exploration captivante"],
-    negatives: ["Narration faible", "Durée de vie courte"]
+    negatives: ["Narration faible", "Durée de vie courte"],
+    types:["metroidvania","action"]
   },
   {
     title: "Anthem",
@@ -26,17 +23,16 @@ window.gamesData = [
       "Un RPG d'action en ligne où vous incarnez un Freelancer équipé d'une exo-armure. Explorez un vaste monde ouvert, personnalisez votre Javelin et combattez aux côtés d'autres joueurs.",
     image: "assets/images/Anthem.jpg",
     positives: ["Graphismes magnifiques", "Gameplay dynamique"],
-    negatives: ["Problèmes de serveurs", "Contenu répétitif"]
+    negatives: ["Problèmes de serveurs", "Contenu répétitif"],
+    types:["action-rpg"]
   },
   {
-    title: "Assassin's Creed Odyssey",
-    description:
-      "Forgez votre destin de Paria à légende vivante. Embarquez pour une odyssée ou vous leverez le voile sur les secrets de vorte passé et changerez le destin de la Grèce Antique.",
     title: "Ratchet & Clank: Rift Apart",
     description: "Une aventure intergalactique explosive où Ratchet et Clank voyagent à travers différentes dimensions. Utilisez un arsenal délirant d'armes et traversez des failles dimensionnelles pour sauver l'univers.",
     image: "https://cdn.akamai.steamstatic.com/steam/apps/1895880/header.jpg",
     positives: ["Graphismes époustouflants", "Arsenal d'armes créatif", "Excellente utilisation des fonctionnalités PS5"],
-    negatives: ["Histoire prévisible", "Prix élevé"]
+    negatives: ["Histoire prévisible", "Prix élevé"],
+   
   },
   {
     title: "Assassin's Creed Odyssey",
@@ -44,7 +40,8 @@ window.gamesData = [
       "Forgez votre de Destin de Paria à légende vivante. Embarquez pour une odyssée ou vous leverez le voile sur les secret de vorte passé et changerez le destin de la Grèce Antique.",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/812140/header.jpg",
     positives: ["Monde ouvert immense", "Combat dynamique"],
-    negatives: ["Quêtes répétitives", "Histoire parfois confuse"]
+    negatives: ["Quêtes répétitives", "Histoire parfois confuse"],
+    types:["action-rpg"]
   },
   {
     title: "Assassin's Creed Origins",
@@ -52,7 +49,8 @@ window.gamesData = [
       "L'égypte Antique. Une terre majestueuse au bord du chaos, manipulée par des forces obscures. Voyagez juqu'aux origines du credo des assassins et prenez part à ses évenements fondateurs.",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/582160/header.jpg",
     positives: ["Égypte magnifique", "Gameplay renouvelé"],
-    negatives: ["Missions annexes répétitives", "IA perfectible"]
+    negatives: ["Missions annexes répétitives", "IA perfectible"],
+    types:["action-rpg"]
   },
   {
     title: "Assassin's Creed Syndicate",
@@ -69,7 +67,7 @@ window.gamesData = [
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1121780/header.jpg",
     positives: ["Graphismes dessinés à la main", "Histoire épique"],
     negatives: ["Rythme lent", "Système de combat complexe"],
-    types: ["jrpg", "rpg"]
+    types: ["tour- par-tour", "rpg"]
   },
   {
     title: "Astro Bot",
