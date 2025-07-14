@@ -70,6 +70,22 @@ window.gamesData = [
     types: ["tour- par-tour", "rpg"]
   },
   {
+    title: "Asterigos: Curse of the Stars",
+    description: "Un RPG d'action inspiré de la mythologie grecque et romaine. Explorez la magnifique cité d'Aphes et frayez-vous un chemin à travers des légions d'ennemis uniques et des boss mythiques pour découvrir la vérité derrière la malédiction de la ville.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1731070/header.jpg",
+    positives: ["Combat dynamique", "Monde magnifique à explorer", "Boss épiques"],
+    negatives: ["Histoire prévisible", "Exploration parfois vide"],
+    types: ["action-rpg", "souls-like"]
+  },
+  {
+    title: "Avatar: Frontiers of Pandora™",
+    description: "Un jeu d'action-aventure à la première personne se déroulant dans la Frontière Ouest de Pandora. Enlevé par la RDA, vous, un Na'vi, avez été façonné pour servir leur objectif. Quinze ans plus tard, vous êtes libre, mais vous vous retrouvez étranger dans votre lieu de naissance.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2840770/header.jpg",
+    positives: ["Monde ouvert magnifique", "Devenir un Na'vi", "Voler dans les cieux"],
+    negatives: ["Contenu répétitif", "Histoire prévisible"],
+    types: ["action-aventure", "open-world", "fps"]
+  },
+  {
     title: "Astro Bot",
     description:
       "Embarquez pour une aventure Gigantesque avec notre petit robot fétiche dans ce sublime jeu de plateforme rempli de références.",
