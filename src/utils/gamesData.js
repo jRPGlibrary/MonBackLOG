@@ -168,6 +168,22 @@ window.gamesData = [
     negatives: ["Peut devenir grindy", "Personnages peu développés"]
   },
   {
+    title: "Berserk Boy",
+    description: "Un jeu de plateforme et d'action ultra-rapide aux allures de Metroidvania. Changez de forme et utilisez les pouvoirs de la foudre, du feu, de la glace, de l'air et de la terre pour sauver la planète !",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1561340/header.jpg",
+    positives: ["Plateforme rapide et fluide", "Style pixel art vibrant", "Inspiré des classiques (Mega Man, Sonic)"],
+    negatives: ["Structure de fin de jeu frustrante", "Certains combats de boss difficiles"],
+    types: ["action", "plateformer", "metroidvania"]
+  },
+  {
+    title: "Black Myth: Wukong",
+    description: "Un Action-RPG basé sur la mythologie chinoise et le roman classique 'La Pérégrination vers l'Ouest'. Incarnez l'Élu et affrontez de puissants ennemis pour découvrir la vérité derrière une ancienne légende.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg",
+    positives: ["Graphismes époustouflants", "Combat dynamique", "Mythologie chinoise riche"],
+    negatives: ["Difficulté élevée (Soulslike)", "Peu de variété d'armes"],
+    types: ["action-rpg", "souls-like"]
+  },
+  {
     title: "Biomutant",
     description:
       "Un RPG d'action en monde ouvert avec un protagoniste mutant. Personnalisez votre personnage, explorez un monde post-apocalyptique, et engagez-vous dans des combats dynamiques avec une variété d'armes et de pouvoirs.",
@@ -1270,6 +1286,14 @@ window.gamesData = [
       "Personnalisation poussée des jobs"
     ],
     negatives: ["Histoire confuse", "Graphismes inégaux"]
+  },
+   {
+    title: "Suikoden I&II HD Remaster Gate Rune and Dunan Unification Wars",
+    description: "Les légendaires JRPG de KONAMI, Suikoden I et Suikoden II, ont été remasterisés en HD ! Retrouvez les récits épiques d'un héros luttant contre un tyran et d'un conflit frontalier qui cache une nouvelle guerre.",
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1932640/header.jpg",
+    positives: ["Remasterisation HD", "Deux classiques en un", "Histoire riche avec 108 personnages"],
+    negatives: ["Date de sortie encore lointaine"],
+    types: ["rpg", "classique", "remaster"]
   },
   {
     title: "Sword and Fairy 7",
